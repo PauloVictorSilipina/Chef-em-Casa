@@ -1,0 +1,61 @@
+img {
+    max-width: 10em;
+    max-height: 10em;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: orange;
+    justify-content: space-between;
+}
+
+header .navegacao ul{
+    list-style: none;
+}
+
+header .navegacao ul li{
+    float: left;
+}
+
+header .navegacao ul li a{
+    font-size: 1em;
+    padding: 1em;
+    color: rgb(255, 136, 0);
+    display: block;
+    background: #191970;
+}
+
+header .navegacao ul li a:hover{
+    background: #4169E1;
+    color: white;
+}
+
+
+header .navegacao ul li ul{
+    position: absolute;
+    left: 0;
+    width: 10em;
+    display: none;
+}
+
+header .navegacao ul li ul li{
+    width: 100%;
+}
+
+
+header .navegacao ul li:focus-within > ul, 
+header .navegacao ul li:hover > ul {
+    display: initial;
+}
+
+footer{
+	
+    min-height:50px;
+    margin-top:auto; 
+    color: orangered;
+    background: #d5f4e6;
+    text-align: center;
+  }
