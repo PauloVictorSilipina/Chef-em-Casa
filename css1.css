@@ -1,61 +1,58 @@
+h1 {
+    margin-left: auto;
+    margin-right: auto;
+	margin-top: 50px;
+}
+
 img {
     max-width: 10em;
     max-height: 10em;
 }
 
-header{
+.cabecalho{
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background: orange;
+    display: flex;
+    background: rgb(255, 136, 0);
     justify-content: space-between;
+    align-items: center;
+    min-height:3em;
 }
 
-header .navegacao ul{
+ul,li {
     list-style: none;
+    font-size: 1.2rem; 
 }
 
-header .navegacao ul li{
-    float: left;
+a {
+    text-decoration: none;
+    color: black;
 }
 
-header .navegacao ul li a{
-    font-size: 1em;
-    padding: 1em;
-    color: rgb(255, 136, 0);
-    display: block;
-    background: #191970;
+.menu{
+    display:flex;
 }
 
-header .navegacao ul li a:hover{
-    background: #4169E1;
-    color: white;
+.menu li {
+    margin-left: 0.5em;
+    
 }
 
-
-header .navegacao ul li ul{
-    position: absolute;
-    left: 0;
-    width: 10em;
-    display: none;
+.menu li a {
+    float:right;
 }
 
-header .navegacao ul li ul li{
-    width: 100%;
+body{
+    height:100vh;
+    display:flex; 
+    flex-direction:column; 
 }
-
-
-header .navegacao ul li:focus-within > ul, 
-header .navegacao ul li:hover > ul {
-    display: initial;
-}
+  
 
 footer{
-	
-    min-height:50px;
-    margin-top:auto; 
-    color: orangered;
-    background: #d5f4e6;
+    min-height:2em;
+    margin-top:auto;
     text-align: center;
   }

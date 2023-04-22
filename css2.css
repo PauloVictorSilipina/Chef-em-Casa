@@ -1,0 +1,16 @@
+.grupo {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 45em;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.grupo > div {
+    flex: 1 1 200px;
+    margin: 1em;
+}
+
+.grupo > h3 {
+    text-align: center;
+}
