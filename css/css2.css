@@ -1,3 +1,5 @@
+/*CSS das Section*/
+
 .grupo {
     display: flex;
     flex-wrap: wrap;
@@ -13,4 +15,82 @@
 
 .grupo > h3 {
     text-align: center;
+}
+
+/*CSS do Login*/
+
+.body_login {
+	background-image: linear-gradient(45deg ,rgba(255, 136, 0, 0.7), rgba(255, 224, 18, 0.7)) !important;
+}
+
+.login {
+    background-color: rgba(0, 0, 0, 0.85);
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    padding: 8em;
+    border-radius: 1.5em;
+    color: white;
+}
+
+.username, .password {
+    padding: 1em;
+    border: none;
+    outline: none;
+}
+
+.butEnviar {
+    background-color: white;
+    border: none;
+    padding: 0.8em;
+    width: 100%;
+    border-radius: 0.3em;
+    font-size: 1em;
+}
+
+.butEnviar:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+
+/*CSS do Sobre*/
+
+.body_sobre {
+	background-image: linear-gradient(90deg ,rgba(255, 136, 0, 0.7), rgba(255, 224, 18, 0.7)) !important;
+}
+
+.desenvolvedores {
+    margin-left:auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 26em;
+    height: 35em;
+
+}
+
+.dev img {
+    width: 9em;
+    height: 9em;
+    border-radius: 10%;
+}
+
+.texto_sobre  h3 {
+    text-align: center;
+}
+
+.texto_sobre span{
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+.texto_sobre p {
+    max-width: 30em;
+    margin: 0 auto;
+    padding-bottom: 5em;
 }

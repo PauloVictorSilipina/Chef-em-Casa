@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
-
-h1 {
-    margin-left: auto;
-    margin-right: auto;
-	margin-top: 50px;
+* {
     font-family: 'Comfortaa', cursive;
 }
 
+body {
+    margin: 0;
+}
+h1 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 h3, p {
-    font-family: 'Comfortaa', cursive;
 }
 
 img {
@@ -17,15 +20,12 @@ img {
 }
 
 .cabecalho{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: relative;
     display: flex;
     background: rgb(255, 136, 0);
     justify-content: space-between;
     align-items: center;
-    min-height:3em;
+    max-height:5em;
 }
 
 ul,li {
