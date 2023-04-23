@@ -1,22 +1,36 @@
-/*CSS das Section*/
+/*CSS da Home*/
 
+.body_home h1{
+    margin-top: 3em;
+    
+}
+
+.pesquisa {
+    margin-left:auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 20px;
+    height: 2em;
+    margin-bottom: 3em;
+    text-indent: 2.5%;
+}
 .grupo {
     display: flex;
     flex-wrap: wrap;
-    max-width: 45em;
+    width: 50em;
+    justify-content: space-between;
     margin: 0 auto;
     text-align: center;
 }
 
-.grupo > div {
-    flex: 1 1 200px;
-    margin: 1em;
+.grupo img {
+    width: 15em;
+    height: 15em;
 }
 
-.grupo > h3 {
-    text-align: center;
+.grupo p {
+    cursor: pointer;
 }
-
 /*CSS do Login*/
 
 .body_login {
@@ -72,18 +86,53 @@
 
 .container  {
     position: relative;
-    top: 5em;
+    top: 5rem;
     display: flex;
 
 }
 .imagem {
     width: 50%;
-    background-color: blue;
 }
 .div_direita {
-    
+    position:relative;
     width: 50%;
-    background-color: red;
+    border-left: 1px solid black;
+}
+
+.div_direita h2 {
+    text-align: center;
+    font-size: 5em;
+}
+
+.dados_contato {
+    text-align: center;
+}
+
+.dados_contato input {
+    width: 40%;
+    outline: none;
+    border: none;
+    transform: translateY(-10%);
+    padding: 5px;
+    border-bottom: 1px solid black;
+    margin-bottom: 1em;
+}
+
+.dados_contato label {
+    padding: 5px;
+}
+
+.dados_contato button {
+    width: 30%;
+    height: 2.1em;
+    border: .1px solid black;
+    font-size: 0.9em;
+    border-radius: 22px;
+    cursor: pointer;
+}
+
+.dados_contato button:hover{
+    background-color: lightgray;
 }
 
 /*CSS do Cadastro e Login*/

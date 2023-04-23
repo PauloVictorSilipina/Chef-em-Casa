@@ -28,21 +28,23 @@
         </nav>
     </header>
 
-    <div class="texto_contato">
-        <h2>Fale Conosco</h2>
-    </div>
-    <div class="contatos">
+    <div class="container">
+        <div class="imagem">
+            <img src="img/chef.png">
+        </div>
+        <div class="div_direita">
+            <h2>Fale conosco</h2>
+            <form action="">
+                <div class="dados_contato">
 
-        <a href="https://api.whatsapp.com/send/?phone=5527988070615&text&type=phone_number&app_absent=0" target="_blank">
-            <img src="img/wpp.png">
-            <p>Whatsapp</p>
-        </a>
-    </div>
-    <div class="contatos">
-        <a href="https://mail.google.com/mail/?view=cm&to=paulovictoralves.contato@gmail.com" target="_blank">
-            <img src="img/gmail.png">
-            <p>Gmail</p>
-        </a>
+                    <label for="nome">Nome completo</label><br>
+                    <input type="text" class="nome"><br>
+                    <label for="message">Mensagem</label><br>
+                    <input type="text" class="message" id="message"><br>
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
     </div>
     <footer>
         <p>Todos direitos reservados - Chef em Casa</p>
