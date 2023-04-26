@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/css_base.css">
+    <link rel="stylesheet" href="css/css_login.css">
+    <title>Chef em Casa</title>
+</head>
+
+<body  class="body_login">
+    <!--criação do cabecalho-->
+    <header class ="cabecalho">
+        <!--classe para itens navegáveis-->
+        <nav class="navegacao">
+            <!--div para posicionar o menu-->
+            <div class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </div>
+        </nav>
+        <a href="index.html" class="logo">
+            <img src="img/logo.png">
+        </a>
+
+        <nav class="navegacao">
+            <div class="menu">
+                <li><a href="contato.html">Contato</a></li>
+                    <li><a href="login.html">Login</a></li>
+            </div>
+        </nav>
+    </header>
+    
+    <!--div com classe reutilizada do cadastro pois modelam-se iguais-->
+    <div class="dados">
+        <form action="">
+            <h1>Login</h1>
+
+            <!--labels e inputs interativos-->
+            <label for="username">Usuário</label>
+            <br><br>
+            <input type="text" class="username">
+            <br><br>
+            <label for="password">Senha</label>
+            <br><br>
+            <input type="password" class="password" id="password">
+            <br><br>
+            <button type="submit">Entrar</button>
+            <br><br>
+            <a href="cadastro.html">
+            <p>Cadastrar-se</p>
+            </a>
+
+        </form>
+    </div>
+
+    <footer>
+        <p>Todos direitos reservados - Chef em Casa</p>
+    </footer>
+</body>
+</html>

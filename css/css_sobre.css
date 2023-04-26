@@ -1,0 +1,33 @@
+body {
+    text-align: center;}
+
+h1 {
+    position: relative;
+    padding: 3.1rem;
+}
+
+.desenvolvedores {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50rem;
+}
+.desenvolvedores img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 40px;
+}
+
+.texto_sobre {
+    display: absolute;
+}
+
+.texto_sobre p {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    margin-bottom: 5rem;
+    width: 30%;
+}

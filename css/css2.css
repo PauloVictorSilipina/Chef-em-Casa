@@ -1,0 +1,323 @@
+/*CSS da Home*/
+
+/*
+defino margem no topo do h1 para ele não ficar atrás do header
+*/
+.body_home h1{
+    margin-top: 3em;
+    
+}
+
+/*
+crio uma guia de pesquisa digitável centralizada e com texto identado
+para não ficar colado
+*/
+
+.pesquisa {
+    margin-left:auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 20px;
+    height: 2em;
+    margin-bottom: 3em;
+    text-indent: 2.5%;
+}
+
+/*
+defino a disposição da div das imagens
+*/
+.grupo {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50em;
+    justify-content: space-between;
+    margin: 0 auto;
+    text-align: center;
+}
+/*
+defino o tamanho das imagens de forma padronizada
+*/
+.grupo img {
+    width: 15em;
+    height: 15em;
+}
+
+/*
+defino o cursor para ponteiro quando passar nos nomes das imagens
+*/
+.grupo p {
+    cursor: pointer;
+}
+/*CSS do Login*/
+
+/*
+defino um plano de fundo degradê
+*/
+.body_login {
+	background: linear-gradient(45deg ,rgba(255, 136, 0, 0.7), rgba(255, 224, 18, 0.7)) !important;
+}
+
+/*CSS do Sobre*/
+
+/*
+defino o degradê do fundo
+*/
+.body_sobre {
+	background: linear-gradient(90deg ,rgba(255, 136, 0, 0.7), rgba(255, 224, 18, 0.7)) !important;
+}
+
+/*
+defino as propriedades da div com as imagens dos devs e os espaçamentos
+*/
+.desenvolvedores {
+    margin-left:auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 26em;
+    height: 35em;
+
+}
+
+/*
+defino tamanho e bordas arredondadas nas imagens dos devs
+*/
+.dev img {
+    width: 9em;
+    height: 9em;
+    border-radius: 10%;
+}
+
+/*
+alinho o texto abaixo dos devs para o centro
+*/
+.texto_sobre  h3 {
+    text-align: center;
+}
+
+/*
+modifico o tamanho e estilo do texto "chef em casa"
+*/
+.texto_sobre span{
+    font-size: 1.5em;
+    font-style: italic;
+}
+/*
+deixo um tamanho maximo para o paragrafo contando sobre a idealização
+*/
+
+.texto_sobre p {
+    max-width: 30em;
+    margin: 0 auto;
+    padding-bottom: 5em;
+}
+
+/*CSS do Contato*/
+
+/*
+defino o body do contato como grid e uso !important para priorizar 
+*/
+.body_contato {
+    display: grid !important;
+}
+
+/*
+defino as propriedades do container
+*/
+.container  {
+    position: relative;
+    top: 5rem;
+    display: flex;
+
+}
+
+/*
+digo quanto a div da imagem irá ocupar da tela
+*/
+.imagem {
+    width: 50%;
+}
+
+/*
+digo quanto a div na direita com dados irá ocupar na tela e traço uma
+borda no centro da tela
+*/
+.div_direita {
+    position:relative;
+    width: 50%;
+    border-left: 1px solid black;
+}
+/*
+aumento a fonte do titulo da div na direita e centralizo seu texto
+*/
+.div_direita h2 {
+    text-align: center;
+    font-size: 5em;
+}
+
+/*
+centralizo os dados do contato
+*/
+.dados_contato {
+    text-align: center;
+}
+
+/*
+estilizo o input para possuir uma borda inferior
+solida e preta e distancio os dados por baixo
+*/
+.dados_contato input {
+    width: 40%;
+    outline: none;
+    border: none;
+    transform: translateY(-10%);
+    padding: 5px;
+    border-bottom: 1px solid black;
+    margin-bottom: 1em;
+}
+/*
+crio um padding para os labels
+*/
+.dados_contato label {
+    padding: 5px;
+}
+
+/*
+estilizo o botão para o cursor mudar o passar por cima e arredondo as bordas
+*/
+.dados_contato button {
+    width: 30%;
+    height: 2.1em;
+    border: .1px solid black;
+    font-size: 0.9em;
+    border-radius: 22px;
+    cursor: pointer;
+}
+
+/*
+adiciono um hover ao botão para trocar cor quando o mouse passar por cima
+*/
+.dados_contato button:hover{
+    background-color: lightgray;
+}
+
+/*CSS do Cadastro e Login*/
+
+/*
+defino o tamanho do body do cadastro e um degradê
+*/
+.body_cadastro {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg ,rgba(255, 136, 0, 0.7), rgba(255, 224, 18, 0.7)) !important;
+}
+
+/*
+crio um background para o fundo do cadastro/login
+*/
+.cadastro {
+    background-color: rgba(0, 0, 0, 0.85);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1.5em;
+    padding: 3em;
+    width: min-content;
+    color: white;
+    align-items: center;
+    animation: inicia 1.6s ease-out;/*adiciono uma animação para essa div*/
+    pointer-events: all;
+}
+
+/*
+defino margem e alinhamento do titulo
+*/
+.cadastro h1 {
+    font-size: 1.3em;
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+/*
+todas divs de input recebem bordas e margens, também um plano de fundo branco
+*/
+.inputs {
+    min-width: 13em;
+    border-radius: 22px;
+    border: 2px white solid;
+    padding: 5px;
+    margin: 0px 0px 12px -5px;
+    background-color: white;
+}
+
+/*
+as tags input perdem o outline e bordas
+*/
+.inputs input {
+    width: 80%;
+    border: none;
+    outline: none;
+    transform: translateY(-10%);
+    font-size: 0.8em;
+}
+
+.cadastro label {
+    font-size: 0.8em;
+}
+
+/*
+estilizo a div e alinho o seu texto
+*/
+.botao {
+    margin-top: 10%;
+    width: 100%;
+    text-align: center;
+}
+
+/*
+o botão ao passar o mouse o cursor vira um ponteiro e as bordas são arredondadas
+*/
+.botao button {
+    width: 100%;
+    height: 2.1em;
+    border: none;
+    font-size: 0.9em;
+    border-radius: 22px;
+    cursor: pointer;
+}
+
+/*
+mudança de cor ao passar mouse
+*/
+.botao button:hover {
+    background-color: lightgray;
+}
+
+/*
+keyframe da animação de deslize de cima para baixo do login e cadastro
+*/
+@keyframes inicia {
+    0%{
+        top: -20%;
+        opacity: 0;
+        pointer-events: none;
+    }
+    100% {
+        top:50%;
+        opacity: 85%;
+        pointer-events: all;
+    }
+}
+
+/*
+tag de link recebe cor e alinhamento
+*/
+.cadastro a {
+    color: white;
+    text-align: center;
+}

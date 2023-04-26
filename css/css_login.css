@@ -1,0 +1,49 @@
+body {
+}
+
+.dados {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: lightgray;
+    color: black;
+    border-radius: 25px;
+    width: 23rem;
+    animation: inicia 1.6s ease-out;
+}
+
+.dados h1 {
+    text-align: center;
+}
+
+.dados input{
+    width: 100%;
+}
+.dados button {
+    width: 100%;
+}
+
+.dados a {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+
+.dados button:hover {
+    background-color: rgb(196, 194, 194);
+    border: 1px solid black;
+}
+
+@keyframes inicia {
+    0%{
+        top: -20%;
+        opacity: 0;
+        pointer-events: none;
+    }
+    100% {
+        top:50%;
+        opacity: 85%;
+        pointer-events: all;
+    }
+}
