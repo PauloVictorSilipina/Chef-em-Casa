@@ -1,6 +1,5 @@
 body {
     height: 100%;
-    background-color: pink;
     width: 100%;
     padding-left: 0;
     padding-right: 0;
@@ -11,7 +10,6 @@ body {
     padding: 0;
     border: 0;
     justify-content: space-between;
-    background-color: blue;
     display: flex;
     justify-content: space-between;
     height: 100%;
@@ -27,11 +25,40 @@ body {
     align-items: center;
     height: 100%;
     width: 50%;
-    background-color: red;
 }
 .div_form {
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: green;
+}
+
+.div_form form {
+    position: relative;
+    top: 30%;
+    left: 30%;
+
+    width: 50%;
+}
+
+.div_form form h2{
+    font-size: 3rem;
+}
+
+.div_form input {
+    width: 70%;
+    margin-bottom: 2rem;
+    border: none;
+    border-bottom: 1px solid black;
+    outline-style: none;
+}
+
+.div_form button {
+    width: 70%;
+    border: none;
+    border-radius: 22px;
+    background-color: lightgray;
+}
+
+.div_form button:hover {
+    background-color: rgb(166, 165, 165);
 }
