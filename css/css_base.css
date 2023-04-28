@@ -1,3 +1,7 @@
+/*
+importação de fonte e adicionando ela em todos itens, utilizado também o border-box para ser posivel justificar os itens dentro das boxes
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 * {
     font-family: 'Comfortaa', cursive;
@@ -6,6 +10,9 @@
     box-sizing:border-box;
 }
 
+/*
+padronização do header para todas páginas
+*/
 .cabecalho {
     position: absolute;
     background-color: rgb(245, 169, 83);
@@ -18,16 +25,25 @@
     align-items: center;
 }
 
+/*
+arrumo a posição dos itens selecionáveis no header e alinho o texto ao centro
+*/
 .cabecalho nav li{
     display: inline-block;
     text-align: center;
 }
 
+/*
+retiro o sublinhado do link e dou cor preta
+*/
 .cabecalho nav li a {
     color: black;
     text-decoration: none;
 }
 
+/*
+padronização do header e posiciono ao fundo
+*/
 footer {
     background-color: rgb(245, 169, 83);
     width: 100%;

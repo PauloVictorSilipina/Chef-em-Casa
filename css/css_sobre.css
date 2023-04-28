@@ -1,11 +1,19 @@
+/*
+alinho os textos do body ao centro
+*/
 body {
     text-align: center;}
-
+/*
+posiciono o h1 e dou uma distancia entre os elementos com ele
+*/
 h1 {
     position: relative;
     padding: 3.1rem;
 }
 
+/*
+centralizo a div com os devs e limito o tamanho
+*/
 .desenvolvedores {
     margin-left: auto;
     margin-right: auto;
@@ -14,16 +22,19 @@ h1 {
     justify-content: center;
     width: 50rem;
 }
+
+/*
+limito o tamanho da imagem dos devs e arrendodo
+*/
 .desenvolvedores img {
     width: 15rem;
     height: 15rem;
     border-radius: 40px;
 }
 
-.texto_sobre {
-    display: absolute;
-}
-
+/*
+os paragrafos centralizam e ficam com o texto justificado, limito o tamanho a 30%
+*/
 .texto_sobre p {
     margin-left: auto;
     margin-right: auto;

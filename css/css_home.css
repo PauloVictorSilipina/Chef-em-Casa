@@ -1,23 +1,38 @@
+/*
+centralizo os textos do body
+*/
 body {
     text-align: center;
 }
 
+/*
+aumento o padding do h1 e mudo sua posição
+*/
 h1 {
     position: relative;
     padding: 3.1rem;
 }
 
+/*
+aumento o tamanho do input e o arrendondo
+*/
 input {
     width: 45rem;
     border-radius: 20px;
 }
 
+/*
+centralizo as imagens e coloco elas em linha
+*/
 .grupo {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+/*
+mudo o tamanho das imagens e adiciono um zoom para quando passar o mouse
+*/
 .grupo img {
     width: 15rem;
     height: 15rem;
@@ -25,6 +40,9 @@ input {
     cursor: poin;
 }
 
+/*
+codigo do zoom das imagens ao passar o mouse
+*/
 .grupo img:hover {
     transform: scale(1.1);
 }
