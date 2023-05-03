@@ -2,6 +2,9 @@
 centralizo os textos do body
 */
 body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
     text-align: center;
 }
 
@@ -9,16 +12,13 @@ body {
 aumento o padding do h1 e mudo sua posição
 */
 h1 {
-    position: relative;
     padding: 3.1rem;
 }
 
 /*
 aumento o tamanho do input e o arrendondo
 */
-input {
-    margin-left: auto;
-    margin-right: auto;
+.pesquisa {
     width: 45rem;
     border-radius: 20px;
 }
@@ -26,7 +26,20 @@ input {
 /*
 centralizo as imagens e coloco elas em linha
 */
-.grupo {
+
+.slider {
+    margin: 0 auto;
+    width: 70rem;
+    overflow: hidden;
+}
+
+.slides img {
+    width: 15rem;
+    height: 15rem;
+}
+
+/*
+.slides {
     margin-left: auto;
     margin-right: auto;
     display: grid;
@@ -36,9 +49,6 @@ centralizo as imagens e coloco elas em linha
     padding-bottom: 37vh;
 }
 
-/*
-mudo o tamanho das imagens e adiciono um zoom para quando passar o mouse
-*/
 .grupo img {
     width: 15rem;
     height: 15rem;
@@ -46,10 +56,7 @@ mudo o tamanho das imagens e adiciono um zoom para quando passar o mouse
     cursor: pointer;
 }
 
-/*
-codigo do zoom das imagens ao passar o mouse
-*/
 .grupo img:hover {
     transform: scale(1.1);
 }
-
+*/

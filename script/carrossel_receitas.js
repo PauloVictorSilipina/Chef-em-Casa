@@ -1,0 +1,1 @@
+const listaImg = ["receitas/Pudim de leite condensado.png"]
