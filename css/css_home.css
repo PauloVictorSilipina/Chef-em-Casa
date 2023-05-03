@@ -17,6 +17,8 @@ h1 {
 aumento o tamanho do input e o arrendondo
 */
 input {
+    margin-left: auto;
+    margin-right: auto;
     width: 45rem;
     border-radius: 20px;
 }
@@ -25,9 +27,13 @@ input {
 centralizo as imagens e coloco elas em linha
 */
 .grupo {
-    display: flex;
-    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
     justify-content: center;
+    width: 70rem;
+    padding-bottom: 37vh;
 }
 
 /*
@@ -37,7 +43,7 @@ mudo o tamanho das imagens e adiciono um zoom para quando passar o mouse
     width: 15rem;
     height: 15rem;
     transition:transform 0.6s;
-    cursor: poin;
+    cursor: pointer;
 }
 
 /*

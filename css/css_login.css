@@ -66,3 +66,16 @@ codigo da animação de deslize
         pointer-events: all;
     }
 }
+
+footer {
+    background-color: rgb(245, 169, 83);
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 3rem;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
