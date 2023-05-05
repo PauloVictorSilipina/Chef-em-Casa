@@ -4,15 +4,42 @@ importação de fonte e adicionando ela em todos itens, utilizado também o bord
 
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 * {
+    padding: 0;
     box-sizing:border-box;
     font-family: 'Comfortaa', cursive;
 }
 
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 20fr 1fr;
+}
+
 .cabecalho {
     background-color: rgb(245, 169, 83);
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+}
+
+.cabecalho li {
+    display: inline-block;
+    margin: 2rem;
+}
+
+.cabecalho li a {
+    color: black;
+    text-decoration: none;
 }
 
 footer {
     background-color: rgb(245, 169, 83);
     text-align: center;
+    align-items: center;
 }

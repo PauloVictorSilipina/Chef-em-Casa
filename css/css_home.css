@@ -1,5 +1,37 @@
-.body_home {
-    display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: 3vh 94vh 3vh;
+.slider {
+    background-color: lightblue;
+}
+
+.imagem:not(:first-child) {
+    display: none;
+}
+
+.imagem img{
+    width: 15rem;
+    height: 15rem;
+}
+
+.anterior, .proximo {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+}
+
+.anterior {
+    left: 0;
+}
+
+.proximo {
+    right: 0;
+}
+
+.desaparecer {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
 }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/css_base.css">
     <link rel="stylesheet" href="css/css_home.css">
+    <script src="script/carrossel_receitas.js" defer></script>
     
     <title>Chef em Casa</title>
 </head>
@@ -14,11 +15,49 @@
 
     <!--criação do cabecalho-->
     <header class ="cabecalho">
-        <p>Chef em Casa</p>
+        <!--classe para itens navegáveis-->
+        <nav class="navegacao">
+            <!--div para posicionar o menu-->
+            <div class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </div>
+        </nav>
+        <a href="index.html" class="logo">
+            <img src="img/logo.png">
+        </a>
+
+        <nav class="navegacao">
+            <div class="menu">
+                <li><a href="contato.html">Contato</a></li>
+                    <li><a href="login.html">Login</a></li>
+            </div>
+        </nav>
     </header>
     <!--rodapé-->
     <div class="slider">
-
+        <div class="imagem desaparecer">
+            <img src="receitas/Bolo.jpg">
+        </div>
+        
+        <div class="imagem desaparecer">
+            <img src="receitas/Brigadeiro.png">
+        </div>
+        
+        <div class="imagem desaparecer">
+            <img src="receitas/Pudim de leite condensado.png">
+        </div>
+        
+        <div class="imagem desaparecer">
+            <img src="receitas/Pão de queijo.jpg">
+        </div>
+        
+        <div class="imagem desaparecer">
+            <img src="receitas/Mojito.jpg">
+        </div>
+        
+        <a class="anterior" onclick="maisSlide(-1)">&#10094;</a>
+        <a class="proximo" onclick="maisSlide(1)">&#10095;</a>
     </div>
 
     <footer>
