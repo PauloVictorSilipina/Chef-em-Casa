@@ -4,54 +4,15 @@ importação de fonte e adicionando ela em todos itens, utilizado também o bord
 
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 * {
-    font-family: 'Comfortaa', cursive;
-    margin: 0;
-    padding: 1rem;
     box-sizing:border-box;
+    font-family: 'Comfortaa', cursive;
 }
 
-/*
-padronização do header para todas páginas
-*/
 .cabecalho {
-    position: absolute;
     background-color: rgb(245, 169, 83);
-    top: 0;
-    left: 0;
-    justify-content: space-between;
-    width: 100%;
-    height: 4rem;
-    display: flex;
-    align-items: center;
 }
 
-/*
-arrumo a posição dos itens selecionáveis no header e alinho o texto ao centro
-*/
-.cabecalho nav li{
-    display: inline-block;
-    text-align: center;
-}
-
-/*
-retiro o sublinhado do link e dou cor preta
-*/
-.cabecalho nav li a {
-    color: black;
-    text-decoration: none;
-}
-
-/*
-padronização do header e posiciono ao fundo
-*/
 footer {
     background-color: rgb(245, 169, 83);
-    width: 100%;
-    left: 0;
-    height: 3rem;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid rgb(245, 169, 83);
+    text-align: center;
 }
