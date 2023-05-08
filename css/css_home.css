@@ -1,5 +1,12 @@
-.slider {
+.container {
     background-color: lightblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.slider {
+    padding: 5px;
+
 }
 
 .imagem:not(:first-child) {
