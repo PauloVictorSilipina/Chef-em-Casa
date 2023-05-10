@@ -1,21 +1,32 @@
 .container {
     background-color: lightblue;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .slider {
-    padding: 5px;
-
+    text-align: center;
 }
-
 .imagem:not(:first-child) {
     display: none;
 }
 
-.imagem img{
-    width: 15rem;
-    height: 15rem;
+.imagem2 {
+    display: none;
+}
+.imagem3 {
+    display: none;
+}
+
+.imagem2:nth-child(2) {
+    display: block;
+}
+
+.imagem3:nth-child(3) {
+    display: block;
+}
+
+.imagem img, .imagem2 img, .imagem3 img {
+    width: 10rem;
+    height: 10rem;
 }
 
 .anterior, .proximo {

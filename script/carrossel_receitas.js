@@ -2,6 +2,8 @@ let slideAtual = 1;
 let slideAtual2 = 2;
 let slideAtual3 = 3;
 const slides = document.querySelectorAll(".imagem");
+const slides2 = document.querySelectorAll(".imagem2");
+const slides3 = document.querySelectorAll(".imagem3");
 
 function maisSlide(n) {
     slideAtual +=n;
@@ -13,30 +15,25 @@ function maisSlide(n) {
     console.log(`---------}`)
     if (slideAtual > slides.length) {
         slideAtual = 1;
-        slideAtual2 = 2;
-        slideAtual3 = 3;
     }
-    else if (slideAtual2 > slides.length) {
-        slideAtual = 5;
+    if (slideAtual2 > slides.length) {
         slideAtual2 = 1;
-        slideAtual3 = 2;
     }
-    else if (slideAtual3 > slides.length) {
-        slideAtual = 4;
-        slideAtual2 = 5;
+    if (slideAtual3 > slides.length) {
         slideAtual3 = 1;
     }
-    else if (slideAtual < 1) {
-        slideAtual = slides.length;
-    }
+
+    
 
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = 'none';
+        slides2[i].style.display = 'none';
+        slides3[i].style.display = 'none';
     }
     
     slides[slideAtual - 1].style.display = 'block';
-    slides[slideAtual2 - 1].style.display = 'block';
-    slides[slideAtual3 - 1].style.display = 'block';
+    slides2[slideAtual2 - 1].style.display = 'block';
+    slides3[slideAtual3 - 1].style.display = 'block';
     
 }
 
