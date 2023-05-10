@@ -23,6 +23,16 @@ function maisSlide(n) {
         slideAtual3 = 1;
     }
 
+    if(slideAtual < 1) {
+        slideAtual = slides.length;
+    }
+    if(slideAtual2 < 1) {
+        slideAtual2 = slides.length;
+    }
+    if(slideAtual3 < 1) {
+        slideAtual3 = slides.length;
+    }
+
     
 
     for (let i = 0; i < slides.length; i++) {
@@ -53,3 +63,26 @@ function maisSlide(n) {
     slides[slideIndex - 1].classList.remove("desaparecer");
     slides[slideIndex - 1].classList.add("aparecer");
 }*/
+
+/*
+CSS FUNCIONAL PARA O JAVASCRIPT
+
+.imagem:not(:first-child) {
+    display: none;
+}
+
+.imagem2 {
+    display: none;
+}
+.imagem3 {
+    display: none;
+}
+
+.imagem2:nth-child(2) {
+    display: block;
+}
+
+.imagem3:nth-child(3) {
+    display: block;
+}
+*/

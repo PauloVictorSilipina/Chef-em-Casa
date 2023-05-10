@@ -21,21 +21,12 @@ body {
 
 .cabecalho {
     background-color: rgb(245, 169, 83);
-    text-align: center;
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    height: 4rem;
 }
 
-.cabecalho li {
-    display: inline-block;
-    margin: 2rem;
-}
-
-.cabecalho li a {
+.cabecalho a {
     color: black;
     text-decoration: none;
+    font-size: 1rem;
 }
 
 footer {
