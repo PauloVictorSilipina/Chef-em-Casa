@@ -1,0 +1,203 @@
+CREATE TABLE USUARIO (
+    cod_perfil SERIAL PRIMARY KEY,
+    nome VARCHAR(100),
+    email VARCHAR(80),
+    senha VARCHAR(30),
+    dta_nasc DATE,
+    tipo VARCHAR(20),
+    img VARCHAR(255)
+);
+
+CREATE TABLE RESTRICAO (
+    cod_rest SERIAL PRIMARY KEY,
+    restricao VARCHAR(50)
+);
+
+CREATE TABLE RECEITA (
+    cod_rec SERIAL PRIMARY KEY,
+    nome VARCHAR(100),
+    temp_preparo INTEGER,
+    porcao INTEGER,
+    dta_lanc DATE,
+    status VARCHAR(15),
+    FK_USUARIO_cod_perfil SERIAL
+);
+
+CREATE TABLE INGREDIENTE (
+    cod_ingrediente SERIAL PRIMARY KEY,
+    nome VARCHAR(50),
+    img VARCHAR(255)
+);
+
+CREATE TABLE MODO_PREPARO (
+    cod_preparo SERIAL PRIMARY KEY,
+    ordem INTEGER,
+    desc_da_ordem VARCHAR(255),
+    FK_RECEITA_cod_rec SERIAL
+);
+
+CREATE TABLE CATEGORIA (
+    cod_cat SERIAL PRIMARY KEY,
+    categoria VARCHAR(50)
+);
+
+CREATE TABLE MIDIA (
+    cod_midia SERIAL PRIMARY KEY,
+    url VARCHAR(255),
+    FK_RECEITA_cod_rec SERIAL
+);
+
+CREATE TABLE Seguindo (
+    fk_USUARIO_cod_perfil SERIAL,
+    fk_USUARIO_cod_perfil_ SERIAL
+);
+
+CREATE TABLE Possui_Res (
+    fk_RECEITA_cod_rec SERIAL,
+    fk_RESTRICAO_cod_rest SERIAL
+);
+
+CREATE TABLE Possui_Ing (
+    fk_RECEITA_cod_rec SERIAL,
+    fk_INGREDIENTE_cod_ingrediente SERIAL,
+    uni_medida VARCHAR(20),
+    qtd INTEGER
+);
+
+CREATE TABLE Avalia (
+    fk_USUARIO_cod_perfil SERIAL,
+    fk_RECEITA_cod_rec SERIAL,
+    qtd_estrelas INTEGER
+);
+
+CREATE TABLE Comenta (
+    fk_USUARIO_cod_perfil SERIAL,
+    fk_RECEITA_cod_rec SERIAL,
+    comentario VARCHAR(255),
+    data DATE
+);
+
+CREATE TABLE Favorita (
+    fk_USUARIO_cod_perfil SERIAL,
+    fk_RECEITA_cod_rec SERIAL
+);
+
+CREATE TABLE Curtir (
+    fk_USUARIO_cod_perfil SERIAL,
+    fk_RECEITA_cod_rec SERIAL
+);
+
+CREATE TABLE Possui_Cat (
+    fk_RECEITA_cod_rec SERIAL,
+    fk_CATEGORIA_cod_cat SERIAL
+);
+
+CREATE TABLE Visualiza (
+    fk_USUARIO_cod_perfil SERIAL,
+    fk_RECEITA_cod_rec SERIAL
+);
+ 
+ALTER TABLE RECEITA ADD CONSTRAINT FK_RECEITA_2
+    FOREIGN KEY (FK_USUARIO_cod_perfil)
+    REFERENCES USUARIO (cod_perfil)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE MODO_PREPARO ADD CONSTRAINT FK_MODO_PREPARO_2
+    FOREIGN KEY (FK_RECEITA_cod_rec)
+    REFERENCES RECEITA (cod_rec)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE MIDIA ADD CONSTRAINT FK_MIDIA_2
+    FOREIGN KEY (FK_RECEITA_cod_rec)
+    REFERENCES RECEITA (cod_rec)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Seguindo ADD CONSTRAINT FK_Seguindo_1
+    FOREIGN KEY (fk_USUARIO_cod_perfil)
+    REFERENCES USUARIO (cod_perfil)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE Seguindo ADD CONSTRAINT FK_Seguindo_2
+    FOREIGN KEY (fk_USUARIO_cod_perfil_)
+    REFERENCES USUARIO (cod_perfil)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE Possui_Res ADD CONSTRAINT FK_Possui_Res_1
+    FOREIGN KEY (fk_RECEITA_cod_rec)
+    REFERENCES RECEITA (cod_rec)
+    ON DELETE SET NULL;
+ 
+ALTER TABLE Possui_Res ADD CONSTRAINT FK_Possui_Res_2
+    FOREIGN KEY (fk_RESTRICAO_cod_rest)
+    REFERENCES RESTRICAO (cod_rest)
+    ON DELETE SET NULL;
+ 
+ALTER TABLE Possui_Ing ADD CONSTRAINT FK_Possui_Ing_1
+    FOREIGN KEY (fk_RECEITA_cod_rec)
+    REFERENCES RECEITA (cod_rec)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Possui_Ing ADD CONSTRAINT FK_Possui_Ing_2
+    FOREIGN KEY (fk_INGREDIENTE_cod_ingrediente)
+    REFERENCES INGREDIENTE (cod_ingrediente)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Avalia ADD CONSTRAINT FK_Avalia_1
+    FOREIGN KEY (fk_USUARIO_cod_perfil)
+    REFERENCES USUARIO (cod_perfil)
+    ON DELETE SET NULL;
+ 
+ALTER TABLE Avalia ADD CONSTRAINT FK_Avalia_2
+    FOREIGN KEY (fk_RECEITA_cod_rec)
+    REFERENCES RECEITA (cod_rec)
+    ON DELETE SET NULL;
+ 
+ALTER TABLE Comenta ADD CONSTRAINT FK_Comenta_1
+    FOREIGN KEY (fk_USUARIO_cod_perfil)
+    REFERENCES USUARIO (cod_perfil)
+    ON DELETE SET NULL;
+ 
+ALTER TABLE Comenta ADD CONSTRAINT FK_Comenta_2
+    FOREIGN KEY (fk_RECEITA_cod_rec)
+    REFERENCES RECEITA (cod_rec)
+    ON DELETE SET NULL;
+ 
+ALTER TABLE Favorita ADD CONSTRAINT FK_Favorita_1
+    FOREIGN KEY (fk_USUARIO_cod_perfil)
+    REFERENCES USUARIO (cod_perfil)
+    ON DELETE SET NULL;
+ 
+ALTER TABLE Favorita ADD CONSTRAINT FK_Favorita_2
+    FOREIGN KEY (fk_RECEITA_cod_rec)
+    REFERENCES RECEITA (cod_rec)
+    ON DELETE SET NULL;
+ 
+ALTER TABLE Curtir ADD CONSTRAINT FK_Curtir_1
+    FOREIGN KEY (fk_USUARIO_cod_perfil)
+    REFERENCES USUARIO (cod_perfil)
+    ON DELETE SET NULL;
+ 
+ALTER TABLE Curtir ADD CONSTRAINT FK_Curtir_2
+    FOREIGN KEY (fk_RECEITA_cod_rec)
+    REFERENCES RECEITA (cod_rec)
+    ON DELETE SET NULL;
+ 
+ALTER TABLE Possui_Cat ADD CONSTRAINT FK_Possui_Cat_1
+    FOREIGN KEY (fk_RECEITA_cod_rec)
+    REFERENCES RECEITA (cod_rec)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Possui_Cat ADD CONSTRAINT FK_Possui_Cat_2
+    FOREIGN KEY (fk_CATEGORIA_cod_cat)
+    REFERENCES CATEGORIA (cod_cat)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Visualiza ADD CONSTRAINT FK_Visualiza_1
+    FOREIGN KEY (fk_USUARIO_cod_perfil)
+    REFERENCES USUARIO (cod_perfil)
+    ON DELETE SET NULL;
+ 
+ALTER TABLE Visualiza ADD CONSTRAINT FK_Visualiza_2
+    FOREIGN KEY (fk_RECEITA_cod_rec)
+    REFERENCES RECEITA (cod_rec)
+    ON DELETE SET NULL;
