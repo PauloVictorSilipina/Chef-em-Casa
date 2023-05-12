@@ -9,14 +9,15 @@ importação de fonte e adicionando ela em todos itens, utilizado também o bord
     font-family: 'Comfortaa', cursive;
 }
 
-html, body {
+html {
     height: 100%;
+
 }
 body {
+    display: flex;
+    flex-direction: column;
     margin: 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 20fr 1fr;
+    min-height: 100%;
 }
 
 .cabecalho {
@@ -29,8 +30,52 @@ body {
     font-size: 1rem;
 }
 
-footer {
+footer{
     background-color: rgb(245, 169, 83);
+    margin-top: auto;
+}
+
+footer h3{
+    margin-top: 15px;
     text-align: center;
-    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 35px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0.5rem 0.2rem;
+    border-radius: 50%;
+  }
+  
+.fa-facebook {
+    background: #2b333b;
+    color: white;
+}
+
+  
+.fa-google {
+    background: #2b333b;
+    color: white;
+}
+  
+.fa-instagram {
+    background: #2b333b;
+    color: white;
+}
+
+.fa-facebook:hover {
+    background-color: #3B5998;
+}
+
+.fa-instagram:hover {
+    background-color: #125688;
+}
+
+.fa-google:hover{
+    background-color: #dd4b39;
 }
