@@ -15,13 +15,18 @@
 <body  class="body_login">
     <!--criação do cabecalho-->
     <header class="cabecalho header-stickable">
-        <a class="left-links" href="sobre.html"><span>Sobre</span></a>
-        <a class="left-links" href="contato.html"><span>Contato</span></a>
-        <img src="img/logo.png">
+        <div class="menu dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Menu
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="login.html">Login</a></li>
+              <li><a class="dropdown-item" href="contato.html">Contato</a></li>
+              <li><a class="dropdown-item" href="sobre.html">Sobre</a></li>
+            </ul>
+          </div>
         <input class="input-procurar" type="text" placeholder="Digite o que deseja buscar">
         <button class="btn-procurar" type="submit">Pesquisar</button>
-        <a class="right-links" href="index.html"><span>Home</span></a>
-        <a class="right-links" href="login.html"><span>Login</span></a>
     </header>
     
     <!--div com classe reutilizada do cadastro pois modelam-se iguais-->

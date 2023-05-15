@@ -7,9 +7,13 @@
 }
 
 .imagem img{
-    width: 10rem;
-    height: 10rem;
+    width: 20rem;
+    height: 15rem;
     margin-top: 10px;
     border: 1px solid lightgray;
     border-radius: 5%;
+}
+
+.imagem p {
+    padding-bottom: 1rem;
 }
