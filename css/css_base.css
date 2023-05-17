@@ -116,3 +116,18 @@ footer h3{
     background: #dd4b39;
     color: white;
 }
+
+.contact-box {
+    text-align: center;
+}
+
+.contact-box li {
+    list-style: none;
+    display: inline;
+}
+
+.footer-separator {
+    margin: 20px 0 10px;
+    position: relative;
+    text-align: center;
+}

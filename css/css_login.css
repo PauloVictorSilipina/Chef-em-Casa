@@ -2,80 +2,20 @@
 posiciono o div com os dados ao centro e adiciono animação para quando aparecer
 */
 .dados {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
     background-color: lightgray;
-    color: black;
     border-radius: 25px;
-    width: 23rem;
-    animation: inicia 1.6s ease-out;
-}
-
-/*
-alinho o h1 ao centro
-*/
-.dados h1 {
-    text-align: center;
-}
-
-/*
-os inputs ocupam 100% da div
-*/
-.dados input{
-    width: 100%;
-}
-
-/*
-os botões ocupam 100% da div
-*/
-.dados button {
-    width: 100%;
-}
-
-/*
-os links ficam pretos, sem sublinhamento e centralizados
-*/
-.dados a {
     color: black;
-    text-decoration: none;
+    height: 20rem;
+}
+
+.dados h1{
+    padding-top: 1rem;
     text-align: center;
 }
 
-/*
-ao passar o mouse no botão ele muda de cor
-*/
-.dados button:hover {
-    background-color: rgb(196, 194, 194);
-    border: 1px solid black;
-}
-
-/*
-codigo da animação de deslize
-*/
-@keyframes inicia {
-    0%{
-        top: -20%;
-        opacity: 0;
-        pointer-events: none;
-    }
-    100% {
-        top:50%;
-        opacity: 85%;
-        pointer-events: all;
-    }
-}
-
-footer {
-    background-color: rgb(245, 169, 83);
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    height: 3rem;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+.btn-valida {
+    width: 90%;
 }
