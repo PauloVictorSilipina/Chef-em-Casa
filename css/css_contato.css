@@ -1,89 +1,41 @@
-/*
-padronizo o body do contato para ser o máximo de altura e largura
-*/
-body {
-    height: 100%;
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
+.div-container {
 }
 
-/*
-faço os itens do container ficarem distribuidos lado a lado
-*/
-.container {
-    margin: 0;
-    padding: 0;
+.div-chef {
+    margin-top: 2rem;
+}
+
+.div-chef img{
+    height: 100%;
+    width: 100%;
+}
+
+.div-formulario {
+    margin-top: 5rem;
+}
+
+.div-formulario h1{
+
+}
+
+.nome input{
     border: 0;
-    justify-content: space-between;
-    display: flex;
-    height: 100%;
-    width: 100%;
-    z-index: -1
-}
-
-/*
-aumento o tamanho da imagem e coloco no centro
-*/
-.chef {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 50%;
-}
-/*
-aumento largura da div
-*/
-.div_form {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
-/*
-posiciono o formulário no centro da div e aumento tamanho
-*/
-.div_form form {
-    position: relative;
-    top: 30%;
-    left: 30%;
-
-    width: 50%;
-}
-
-/*
-aumento a fonte do Fale Conosco
-*/
-.div_form form h2{
-    font-size: 3rem;
-}
-/*
-aumento o espaço dos inputs e estilizo
-*/
-.div_form input {
-    width: 70%;
-    margin-bottom: 2rem;
-    border: none;
     border-bottom: 1px solid black;
-    outline-style: none;
+    outline: 0;
+    margin-top: 1rem;
 }
 
-/*
-aumento o tamanho do botão
-*/
-.div_form button {
-    width: 70%;
-    border: none;
-    border-radius: 22px;
-    background-color: lightgray;
+.mensagem label {
+    margin-top: 1rem;
+}
+.mensagem textarea{
+    border: 0;
+    border-bottom: 1px solid black;
+    outline: 0;
+    margin-top: 1rem;
 }
 
-/*
-ao passar o mouse no botão, troca a cor
-*/
-.div_form button:hover {
-    background-color: rgb(166, 165, 165);
+.btn-enviar {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
