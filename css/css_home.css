@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+
 .container {
 }
 
@@ -21,5 +23,38 @@
     border: 1px solid lightgray;
 }
 
-.imagem a{
+.div-imagem:hover {
+    color: aqua;
+}
+
+.categorias {
+    padding-bottom: 2rem;
+}
+.div-categorias{
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    border: 1px solid black;
+}
+
+.titulo-categoria{
+    text-decoration: none;
+    color: black;
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.3rem;
+}
+.div-categorias li {
+    list-style: none;
+    margin-left: -1.5rem;
+    font-size: 0.7rem;
+}
+
+.div-categorias a {
+    text-decoration: none;
+    color: black;
+}
+
+.div-categorias a:hover {
+    text-decoration: underline;
 }

@@ -50,19 +50,22 @@
 
     <!--div para manipular os itens do cadastro-->
     <div class="col-10 col-lg-2 dados">
-        <form action="">
+        <form id="form" action="">
             <h1>Cadastro</h1>
-            <div class="user">
+            <div class="input-control">
                 <label for="usuario" class="col-9 offset-1">Usuário</label>
                 <input type="text" id="usuario" placeholder="Digite o usuário" class="col-10 offset-1">
+                <div class="error"></div>
             </div>
-            <div class="pass">
+            <div class="input-control">
                 <label for="password" class="col-9 offset-1">Senha</label>
                 <input type="password" id="password" placeholder="Digite sua senha" class="col-10 offset-1">
+                <div class="error"></div>
             </div>
-            <div class="pass">
+            <div class="input-control">
                 <label for="password" class="col-9 offset-1">Confirme a senha</label>
                 <input type="password" id="confirm-password" placeholder="Confirme sua senha" class="col-10 offset-1">
+                <div class="error"></div>
             </div>
             <div class="button">
                 <button class="btn-valida col-10 offset-1" type="submit">Fazer cadastro</button>
