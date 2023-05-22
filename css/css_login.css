@@ -62,16 +62,18 @@ posiciono o div com os dados ao centro e adiciono animação para quando aparece
     height: 13px;
 }
 
+
 .input-control.success input {
-    border-color: #09c372;
+    border-color: rgb(40, 255, 40);
 }
 
 .input-control.error input {
-    border-color: #ff3860;
+    border-color: red;
 }
 
 .input-control .error {
-    color: #ff3860;
-    font-size: 12px;
-    height: 13px;
+    color: red;
+    font-size: 0.75rem;
+    height: 2.75rem;
+    margin-left: 1.5rem;
 }
