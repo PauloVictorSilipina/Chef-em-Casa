@@ -1,9 +1,9 @@
 const form = document.getElementById('form');
 const username = document.getElementById('usuario');
 const password = document.getElementById('password');
-const checkpassword = document.getElementById('confirm-password');
 
 form.addEventListener('submit', e => {
+    console.log("pera");
     e.preventDefault();
 
     validateInputs();
@@ -31,16 +31,14 @@ const setSuccess = element => {
 const login = element => {
     const inputPass = String(password.parentElement.classList).trim();
     const inputUser = String(username.parentElement.classList).trim();
-    const inputCheck = String(checkpassword.parentElement.classList).trim();
-    if(inputPass === "input-control success" && inputUser === "input-control success" && inputCheck === "input-control success"){
-        window.location.href = "login.html";
+    if(inputPass === "input-control success" && inputUser === "input-control success"){
+        window.location.href = "index.html";
     }
  };   
 
 const validateInputs = () => {
     const usernameValue = username.value.trim();
     const passwordValue = password.value.trim();
-    const checkpasswordValue = checkpassword.value.trim();
 
     if(usernameValue === '') {
         setError(username, 'Usuário deve ser preenchido!');
@@ -52,17 +50,9 @@ const validateInputs = () => {
     if(passwordValue === '') {
         setError(password, 'Senha deve ser preenchida!');
     } else if (passwordValue.length < 6 || passwordValue.length > 30) {
-        setError(password, 'Senha deve ter entre 6 a 30 caracteres!')
+        setError(password, 'Senha deve ter entre 6 a 30 caracteres!');
     } else {
         setSuccess(password);
-    }
-    
-    if(checkpasswordValue == '') {
-        setError(checkpassword, 'Preencha o campo de confirmação de senha!')
-    } else if (checkpasswordValue != passwordValue) {
-        setError(checkpassword, 'A senhas devem estar iguais!')
-    } else {
-        setSuccess(checkpassword);
     }
 
 };

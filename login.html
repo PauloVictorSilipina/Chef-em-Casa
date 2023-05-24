@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous" defer></script>
-    
+    <script src="script/login.js" defer></script>
     <link rel="stylesheet" href="css/css_login.css">
     <link rel="stylesheet" href="css/css_base.css">
 </head>
@@ -49,15 +49,17 @@
     
     <!--div com classe reutilizada do cadastro pois modelam-se iguais-->
     <div class="col-10 col-lg-2 dados">
-        <form action="">
+        <form id="form" action="">
             <h1>Login</h1>
-            <div class="user">
+            <div class="input-control">
                 <label for="usuario" class="col-9 offset-1">Usuário</label>
                 <input type="text" id="usuario" placeholder="Digite o usuário" class="col-10 offset-1">
+                <div class="error"></div>
             </div>
-            <div class="pass">
+            <div class="input-control">
                 <label for="password" class="col-9 offset-1">Senha</label>
                 <input type="password" id="password" placeholder="Digite sua senha" class="col-10 offset-1">
+                <div class="error"></div>
             </div>
             <div class="">
                 <button class="btn-valida col-10 offset-1" type="submit">Fazer login</button>

@@ -1,0 +1,33 @@
+.conteudo {
+    margin-top: 7.5rem;
+}
+
+.receita {
+    text-align: center;
+}
+
+.img-receita{
+    width: 67.5%;
+    max-height: 50%;
+    border-radius: 0.75rem;
+}
+
+.criador {
+    margin-right: auto;
+    margin-left: auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-top: -25px;
+}
+
+.info-receita {
+    margin-top: 1rem;
+}
+
+.categorias {
+    display: flex;
+    text-align: center;
+    font-size: 1.1rem;
+}
