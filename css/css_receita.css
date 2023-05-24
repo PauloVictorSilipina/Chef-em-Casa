@@ -1,5 +1,6 @@
 .conteudo {
     margin-top: 7.5rem;
+    padding-bottom: 15rem;
 }
 
 .receita {
@@ -7,9 +8,9 @@
 }
 
 .img-receita{
-    width: 67.5%;
-    max-height: 50%;
-    border-radius: 0.75rem;
+    width: 60%;
+    height: 20rem;
+    border-radius: 0.5rem;
 }
 
 .criador {
@@ -26,8 +27,9 @@
     margin-top: 1rem;
 }
 
-.categorias {
-    display: flex;
-    text-align: center;
-    font-size: 1.1rem;
+.info-dadosReceita {
+    padding: 0.75rem;
+    border-radius: 10px;
+    background-color: rgb(255, 189, 113);
+    height: 5rem;
 }
