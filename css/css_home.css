@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
 
-.container {
+.div-receitas {
+    margin-top: 10rem;
 }
 
 .imagens {
@@ -35,37 +36,3 @@
     cursor: pointer;
 }
 
-.categorias {
-    cursor: pointer;
-    padding: 1rem;
-    margin-left: -1.5rem;
-    border: none;
-    border-right: 0.1px solid;
-    background-color: rgba(228, 227, 227);
-}
-
-.titulo-categorias {
-
-}
-
-.sub-categorias {
-    cursor: pointer;
-    padding: 1em;
-    margin-left: -1.5rem;
-    background-color: rgba(228, 227, 227);
-    border: none;
-    display: none;
-}
-
-.categorias:hover {
-    text-decoration: underline;
-}
-
-.sub-categorias li {
-    list-style: none;
-    margin-left: -2rem;
-}
-
-.active .sub-categorias {
-    display: block;
-}
