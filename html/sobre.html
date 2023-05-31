@@ -8,18 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous" defer></script>
-
-    <link rel="stylesheet" href="css/css_contato.css">
-    <link rel="stylesheet" href="css/css_base.css">
     
-    <title>Chef em Casa</title>
+    <link rel="stylesheet" href="/css/css_sobre.css">
+    <link rel="stylesheet" href="/css/css_base.css">
 </head>
 
-<body class="body_contato">
+<body class="body_sobre">
     <!--criação do cabecalho-->
     <nav class="cabecalho navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+            <a href="/html/index.html"><img src="/img/logo.png" alt="logo"></a>
             <!--responsividade-->
              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" >
               <span class="navbar-toggler-icon"></span>
@@ -29,19 +27,19 @@
              <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                  <a class="nav-link"  href="sobre.html">Sobre</a>
+                  <a class="nav-link"  href="/html/sobre.html">Sobre</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contato.html">Contato</a>
+                    <a class="nav-link" href="/html/contato.html">Contato</a>
                 </li>            
               </ul>           
               <!--Itens de menu a esquerda-->
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link"  href="login.html">Login</a>
+                  <a class="nav-link"  href="/html/login.html">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="cadastro.html">Cadastro</a>
+                    <a class="nav-link" href="/html/cadastro.html">Cadastro</a>
                 </li>
                 
               </ul>
@@ -49,36 +47,57 @@
           </div>
      </nav>
 
-    <!--container para a imagem à esquerda com o chef-->
-
-
-    <div class="container-fluid div-container">
-        <div class="row">
-            <div class="col-lg-3 offset-lg-2 div-chef">
-                <img src="img/chef.png">
+    <!--titulo explicando que são os devs da página-->
+    
+    <!--div para guardar as imagens dos devs e moldá-las-->
+    <div class="container desenvolvedores">
+        <h1>Desenvolvedores</h1>
+        <div class="devs row">
+            <div class="col-8 offset-2 col-lg-3 offset-lg-2 dev">
+                <p class="nome">Halisson Julio</p>
+                <img src="/img/halisson.png" alt="Halisson">
+                <p class="funcao">Front-End Developer</p>
             </div>
     
-            
-            <div class="col-lg-3 offset-lg-2 div-formulario">
-                <form action="">
-                    <h2 class="col-10 offset-1">Fale conosco</h2>
-                    <div class="nome">
-                        <label for="nome" class="col-9 offset-1">Nome</label>
-                        <input type="text" id="nome" placeholder="Digite seu nome" class="col-10 offset-1" maxlength="50">
-                    </div>
-                    <div class="mensagem">
-                        <label for="message" class="col-9 offset-1">Senha</label>
-                        <textarea type="text" id="message" placeholder="Digite sua mensagem" class="col-10 offset-1"></textarea>
-                    </div>
-                    <div class="">
-                        <button class="btn-enviar col-10 offset-1" type="submit">Enviar</button>
-                    </div>
-                </form>
+            <div class="col-8 offset-2 col-lg-3 offset-lg-2 dev">
+                <p class="nome">Pedro Antonio</p>
+                <img src="/img/pedroantonio.jpeg" alt="Pedro Antônio">
+                <p class="funcao">Back-End Developer</p>
+            </div>
     
+            <div class="col-8 offset-2 col-lg-3 offset-lg-2 dev">
+                <p class="nome">Paulo Victor</p>
+                <img src="/img/paulovictor.jpg" alt="Paulo Victor">
+                <p class="funcao">Full-Stack Developer</p>
+            </div>
+    
+            <div class="col-8 offset-2 col-lg-3 offset-lg-2 dev">
+                <p class="nome">Ricardo</p>
+                <img src="/img/ricardo.jpeg" alt="Ricardo">
+                <p class="funcao">Database Developer</p>
             </div>
         </div>
     </div>
-
+    
+    <!--texto em paragráfos com a motivação da empresa-->
+    <div class="container texto_sobre">
+        <h2 class="col-10 offset-1 col-lg-8 offset-lg-2">Não é só sobre divulgar receitas. É sobre ser um Chef em Casa</h3>
+        <p class="col-10 offset-1 col-lg-8 offset-lg-2"> 
+            Somos um grupo, que decidiu se juntar para mesclar conhecimentos de tecnologia e culinária,
+            onde pretentemos criar um website de receitas, que seja fácil e intuitivo para uso, também contando
+            com possibilidade de buscar receitas com base nos ingredientes, restrições alimentares e categorias.
+        </p>
+        <p class="col-10 offset-1 col-lg-8 offset-lg-2">
+            Queremos oferecer uma experiência de navegação agradável e simples para o usuário, para que possam buscar
+            receitas independente da ocasião, sejam receitas fáceis à receitas mais elaboradas.
+            Temos fé que a culinária pode se tornar uma experiência divertida e prazerosa, e queremos tornar
+            essa ideia realidade.
+        </p>
+        <p class="col-10 offset-1 col-lg-8 offset-lg-2">
+            Seja bem-vindo ao nosso site.
+        </p>
+    </div>
+    <!--rodapé-->
     <footer class="container-fluid">
         <div id="contact-area">
             <div class="container">
