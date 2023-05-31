@@ -1,4 +1,5 @@
 .div-container {
+    margin-top: 5rem;
 }
 
 .div-chef {
@@ -11,7 +12,7 @@
 }
 
 .div-formulario {
-    margin-top: 5rem;
+    margin-top: 10rem;
 }
 
 .div-formulario h1{
@@ -38,4 +39,6 @@
 .btn-enviar {
     margin-top: 2rem;
     margin-bottom: 2rem;
+    height: 2rem;
+    border: 0;
 }

@@ -7,7 +7,7 @@
 .imagens {
     margin-top: 1rem;
     text-align: center;
-    /*dad*/
+
 }
 
 .imagens .criador{
@@ -28,16 +28,44 @@
     text-decoration: none;
     color: black;
 }
+
+.div-imagem a:hover {
+    color: aqua;
+}
+
 .div-imagem img{
-    width: 100%;
+    width: 90%;
     height: 15rem;
 
     margin-top: 10px;
     border: 1px solid lightgray;
 }
 
-.div-imagem:hover {
-    color: aqua;
+.img-receitas:hover{
+    border: 1px solid aqua;
     cursor: pointer;
 }
 
+.div-pesquisa{
+}
+
+.div-input-pesquisa{
+    display: inline;
+}
+
+.div-pesquisa input{
+    border-top-left-radius: 22px;
+    border-bottom-left-radius: 22px;
+    border: 0;
+    height: 2rem;
+    padding-left: 1rem;
+}
+
+.div-pesquisa button{
+    border-top-right-radius: 22px;
+    border-bottom-right-radius: 22px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border: 0;
+    height: 2rem;
+}

@@ -23,25 +23,25 @@
     <!--criação do cabecalho-->
     <nav class="cabecalho navbar navbar-expand-lg">
 
-        <div class="container-fluid">
-            <a href="/html/index.html"><img src="/img/logo.png" alt="logo"></a>
+        <div class="container">
+            <a class="col-1" href="/html/index.html"><img src="/img/logo.png" alt="logo"></a>
             <!--responsividade-->
+
              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" >
               <span class="navbar-toggler-icon"></span>
             </button>
 
             <!--Itens de menu a direita-->
-             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                  <a class="nav-link"  href="/html/sobre.html">Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/html/contato.html">Contato</a>
-                </li>            
-              </ul>           
 
-              <!--Itens de menu a esquerda-->
+             <div class="offset-lg-2 collapse navbar-collapse" id="navbarSupportedContent"> 
+
+                <div class="col-12 col-lg-10 div-pesquisa">
+                    <div class="col-8 div-input-pesquisa">
+                        <input class="col-7 col-lg-7" type="text" placeholder="Digite a receita, ingrediente ou categoria">
+                    </div>
+                    <button class="col-4 col-lg-2" type="submit">Pesquisar</button>
+                </div>
+
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                   <a class="nav-link"  href="/html/login.html">Login</a>
@@ -49,7 +49,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/html/cadastro.html">Cadastro</a>
                 </li>
-                
+                <li class="nav-item">
+                    <a class="nav-link"  href="/html/sobre.html">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/contato.html">Contato</a>
+                </li>              
               </ul>
             </div>
           </div>
@@ -77,7 +82,7 @@
                 <div class="info-criador">
                     <img class="criador" src="/img/paulovictor.jpg">
                 </div>
-                <a>Brigadeiro</a>
+                <a href="#">Brigadeiro</a>
             </div>
 
             <div class="div-imagem col-lg-3">
@@ -87,7 +92,7 @@
                 <div class="info-criador">
                     <img class="criador" src="/img/paulovictor.jpg">
                 </div>
-                <a>Pudim de leite condensado</a>
+                <a href="#">Pudim de leite condensado</a>
             </div>
 
             <div class="div-imagem col-lg-3">
@@ -97,7 +102,7 @@
                 <div class="info-criador">
                     <img class="criador" src="/img/paulovictor.jpg">
                 </div>
-                <a>Pão de queijo</a>
+                <a href="#">Pão de queijo</a>
             </div>
 
         </div>
@@ -125,7 +130,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-12 col-lg-5 offset-lg-3">
+                    <div class="col-10 offset-1 col-lg-5 offset-lg-3">
                         <p>Chef em Casa oferece receitas de forma amplas, visando vários públicos com seus inovadores filtros</p>
                     </div>
                 </div>
