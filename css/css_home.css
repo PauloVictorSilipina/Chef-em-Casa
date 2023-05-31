@@ -23,6 +23,10 @@
     display: inline;
 }
 
+.div-imagem a {
+    text-decoration: none;
+    color: black;
+}
 .div-imagem img{
     width: 100%;
     height: 15rem;
