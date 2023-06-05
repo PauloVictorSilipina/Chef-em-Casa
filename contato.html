@@ -4,36 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/05b9e3a650.js" crossorigin="anonymous"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous" defer></script>
-    <script src="script/index.js" defer></script>
 
-    <link rel="stylesheet" href="/css/css_base.css">
-    <link rel="stylesheet" href="/css/css_receita.css">
-    
+    <link rel="stylesheet" href="css/css_contato.css">
+    <link rel="stylesheet" href="css/css_base.css">
     
     <title>Chef em Casa</title>
 </head>
-<!--criação do corpo-->
-<body class="body_home">
+
+<body class="body_contato">
     <!--criação do cabecalho-->
     <nav class="cabecalho navbar navbar-expand-lg">
 
         <div class="container-fluid">
             <!--Menu hamburguer-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" >
-                <span class="navbar-toggler-icon"></span>
+                <i class="fa-solid fa-bars fa-xl"></i>
             </button>
-            <a href="/index.html"><img src="/img/logo.png" alt="logo"></a>
+            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
 
             <!--Pesquisa-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#div-pesquisa">
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-magnifying-glass fa-xl"></i>
             </button>
             
             <div class="col-12 col-lg-5 offset-lg-3 row no-gutters div-pesquisa" id="div-pesquisa">
@@ -43,19 +39,19 @@
             <!--responsividade-->
 
             <!--Itens de menu a direita-->
-             <div class="offset-1 collapse navbar-collapse" id="navbarSupportedContent">
+             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link"  href="/html/sobre.html">Sobre</a>
+                  <a class="nav-link"  href="sobre.html">Sobre</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/html/contato.html">Contato</a>
+                    <a class="nav-link" href="contato.html">Contato</a>
                 </li>            
                 <li class="nav-item">
-                  <a class="nav-link"  href="/html/login.html">Login</a>
+                  <a class="nav-link"  href="login.html">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/html/cadastro.html">Cadastro</a>
+                    <a class="nav-link" href="cadastro.html">Cadastro</a>
                 </li>
                 
               </ul>
@@ -63,72 +59,35 @@
           </div>
     </nav>
 
-     <!-- Conteúdo -->
+    <!--container para a imagem à esquerda com o chef-->
 
-     <div class="conteudo container">
-        <div class="receita container col-lg-6">
-            <img class="img-receita" src="/receitas/bolo.jpg">
-        </div>
 
-        <div class="info-receita container col-lg-6">
-            <div class="tempo-rendimento-serve">
-                <div class="div-tempo col-4 col-lg-4">
-                    <span><i class="fa-regular fa-clock fa-2xl"></i></span>
-                    <br>
-                    <span></span>
-                </div>
-                <div class="div-rendimento col-4 col-lg-4">
-                    <span><i class="fa-solid fa-bowl-rice fa-2xl"></i></span>
-                    <br>
-                    <span></span>
-                </div>
-                <div class="div-dificuldade col-4 col-lg-4">
-                    <span><i class="fa-solid fa-fire-flame-curved fa-2xl"></i></span>
-                </div>
+    <div class="container-fluid div-container">
+        <div class="row">
+            <div class="col-lg-3 offset-lg-2 div-chef">
+                <img src="img/chef.png">
+            </div>
+    
+            
+            <div class="col-lg-3 offset-lg-2 div-formulario">
+                <form action="">
+                    <h2 class="col-10 offset-1">Fale conosco</h2>
+                    <div class="nome">
+                        <label for="nome" class="col-9 offset-1">Nome</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome" class="col-10 offset-1" maxlength="50">
+                    </div>
+                    <div class="mensagem">
+                        <label for="message" class="col-9 offset-1">Senha</label>
+                        <textarea type="text" id="message" placeholder="Digite sua mensagem" class="col-10 offset-1"></textarea>
+                    </div>
+                    <div class="">
+                        <button class="btn-enviar col-10 offset-1" type="submit">Enviar</button>
+                    </div>
+                </form>
+    
             </div>
         </div>
-
-        <div class="info-criador container col-lg-6">
-            <img src="/img/paulovictor.jpg">
-            <span>Paulo Victor</span>
-        </div>
-
-        <div class="container col-lg-6">
-            <div class="titulo-ingredientes col-lg-12">
-                <span>Ingredientes</span>
-            </div>
-        </div>
-        <div class="container col-lg-6">
-            <div class="info-ingredientes col-lg-12">
-                <ul>
-                    <li>3 copos de trigo</li>
-                    <li>2 copos de açúcar</li>
-                    <li>1 copo de chocolate em pó</li>
-                    <li>1 copo de óleo</li>
-                    <li>Óleo</li>
-                    <li>Fermento</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="container col-lg-6">
-            <div class="titulo-preparo col-lg-12">
-                <span>Modo de Preparo</span>
-            </div>
-        </div>
-        <div class="container col-lg-6">
-            <div class="info-preparo col-lg-12">
-                <ul>
-                    <li>Em uma tigela misturar o açúcar e o chocolate em pó</li>
-                    <li>Em seguida, misturar as gemas e o óleo</li>
-                    <li>Aos poucos acrescentar a água e o trigo</li>
-                    <li>Em seguida juntar o fermento e por fim juntar as claras em neve</li>
-                    <li>Óleo</li>
-                    <li>Despejar numa forma untada e colocar para assar por aproximadamente 40 minutos</li>
-                </ul>
-            </div>
-        </div>
-     </div>
+    </div>
 
     <footer class="container-fluid">
         <div id="contact-area">
