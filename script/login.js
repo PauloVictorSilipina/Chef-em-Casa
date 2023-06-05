@@ -32,7 +32,7 @@ const login = element => {
     const inputPass = String(password.parentElement.classList).trim();
     const inputUser = String(username.parentElement.classList).trim();
     if(inputPass === "input-control success" && inputUser === "input-control success"){
-        window.location.href = "index.html";
+        window.location.href = "/index.html";
     }
  };   
 

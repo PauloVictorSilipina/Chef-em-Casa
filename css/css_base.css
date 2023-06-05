@@ -21,7 +21,7 @@ body {
 }
 
 .cabecalho {
-    position: absolute;
+    position: fixed;
     right: 0;
     left: 0;
     background-color: rgb(245, 169, 83);
@@ -32,7 +32,6 @@ body {
 }
 
 #navbarSupportedContent li {
-    margin-left: 1rem;
 }
 
 .cabecalho a {
@@ -115,4 +114,39 @@ footer h3{
     margin: 20px 0 10px;
     position: relative;
     text-align: center;
+}
+
+.div-pesquisa{
+    margin-top: 1rem;
+}
+
+.input-pesquisa{
+    border-top-left-radius: 22px;
+    border-bottom-left-radius: 22px;
+    border: 0;
+    box-shadow: 0 0 5px 0 rgb(245, 169, 83);
+    background-color: white;
+    padding: 0.6rem;
+    padding-left: 1rem;
+    outline: 0;
+
+}
+
+.input-pesquisa::placeholder {
+    color: black;
+}
+
+.btn-pesquisa{
+    border-top-right-radius: 22px;
+    border-bottom-right-radius: 22px;
+    border-left: 0;
+    border: 0.1px solid lightgray;
+    background-color: lightgray;
+    padding: 0.6rem;
+}
+
+.navbar-toggler {
+    border: 0;
+    outline: 0 !important;
+    --bs-navbar-toggler-focus-width: 0 !important;
 }

@@ -23,26 +23,34 @@
 <body class="body_home">
     <!--criação do cabecalho-->
     <nav class="cabecalho navbar navbar-expand-lg">
+
         <div class="container-fluid">
-            <a href="/html/index.html"><img src="/img/logo.png" alt="logo"></a>
-            <!--responsividade-->
-             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" >
-              <span class="navbar-toggler-icon"></span>
+            <!--Menu hamburguer-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" >
+                <span class="navbar-toggler-icon"></span>
             </button>
+            <a href="/index.html"><img src="/img/logo.png" alt="logo"></a>
+
+            <!--Pesquisa-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#div-pesquisa">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            
+            <div class="col-12 col-lg-5 offset-lg-3 row no-gutters div-pesquisa" id="div-pesquisa">
+                <input type="text" placeholder="Digite uma receita, ingrediente ou categoria" id="input-pesquisa" class="input-pesquisa col-6 offset-1 col-lg-6 offset-lg-2">
+                <button type="submit" id="btn-pesquisa" class="btn-pesquisa col-4 col-lg-2">Pesquisar</button>
+            </div>
+            <!--responsividade-->
 
             <!--Itens de menu a direita-->
-             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto">
+             <div class="offset-1 collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                   <a class="nav-link"  href="/html/sobre.html">Sobre</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/html/contato.html">Contato</a>
                 </li>            
-              </ul>           
-
-              <!--Itens de menu a esquerda-->
-              <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                   <a class="nav-link"  href="/html/login.html">Login</a>
                 </li>
@@ -53,7 +61,7 @@
               </ul>
             </div>
           </div>
-     </nav>
+    </nav>
 
      <!-- Conteúdo -->
 
@@ -64,16 +72,18 @@
 
         <div class="info-receita container col-lg-6">
             <div class="tempo-rendimento-serve">
-                <div class="div-tempo col-lg-4">
+                <div class="div-tempo col-4 col-lg-4">
                     <span><i class="fa-regular fa-clock fa-2xl"></i></span>
                     <br>
                     <span></span>
                 </div>
-                <div class="div-rendimento col-lg-4">
-                    <span><i class="fa-regular fa-plate-utensils"></i></span>
+                <div class="div-rendimento col-4 col-lg-4">
+                    <span><i class="fa-solid fa-bowl-rice fa-2xl"></i></span>
+                    <br>
+                    <span></span>
                 </div>
-                <div class="div-dificuldade col-lg-4">
-                    <span>Dificuldade</span>
+                <div class="div-dificuldade col-4 col-lg-4">
+                    <span><i class="fa-solid fa-fire-flame-curved fa-2xl"></i></span>
                 </div>
             </div>
         </div>

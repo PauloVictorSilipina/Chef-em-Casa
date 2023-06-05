@@ -39,6 +39,16 @@
     border: 1px solid black;
 }
 
+.div-rendimento {
+    border-left: 0;
+    color: black;
+}
+
+.div-dificuldade {
+    border-left: 0;
+    color: red;
+}
+
 .tempo-rendimento-serve {
     display: flex;
 }
