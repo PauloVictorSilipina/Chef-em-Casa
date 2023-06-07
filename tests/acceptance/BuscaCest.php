@@ -14,10 +14,13 @@ class BuscaCest
     // tests
     public function buscarResultadosNaPaginaTest(AcceptanceTester $I)
     {
-		$I->amOnPage('/');
-		$I->fillField('searchword', 'edital');
-		$I->click('Buscar');
-		$I->see('resultados encontdos');
+      $I->amOnPage('/Website-Chef-em-Casa/index.html');
+      $I->click('Login');
+      $I->seeCurrentURLEquals('/login.html');
+      $I->fillField('usuario', 'Ricardo');
+      $I->fillField('senha', '123456');
+      $I->click('Fazer login');
+      $I->seeCurrentURLEquals('/index.html');
     }
 }
 
