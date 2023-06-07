@@ -27,7 +27,7 @@ class BuscaCest
     {
       $I->amOnPage('/Website-Chef-em-Casa/index.html');
       $I->click('Cadastro');
-      $I->seeCurrentURLEquals('/cadastro.html');
+      $I->seeCurrentURLEquals('/Website-Chef-em-Casa/cadastro.html');
       $I->fillField('usuario', 'Ricardo');
       $I->fillField('senha', '123456');
       $I->fillField('cfsenha', '123456');
@@ -39,7 +39,7 @@ class BuscaCest
     {
       $I->amOnPage('/Website-Chef-em-Casa/index.html');
       $I->click('Contato');
-      $I->seeCurrentURLEquals('/contato.html');
+      $I->seeCurrentURLEquals('/Website-Chef-em-Casa/contato.html');
       $I->fillField('name', 'Ricardo Leite Rodrigues');
       $I->fillField('mensagem', 'Olá, bom dia, gostaria de fazer um pedido para adicionarem mais receitas de doces!');
       $I->click('Enviar');
