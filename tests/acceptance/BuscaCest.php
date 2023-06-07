@@ -16,11 +16,11 @@ class BuscaCest
     {
       $I->amOnPage('/Website-Chef-em-Casa/index.html');
       $I->click('Login');
-      $I->seeCurrentURLEquals('/login.html');
+      $I->seeCurrentURLEquals('/Website-Chef-em-Casa/login.html');
       $I->fillField('usuario', 'Ricardo');
       $I->fillField('senha', '123456');
       $I->click('Fazer login');
-      $I->seeCurrentURLEquals('/index.html');
+      $I->seeCurrentURLEquals('/Website-Chef-em-Casa/index.html');
     }
 }
 
