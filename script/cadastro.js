@@ -33,6 +33,11 @@ const login = element => {
     const inputUser = String(username.parentElement.classList).trim();
     const inputCheck = String(checkpassword.parentElement.classList).trim();
     if(inputPass === "input-control success" && inputUser === "input-control success" && inputCheck === "input-control success"){
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+          } else {
+            localStorage.clickcount = 1;
+        }
         window.location.href = "login.html";
     }
  };   
