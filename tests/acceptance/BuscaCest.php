@@ -12,7 +12,7 @@ class BuscaCest
     }
 
     // tests
-    public function buscarResultadosNaPaginaTest(AcceptanceTester $I)
+    public function testeLogin(AcceptanceTester $I)
     {
       $I->amOnPage('/Website-Chef-em-Casa/index.html');
       $I->click('Login');
@@ -23,7 +23,7 @@ class BuscaCest
       $I->seeCurrentURLEquals('/Website-Chef-em-Casa/index.html');
     }
 
-    public function buscarResultadosNaPaginaTest(AcceptanceTester $I)
+    public function testeCadastro(AcceptanceTester $I)
     {
       $I->amOnPage('/Website-Chef-em-Casa/index.html');
       $I->click('Cadastro');
@@ -35,7 +35,7 @@ class BuscaCest
       $I->seeCurrentURLEquals('/Website-Chef-em-Casa/login.html');
     }
 
-    public function buscarResultadosNaPaginaTest(AcceptanceTester $I)
+    public function testeContato(AcceptanceTester $I)
     {
       $I->amOnPage('/Website-Chef-em-Casa/index.html');
       $I->click('Contato');
@@ -46,21 +46,14 @@ class BuscaCest
       $I->seeCurrentURLEquals('/Website-Chef-em-Casa/contato.html');
     }
 
-    public function buscarResultadosNaPaginaTest(AcceptanceTester $I)
+    public function testeReceita(AcceptanceTester $I)
     {
       $I->amOnPage('/Website-Chef-em-Casa/index.html');
       $I->click('bolo');
       $I->seeCurrentURLEquals('/Website-Chef-em-Casa/receita.html');
     }
 
-    public function buscarResultadosNaPaginaTest(AcceptanceTester $I)
-    {
-      $I->amOnPage('/Website-Chef-em-Casa/index.html');
-      $I->click('bolo');
-      $I->seeCurrentURLEquals('/Website-Chef-em-Casa/receita.html');
-    }
-
-    public function buscarResultadosNaPaginaTest(AcceptanceTester $I)
+    public function testeSobre(AcceptanceTester $I)
     {
       $I->amOnPage('/Website-Chef-em-Casa/index.html');
       $I->click('Sobre');

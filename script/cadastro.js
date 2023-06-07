@@ -25,12 +25,10 @@ const setSuccess = element => {
     errorDisplay.innerText = '';
     inputControl.classList.add('success');
     inputControl.classList.remove('error');
-    console.log("Paulo Victor da a bunda")
     login(inputControl);
 };
 
 const login = element => {
-    console.log("Ricardo é um primata desgraçado arrombado filho da puta")
     const inputPass = String(password.parentElement.classList).trim();
     const inputUser = String(username.parentElement.classList).trim();
     const inputCheck = String(checkpassword.parentElement.classList).trim();
