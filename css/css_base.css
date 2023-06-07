@@ -3,6 +3,8 @@ importação de fonte e adicionando ela em todos itens, utilizado também o bord
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -38,6 +40,10 @@ body {
 .cabecalho a {
     text-decoration: none;
     color: black;
+}
+
+.menu a{
+    margin-left: 1.5rem;
 }
 
 .left-links {
@@ -93,8 +99,9 @@ footer h3{
 }
 
 .fa-instagram:hover {
-    background: #125688;
     color: white;
+    background-clip: text;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
 }
 
 .fa-google:hover{
@@ -119,6 +126,7 @@ footer h3{
 
 .div-pesquisa{
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .input-pesquisa{
