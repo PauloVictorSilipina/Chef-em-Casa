@@ -9,8 +9,7 @@ posiciono o div com os dados ao centro e adiciono animação para quando aparece
     border-radius: 25px;
     color: black;
     width: 18rem;
-    margin-top: 10rem;
-    margin-bottom: 2.5rem;
+    margin-top: 12.5rem;
 }
 
 .dados h1{
@@ -19,7 +18,7 @@ posiciono o div com os dados ao centro e adiciono animação para quando aparece
 }
 
 .dados input {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     font-size: 0.8rem;
     height: 1.7rem;
     border: 0;
@@ -35,6 +34,7 @@ posiciono o div com os dados ao centro e adiciono animação para quando aparece
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
     margin-bottom: 1rem;
+    padding: 0.25rem;
 }
 
 .btn-valida:hover{
