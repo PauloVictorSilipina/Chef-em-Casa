@@ -1,6 +1,4 @@
-localStorage.setItem('user','Flávio,123456,Roberto,654321');
-lista = localStorage.getItem('user').split(',');
-console.log(lista);
+
 
 
 const form = document.getElementById('form');
@@ -37,8 +35,17 @@ const login = element => {
     const inputPass = String(password.parentElement.classList).trim();
     const inputUser = String(username.parentElement.classList).trim();
     const inputCheck = String(checkpassword.parentElement.classList).trim();
-    if(inputPass === "input-control success" && inputUser === "input-control success" && inputCheck === "input-control success"){
-        window.location.href = "login.html";
+    if(inputPass === "col-lg-8 offset-lg-2 input-control success" && inputUser === "col-lg-8 offset-lg-2 input-control success" && inputCheck === "col-lg-8 offset-lg-2 input-control success"){
+        if (localStorage.getItem('user') == null){
+            localStorage.setItem('user',`${username.value.trim()},${password.value.trim()}`)
+        } else{
+            let lista = localStorage.getItem('user').split(',')
+            if (lista.includes(username.value.trim()) == false){
+                let newStorage = localStorage.getItem('user') + `,${username.value.trim()},${password.value.trim()}`;
+                localStorage.setItem('user', newStorage);
+                window.location.href = "login.html";
+            }
+        }
     }
  };   
 

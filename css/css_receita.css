@@ -57,7 +57,7 @@
 }
 
 .titulo {
-    background-color: rgb(243, 243, 243);
+    background-color: rgb(219, 219, 219);
     padding: 0.75rem;
     margin-top: 1rem;
     text-align: center; 
@@ -89,22 +89,21 @@
 
 .usuario{
     margin-top: 2rem;
-    padding-top: 2rem;
+    padding-top: 1rem;
     text-align: center;
     border-right: 1px solid lightgray;
 }
 
-.img-usuario{
-    border-bottom: 2rem;
-}
 .img-usuario img{
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border: 1px solid black;
+    border: 1px solid rgb(223, 223, 223);
     text-align: center;
+    margin-bottom: 0.5rem;
 }
 
 .texto-comentario {
     padding-top: 4rem;
+    margin-left: 2rem;
 }

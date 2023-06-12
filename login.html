@@ -58,52 +58,40 @@
     </nav>
     
     <!--div com classe reutilizada do cadastro pois modelam-se iguais-->
-    <div class="col-10 col-lg-2 dados">
-        <form id="form" action="">
-            <h1>Login</h1>
-            <div class="input-control">
-                <label for="usuario" class="col-9 offset-1">Usuário</label>
-                <input type="text" id="usuario" placeholder="Digite o usuário" class="col-10 offset-1" name="usuario">
-                <div class="error"></div>
+    <div class="login container">
+        <div class="log row">
+            <div class="d-none d-lg-block img col-lg-4 offset-lg-2  ">
+                <img src="/img/chapeu.png">
             </div>
-            <div class="input-control">
-                <label for="password" class="col-9 offset-1">Senha</label>
-                <input type="password" id="password" placeholder="Digite sua senha" class="col-10 offset-1" name="senha">
-                <div class="error"></div>
-            </div>
-            <div class="">
-                <button class="btn-valida col-10 offset-1" type="submit">Fazer login</button>
-            </div>
-            <a class="cadastro" href="cadastro.html"><p>Cadastrar-se</p></a>
-        </form>
-    </div>
+
+            <div class="dados col-lg-4 col-10 offset-1 offset-lg-0">
+                <form id="form" action="">
+                    <div class="col-lg-8 offset-lg-2">
+                        <h1 class="">Login</h1>
+                    </div>
     
-    <footer class="container-fluid">
-        <div id="contact-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-lg-12">
-                        <h3 class="main-title">Chef em Casa</h3>
+                    <div class="col-lg-8 offset-lg-2 input-control col-12">
+                        <label for="usuario" class="col-lg-12 col-10 offset-1">Usuário</label>
+                        <input type="text" id="usuario" placeholder="Digite o usuário" class="col-lg-12 col-10 offset-1" name="usuario">
+                        <div class="error"></div>
                     </div>
-                    <div class="col-12 col-lg-3 offset-lg-1 contact-box">
-                        <ul class="col-10">
-                            <li>
-                                <a href="#" class="fa fa-facebook"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fa fa-google"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fa fa-instagram"></a>
-                            </li>
-                        </ul>
+    
+                    <div class="col-lg-8 offset-lg-2 input-control">    
+                        <label for="password" class="col-lg-12 col-10 offset-1">Senha</label>
+                        <input type="password" id="password" placeholder="Digite sua senha" class="col-lg-12 col-10 offset-1" name="senha">
+                        <div class="error"></div>
                     </div>
-                    <div class="col-12 col-lg-5 offset-lg-3">
-                        <p>Chef em Casa oferece receitas de forma amplas, visando vários públicos com seus inovadores filtros</p>
+    
+                    <div class="div-btn offset-lg-4 col-lg-4 col-10 offset-1">
+                        <button class="btn-valida col-lg-12" type="submit">Fazer login</button>
                     </div>
-                </div>
+    
+                    <div class="cad">
+                        <span class="col-10 offset-1">Não possui uma conta? <a href="cadastro.html">Clique aqui</a></span>
+                    </div>
+                </form>
             </div>
         </div>
-    </footer>
+    </div>
 </body>
 </html>
