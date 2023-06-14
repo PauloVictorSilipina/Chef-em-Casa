@@ -27,7 +27,6 @@ body {
     right: 0;
     left: 0;
     background-color: rgb(245, 169, 83);
-    margin-bottom: 2rem;
 }
 
 #navbarSupportedContent {
@@ -43,7 +42,7 @@ body {
 }
 
 .menu a{
-    margin-left: 1.5rem;
+    margin-left: 1rem;
 }
 
 .left-links {
@@ -139,6 +138,18 @@ footer h3{
     padding-left: 1rem;
     outline: 0;
 
+}
+
+.div-logo{
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.usuario {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .input-pesquisa::placeholder {

@@ -21,45 +21,55 @@
 <!--criação do corpo-->
 <body class="body_home">
     <!--criação do cabecalho-->
-    <nav class="cabecalho navbar navbar-expand-lg">
+    <nav class="cabecalho navbar navbar-expand-lg sticky-top">
 
-        <div class="container-fluid">
+        <div class="row bg-danger">
+            <div class="div-logo col-lg-1">
+                <a><img src="img/logo.png"></a>
+            </div>
+
+            <div class="div-pesquisa col-lg-4 offset-lg-1 row no-gutters"  id="div-pesquisa">
+                <input type="text" placeholder="Digite uma receita, ingrediente ou categoria" id="input-pesquisa" class="input-pesquisa col-lg-9">
+                <button type="submit" id="btn-pesquisa" class="btn-pesquisa col-lg-3">Pesquisar</button>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#div-pesquisa">
+                <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+            </button>
+
+            <div class="usuario col-lg-1 offset-lg-1">
+                <a href="perfil.html"><i class="fa-solid fa-circle-user fa-2xl"></i></a>
+            </div>
+        </div>
+        
+        
+        
+        <!--Itens de menu a direita-->
+        <!--
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" >
                 <i class="fa-solid fa-bars fa-xl"></i>
             </button>
-            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
-
-            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#div-pesquisa">
                 <i class="fa-solid fa-magnifying-glass fa-xl"></i>
             </button>
-            
-            <div class="col-12 col-lg-5 offset-lg-3 row no-gutters div-pesquisa" id="div-pesquisa">
-                <input type="text" placeholder="Digite uma receita, ingrediente ou categoria" id="input-pesquisa" class="input-pesquisa col-6 offset-1 col-lg-6 offset-lg-2">
-                <button type="submit" id="btn-pesquisa" class="btn-pesquisa col-4 col-lg-2">Pesquisar</button>
-            </div>
-            <!--responsividade-->
-
-            <!--Itens de menu a direita-->
-             <div class="menu collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <a class="nav-link"  href="sobre.html">Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contato.html">Contato</a>
-                </li>            
-                <li class="nav-item">
-                  <a class="nav-link"  href="login.html">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="cadastro.html">Cadastro</a>
-                </li>
-                
-              </ul>
-            </div>
-          </div>
+                <div class="menu collapse navbar-collapse offset-lg-1" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link"  href="sobre.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>            
+                    <li class="nav-item">
+                      <a class="nav-link"  href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastro.html">Cadastro</a>
+                    </li>
+                    
+                  </ul>
+                </div>
+            -->
     </nav>
 
     <div class="container div-receitas">
