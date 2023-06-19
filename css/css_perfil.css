@@ -2,7 +2,9 @@
     margin-top: 10rem;
 }
 
-.imagem img{
+.info-perfil img{
     width: 10rem;
     height: 10rem;
+    border-radius: 10%;
 }
+

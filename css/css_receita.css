@@ -29,16 +29,18 @@
 
 .info-criador span {
     margin-left: 1rem;
+    font-size: 1.25rem;
 }
 
 .div-tempo, .div-rendimento, .div-dificuldade {
     background-color: rgb(243, 243, 243);
     text-align: center;
     padding: 1rem;
-    border: 1px solid rgb(222, 222, 222);
+    border: 2px solid rgb(222, 222, 222);
 }
 
 .div-tempo {
+    border-left: 2px solid rgb(222, 222, 222);
     color: black;
 }
 
@@ -79,7 +81,7 @@
 
 .info-ingredientes li{
     font-size: 1.1rem;
-    list-style:decimal;
+    list-style:disc;
 }
 
 .info-preparo ul {
@@ -88,7 +90,7 @@
 
 .info-preparo li {
     font-size: 1.1rem;
-    list-style:decimal;
+    list-style:disc;
 }
 
 .comentario {

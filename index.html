@@ -23,67 +23,84 @@
     <!--criação do cabecalho-->
     <nav class="cabecalho navbar navbar-expand-lg sticky-top">
 
-        <div class="row bg-danger">
-            <div class="div-logo col-lg-1">
-                <a><img src="img/logo.png"></a>
+        <!--
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="div-logo col-lg-2">
+                        <a><img src="img/logo.png"></a>
+                    </div>
+    
+                    <div class="div-pesquisa col-lg-6 offset-lg-1 row no-gutters"  id="div-pesquisa">
+                        <input type="text" placeholder="Digite uma receita, ingrediente ou categoria" id="input-pesquisa" class="input-pesquisa col-lg-9">
+                        <button type="submit" id="btn-pesquisa" class="btn-pesquisa col-lg-3">Pesquisar</button>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#div-pesquisa">
+                        <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+                    </button>
+    
+                    <div class="usuario col-lg-1 offset-lg-2">
+                        <a href="perfil.html"><i class="fa-solid fa-circle-user fa-2xl"></i></a>
+                    </div>
+                </div>
             </div>
-
-            <div class="div-pesquisa col-lg-4 offset-lg-1 row no-gutters"  id="div-pesquisa">
-                <input type="text" placeholder="Digite uma receita, ingrediente ou categoria" id="input-pesquisa" class="input-pesquisa col-lg-9">
-                <button type="submit" id="btn-pesquisa" class="btn-pesquisa col-lg-3">Pesquisar</button>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#div-pesquisa">
-                <i class="fa-solid fa-magnifying-glass fa-xl"></i>
-            </button>
-
-            <div class="usuario col-lg-1 offset-lg-1">
-                <a href="perfil.html"><i class="fa-solid fa-circle-user fa-2xl"></i></a>
-            </div>
-        </div>
+        -->
         
         
         
         <!--Itens de menu a direita-->
-        <!--
+        <div class="container-fluid">
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" >
                 <i class="fa-solid fa-bars fa-xl"></i>
             </button>
+            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#div-pesquisa">
                 <i class="fa-solid fa-magnifying-glass fa-xl"></i>
             </button>
-                <div class="menu collapse navbar-collapse offset-lg-1" id="navbarSupportedContent">
-                  <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                      <a class="nav-link"  href="sobre.html">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contato.html">Contato</a>
-                    </li>            
-                    <li class="nav-item">
-                      <a class="nav-link"  href="login.html">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cadastro.html">Cadastro</a>
-                    </li>
-                    
-                  </ul>
-                </div>
-            -->
+            
+            <div class="col-12 col-lg-5 offset-lg-3 row no-gutters div-pesquisa" id="div-pesquisa">
+                <input type="text" placeholder="Digite uma receita, ingrediente ou categoria" id="input-pesquisa" class="input-pesquisa col-6 offset-1 col-lg-6 offset-lg-2">
+                <button type="submit" id="btn-pesquisa" class="btn-pesquisa col-4 col-lg-2">Pesquisar</button>
+            </div>
+            <!--responsividade-->
+
+            <!--Itens de menu a direita-->
+             <div class="menu collapse navbar-collapse offset-lg-1" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link"  href="sobre.html">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contato.html">Contato</a>
+                </li>            
+                <li class="nav-item">
+                  <a class="nav-link"  href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cadastro.html">Cadastro</a>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
     </nav>
 
     <div class="container div-receitas">
 
-
+        <div class="col-lg-3 titulo-receita">
+            <h3>Receitas do Chef</h3>
+        </div>
         <div class="imagens row">
             <div class="div-imagem col-lg-3">
                 <div class="imagem">
                     <a href="receita.html"><img class="img-receitas" src="receitas/Bolo.jpg"></a>
                 </div>
                 <div class="info-criador">
-                    <img class="criador" src="img/paulovictor.jpg">
+                    <img class="criador" src="img/chapeu com bg.png">
                 </div>
-                <a href="receita.html">Bolo de Chocolate</a>
+                <a href="receita.html"><span>Bolo de Chocolate</span></a>
             </div>
             
             <div class="div-imagem col-lg-3">
@@ -91,9 +108,9 @@
                     <img class="img-receitas" src="receitas/Brigadeiro.png">
                 </div>
                 <div class="info-criador">
-                    <img class="criador" src="img/paulovictor.jpg">
+                    <img class="criador" src="img/chapeu com bg.png">
                 </div>
-                <a href="#">Brigadeiro</a>
+                <a href="#"><span>Brigadeiro</span></a>
             </div>
 
             <div class="div-imagem col-lg-3">
@@ -101,9 +118,9 @@
                     <img class="img-receitas" src="receitas/Pudim de leite condensado.png">
                 </div>
                 <div class="info-criador">
-                    <img class="criador" src="img/paulovictor.jpg">
+                    <img class="criador" src="img/chapeu com bg.png">
                 </div>
-                <a href="#">Pudim de leite condensado</a>
+                <a href="#"><span>Pudim de leite condensado</span></a>
             </div>
 
             <div class="div-imagem col-lg-3">
@@ -111,11 +128,85 @@
                     <img class="img-receitas" src="receitas/Pão de queijo.jpg">
                 </div>
                 <div class="info-criador">
-                    <img class="criador" src="img/paulovictor.jpg">
+                    <img class="criador" src="img/chapeu com bg.png">
                 </div>
-                <a href="#">Pão de queijo</a>
+                <a href="#"><span>Pão de Queijo</span></a>
             </div>
 
+            <div class="div-imagem col-lg-3">
+                <div class="imagem">
+                    <img class="img-receitas" src="receitas/Macarrão com molho de tomate.jpg">
+                </div>
+                <div class="info-criador">
+                    <img class="criador" src="img/chapeu com bg.png">
+                </div>
+                <a href="#"><span>Macarrão com molho de tomate</span></a>
+            </div>
+
+            <div class="div-imagem col-lg-3">
+                <div class="imagem">
+                    <img class="img-receitas" src="receitas/Mojito.jpg">
+                </div>
+                <div class="info-criador">
+                    <img class="criador" src="img/chapeu com bg.png">
+                </div>
+                <a href="#"><span>Mojito</span></a>
+            </div>
+
+            <div class="div-imagem col-lg-6">
+                <div class="imagem">
+                    <img class="img-receitas" src="receitas/caldo verde.jpg">
+                </div>
+                <div class="info-criador">
+                    <img class="criador" src="img/chapeu com bg.png">
+                </div>
+                <a href="#"><span>Caldo Verde</span></a>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 titulo-receita">
+            <h3>Receitas Famosas</h3>
+        </div>
+        <div class="imagens row">
+            <div class="div-imagem col-lg-3">
+                <div class="imagem">
+                    <a href="receita.html"><img class="img-receitas" src="receitas/batida de coco.jpg"></a>
+                </div>
+                <div class="info-criador">
+                    <img class="criador" src="img/paulovictor.jpg">
+                </div>
+                <a href="receita.html"><span>Batida de Coco bem Gostosa</span></a>
+            </div>
+            
+            <div class="div-imagem col-lg-3">
+                <div class="imagem">
+                    <img class="img-receitas" src="receitas/bife acebolado.jpg">
+                </div>
+                <div class="info-criador">
+                    <img class="criador" src="img/pedroantonio.jpeg">
+                </div>
+                <a href="#"><span>Bife Acebolado</span></a>
+            </div>
+
+            <div class="div-imagem col-lg-3">
+                <div class="imagem">
+                    <img class="img-receitas" src="receitas/camarao internacional.jpg">
+                </div>
+                <div class="info-criador">
+                    <img class="criador" src="img/ricardo.jpeg">
+                </div>
+                <a href="#"><span>Camarão Internacional</span></a>
+            </div>
+
+            <div class="div-imagem col-lg-3">
+                <div class="imagem">
+                    <img class="img-receitas" src="receitas/dadinho.jpeg">
+                </div>
+                <div class="info-criador">
+                    <img class="criador" src="img/deninho.jpg">
+                </div>
+                <a href="#">Dadinho de Queijo Coalho</a>
+            </div>
         </div>
     </div>
 

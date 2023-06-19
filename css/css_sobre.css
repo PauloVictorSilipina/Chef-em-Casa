@@ -24,4 +24,5 @@
 .pos-titulo {
     font-weight: bold;
     margin-top: 5rem;
+    word-wrap: break-word;
 }

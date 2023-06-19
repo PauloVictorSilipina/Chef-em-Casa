@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
 .div-receitas {
     margin-top: 7.5rem;
+    margin-bottom: 10rem;
 }
 
 .imagens {
     margin-top: 1rem;
     text-align: center;
 
+}
+
+.titulo-receita h3{
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 5rem;
 }
 
 .imagens .criador{
@@ -20,13 +27,10 @@
     margin-top: -25px;
 }
 
-.div-imagem {
-    display: inline;
-}
-
 .div-imagem a {
     text-decoration: none;
     color: black;
+    word-wrap: break-word;
 }
 
 .div-imagem a:hover {
@@ -34,7 +38,7 @@
 }
 
 .div-imagem img{
-    width: 90%;
+    width: 100%;
     height: 15rem;
 
     margin-top: 10px;
