@@ -2,9 +2,22 @@
     margin-top: 10rem;
 }
 
-.info-perfil img{
-    width: 10rem;
-    height: 10rem;
-    border-radius: 10%;
+.nome-usuario{
+    text-align: center;
 }
 
+.nome-usuario span{
+    font-size: 2.5rem;
+}
+
+.foto-usuario {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.foto-usuario img{
+    width: 15rem;
+    height: 15rem;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+}

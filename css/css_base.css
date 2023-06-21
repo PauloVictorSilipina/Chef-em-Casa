@@ -12,6 +12,13 @@ importação de fonte e adicionando ela em todos itens, utilizado também o bord
     font-family: 'Comfortaa', cursive;
 }
 
+/*
+.img-logo {
+    width: 10rem;
+    height: 5rem;
+}
+*/
+
 html {
     height: 100%;
 
