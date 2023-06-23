@@ -11,6 +11,8 @@ Login
 --------------------------------
 LocalStorage:
 Cadastro
+Login
 
 --------------------------------
 Hospedagem Website:
+chefemcasa.infinityfreeapp.com

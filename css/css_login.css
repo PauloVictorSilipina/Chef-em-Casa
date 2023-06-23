@@ -7,7 +7,7 @@ posiciono o div com os dados ao centro e adiciono animação para quando aparece
     margin-right: auto;
 }
 .body_login {
-    background-image: url(../img/bg_chocolate.jpg);
+    background-image: url('./../img/bg_chocolate.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
