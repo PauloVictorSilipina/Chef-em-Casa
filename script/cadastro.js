@@ -43,7 +43,7 @@ const login = element => {
             if (lista.includes(username.value.trim()) == false){
                 let newStorage = localStorage.getItem('user') + `,${username.value.trim()},${password.value.trim()}`;
                 localStorage.setItem('user', newStorage);
-                window.location.href = "login.html";
+                window.location.href = "../login.html";
             }
         }
     }

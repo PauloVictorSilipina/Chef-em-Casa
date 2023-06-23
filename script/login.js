@@ -37,7 +37,8 @@ const login = element => {
     if(inputPass === "col-lg-8 offset-lg-2 input-control success" && inputUser === "col-lg-8 offset-lg-2 input-control success"){
         for (var i = 0; i < lista.length; i = i+2) {
             if ((username.value.trim() == lista[i]) && (password.value.trim() == lista[i+1])) {
-                window.location.href = "index.html";
+                window.location.href = "../index.html";
+                console.log("Sim")
             }
     }
  }};   
