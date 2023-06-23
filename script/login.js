@@ -34,11 +34,16 @@ const setSuccess = element => {
 const login = element => {
     const inputPass = String(password.parentElement.classList).trim();
     const inputUser = String(username.parentElement.classList).trim();
-    if(inputPass === "col-lg-8 offset-lg-2 input-control success" && inputUser === "col-lg-8 offset-lg-2 input-control success"){
+    console.log(inputUser);
+    console.log("col-lg-8 offset-lg-2 input-control col-12 success");
+    console.log(inputPass);
+    console.log("col-lg-8 offset-lg-2 input-control success");
+    console.log("---------------------")
+    if(inputUser === "col-lg-8 offset-lg-2 input-control col-12 success" && inputPass === "col-lg-8 offset-lg-2 input-control success"){
+        console.log("aaaaaaaaa")
         for (var i = 0; i < lista.length; i = i+2) {
             if ((username.value.trim() == lista[i]) && (password.value.trim() == lista[i+1])) {
-                window.location.href = "../index.html";
-                console.log("Sim")
+                window.location.href = "index.html";
             }
     }
  }};   
