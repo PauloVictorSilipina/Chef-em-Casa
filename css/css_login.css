@@ -13,7 +13,7 @@ posiciono o div com os dados ao centro e adiciono animação para quando aparece
 }
 
 .body_cadastro {
-    background-image: url(../img/bg_comida.jpg);
+    background-image: url('./../img/bg_comida.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
