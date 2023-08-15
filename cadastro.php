@@ -18,7 +18,7 @@
 
     <!--criação do cabecalho-->
     <nav class="cabecalho navbar navbar-expand-lg">
-        <a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+        <a href="index.php" class="logo"><img src="img/logo.png" alt="logo"></a>
     </nav>
 
     <!--div para manipular os itens do cadastro-->

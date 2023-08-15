@@ -4,53 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/05b9e3a650.js" crossorigin="anonymous"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous" defer></script>
+    <script src="script/index.js" defer></script>
 
-    <link rel="stylesheet" href="css/css_contato.css">
     <link rel="stylesheet" href="css/css_base.css">
+    <link rel="stylesheet" href="css/css_perfil.css">
+    
     
     <title>Chef em Casa</title>
 </head>
-
-<body class="body_contato">
+<!--criação do corpo-->
+<body class="body_home">
     <!--criação do cabecalho-->
     <nav class="cabecalho navbar navbar-expand-lg sticky-top">
 
-        <!--
-            <div class="col-lg-12">
-                <div class="row">
-                    <div class="div-logo col-lg-2">
-                        <a><img src="img/logo.png"></a>
-                    </div>
-    
-                    <div class="div-pesquisa col-lg-6 offset-lg-1 row no-gutters"  id="div-pesquisa">
-                        <input type="text" placeholder="Digite uma receita, ingrediente ou categoria" id="input-pesquisa" class="input-pesquisa col-lg-9">
-                        <button type="submit" id="btn-pesquisa" class="btn-pesquisa col-lg-3">Pesquisar</button>
-                    </div>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#div-pesquisa">
-                        <i class="fa-solid fa-magnifying-glass fa-xl"></i>
-                    </button>
-    
-                    <div class="usuario col-lg-1 offset-lg-2">
-                        <a href="perfil.html"><i class="fa-solid fa-circle-user fa-2xl"></i></a>
-                    </div>
-                </div>
-            </div>
-        -->
-        
-        
-        
         <!--Itens de menu a direita-->
         <div class="container-fluid">
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" >
                 <i class="fa-solid fa-bars fa-xl"></i>
             </button>
-            <a href="index.html"><img class="img-logo" src="img/logo.png" alt="logo"></a>
+            <a href="index.php"><img class="img-logo" src="img/logo.png" alt="logo"></a>
 
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#div-pesquisa">
@@ -67,16 +46,16 @@
              <div class="menu collapse navbar-collapse offset-lg-1" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link"  href="sobre.html">Sobre</a>
+                  <a class="nav-link"  href="sobre.php">Sobre</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contato.html">Contato</a>
+                    <a class="nav-link" href="contato.php">Contato</a>
                 </li>            
                 <li class="nav-item">
-                  <a class="nav-link"  href="perfil.html">Perfil</a>
+                  <a class="nav-link"  href="perfil.php">Perfil</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link"  href="login.html">Login</a>
+                  <a class="nav-link"  href="login.php">Login</a>
                 </li>
                 
               </ul>
@@ -84,32 +63,47 @@
           </div>
     </nav>
 
-    <!--container para a imagem à esquerda com o chef-->
-
-
-    <div class="container-fluid div-container">
-        <div class="row">
-            <div class="col-lg-3 offset-lg-2 div-chef">
-                <img src="img/chef.png">
+    <div class="container perfil">
+            <div class="nome-usuario col-lg-12">
+                <span>Remy</span>
             </div>
     
-            
-            <div class="col-lg-3 offset-lg-2 div-formulario">
-                <form action="">
-                    <h2 class="col-10 offset-1">Fale conosco</h2>
-                    <div class="nome">
-                        <label for="nome" class="col-9 offset-1">Nome</label>
-                        <input type="text" id="nome" placeholder="Digite seu nome" class="col-10 offset-1" maxlength="50" name="nome">
-                    </div>
-                    <div class="mensagem">
-                        <label for="message" class="col-9 offset-1">Mensagem</label>
-                        <textarea type="text" id="message" placeholder="Digite sua mensagem" class="col-10 offset-1" name="mensagem"></textarea>
-                    </div>
-                    <div class="">
-                        <button class="btn-enviar col-10 offset-1" type="submit" name="enviar">Enviar</button>
-                    </div>
-                </form>
+            <div class="foto-usuario col-lg-12">
+                <img src="img/chef mito.jpg">
+            </div>
     
+            <div class="titulo-historico offset-lg-3 col-lg-6">
+                <span>Histórico de receitas visualizadas</span>
+            </div>
+
+        <div class="container">
+            <div class="row receitas-visualizadas">
+                <div class="col-lg-4 col-12">
+                    <img src="receitas/ratatouille.webp">
+                    <a href="#"><span>Ratatouille du chef</span></a>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <img src="receitas/bife acebolado.jpg">
+                    <a href="#"><span>Bife acebolado</span></a>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <img src="receitas/Bolo padrao.jpg">
+                    <a href="#"><span>Bolo de chocolate</span></a>
+                </div>
+            </div>
+            <div class="row receitas-visualizadas">
+                <div class="col-lg-4 col-12">
+                    <img src="receitas/dadinho.jpeg">
+                    <a href="#"><span>Dadinho de Queijo Coalho</span></a>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <img src="receitas/caldo verde.jpg">
+                    <a href="#"><span>Caldo verde</span></a>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <img src="receitas/camarao internacional.jpg">
+                    <a href="#"><span>Camarão internacional</span></a>
+                </div>
             </div>
         </div>
     </div>

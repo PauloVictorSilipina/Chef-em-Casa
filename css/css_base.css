@@ -4,6 +4,8 @@ importação de fonte e adicionando ela em todos itens, utilizado também o bord
 
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
 
 * {
     padding: 0;
@@ -39,6 +41,13 @@ body {
 .cabecalho a {
     text-decoration: none;
     color: black;
+}
+
+.div-logo h1{
+    font-family: 'Cookie', cursive;
+    font-size: 3.2rem;
+    color: #ff5200;
+    text-shadow: 2px 2px black;
 }
 
 .left-links {
@@ -174,3 +183,15 @@ footer h3{
     outline: 0 !important;
     --bs-navbar-toggler-focus-width: 0 !important;
 }
+
+@media (max-width: 576px) {
+    .menu{
+      font-size: 2rem;
+    }
+  }
+
+@media (max-width: 576px) {
+    .div-logo h1{
+      font-size: 2rem;
+    }
+  }

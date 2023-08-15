@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/05b9e3a650.js" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous" defer></script>
+    <script src="script/index.js" defer></script>
+
+    <link rel="stylesheet" href="css/css_base.css">
+    <link rel="stylesheet" href="css/css_receita.css">
+    
+    
+    <title>Chef em Casa</title>
+</head>
+<!--criação do corpo-->
+<body class="body_home">
+    <!--criação do cabecalho-->
+    <nav class="cabecalho navbar navbar-expand-lg sticky-top">
+
+        <!--
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="div-logo col-lg-2">
+                        <a><img src="img/logo.png"></a>
+                    </div>
+    
+                    <div class="div-pesquisa col-lg-6 offset-lg-1 row no-gutters"  id="div-pesquisa">
+                        <input type="text" placeholder="Digite uma receita, ingrediente ou categoria" id="input-pesquisa" class="input-pesquisa col-lg-9">
+                        <button type="submit" id="btn-pesquisa" class="btn-pesquisa col-lg-3">Pesquisar</button>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#div-pesquisa">
+                        <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+                    </button>
+    
+                    <div class="usuario col-lg-1 offset-lg-2">
+                        <a href="perfil.php"><i class="fa-solid fa-circle-user fa-2xl"></i></a>
+                    </div>
+                </div>
+            </div>
+        -->
+        
+        
+        
+        <!--Itens de menu a direita-->
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" >
+                <i class="fa-solid fa-bars fa-xl"></i>
+            </button>
+            <a href="index.php"><img class="img-logo" src="img/logo.png" alt="logo"></a>
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#div-pesquisa">
+                <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+            </button>
+            
+            <div class="col-12 col-lg-5 offset-lg-3 row no-gutters div-pesquisa" id="div-pesquisa">
+                <input type="text" placeholder="Digite uma receita, ingrediente ou categoria" id="input-pesquisa" class="input-pesquisa col-6 offset-1 col-lg-6 offset-lg-2">
+                <button type="submit" id="btn-pesquisa" class="btn-pesquisa col-4 col-lg-2">Pesquisar</button>
+            </div>
+            <!--responsividade-->
+
+            <!--Itens de menu a direita-->
+             <div class="menu collapse navbar-collapse offset-lg-1" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link"  href="sobre.php">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contato.php">Contato</a>
+                </li>            
+                <li class="nav-item">
+                  <a class="nav-link"  href="perfil.php">Perfil</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="login.php">Login</a>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+    </nav>
+
+     <!-- Infos da receitas -->
+     <div class="conteudo container">
+        <div class="receita container col-lg-6">
+            <div class="">
+                <h3 class="titulo-receita col-lg-12">Bolo de Chocolate</h3>
+            </div>
+
+            <img class="img-receita col-lg-12" src="receitas/Bolo padrao.jpg">
+        </div>
+        <div class="info-receita container col-lg-6">
+            <div class="tempo-rendimento-serve">
+                <div class="div-tempo col-4 col-lg-4">
+                    <span><i class="fa-regular fa-clock fa-2xl"></i></span>
+                    <br>
+                    <span>1 hora</span>
+                </div>
+                <div class="div-rendimento col-4 col-lg-4">
+                    <span><i class="fa-solid fa-bowl-rice fa-2xl"></i></span>
+                    <br>
+                    <span>8 porções</span>
+                </div>
+                <div class="div-dificuldade col-4 col-lg-4">
+                    <span><i class="fa-solid fa-fire fa-2xl"></i></span>
+                    <br>
+                    <span>Fácil</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-criador container col-lg-6">
+            <img src="img/chapeu com bg.png">
+            <span>Chef em Casa</span>
+        </div>
+
+        <!--Ingredientes-->
+        <div class="container col-lg-6">
+            <div class="titulo col-lg-12">
+                <span>Ingredientes</span>
+            </div>
+        </div>
+        <div class="container col-lg-6">
+            <div class="info-ingredientes col-lg-12">
+                <ul>
+                    <li>3 copos de trigo</li>
+                    <li>2 copos de açúcar</li>
+                    <li>1 copo de chocolate em pó</li>
+                    <li>1 copo de óleo</li>
+                    <li>Óleo</li>
+                    <li>Fermento</li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Modo de preparo-->
+        <div class="container col-lg-6">
+            <div class="titulo col-lg-12">
+                <span>Modo de Preparo</span>
+            </div>
+        </div>
+        <div class="container col-lg-6">
+            <div class="info-preparo col-lg-12">
+                <ul>
+                    <li>Em uma tigela misturar o açúcar e o chocolate em pó</li>
+                    <li>Em seguida, misturar as gemas e o óleo</li>
+                    <li>Aos poucos acrescentar a água e o trigo</li>
+                    <li>Em seguida juntar o fermento e por fim juntar as claras em neve</li>
+                    <li>Óleo</li>
+                    <li>Despejar numa forma untada e colocar para assar por aproximadamente 40 minutos</li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Seção de comentários-->
+        <div class="container col-lg-6">
+            <div class="titulo col-lg-12">
+                <span>Comentários</span>
+            </div>
+            <div class="comentario row">
+                <div class="usuario col-lg-3">
+                    <div class="img-usuario">
+                        <img src="img/pedroantonio.jpeg">
+                    </div>
+                    <span>Pedro Antônio</span>
+                </div>
+                <div class="texto-comentario col-lg-6">
+                    <span>Gostei muito dessa receita! Muito fácil de fazer</span>
+                </div>
+            </div>
+            <div class="comentario row">
+                <div class="usuario col-lg-3">
+                    <div class="img-usuario">
+                        <img src="img/deninho.jpg">
+                    </div>
+                    <span>Denninho Silva</span>
+                </div>
+                <div class="texto-comentario col-lg-6">
+                    <span>Gostei muito dessa receita! Muito fácil de fazer</span>
+                </div>
+            </div>
+        </div>
+     </div>
+
+    <footer class="container-fluid">
+        <div id="contact-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-12">
+                        <h3 class="main-title">Chef em Casa</h3>
+                    </div>
+                    <div class="col-12 col-lg-3 offset-lg-1 contact-box">
+                        <ul class="col-10">
+                            <li>
+                                <a href="#" class="fa fa-facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-google"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-instagram"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-5 offset-lg-3">
+                        <p>Chef em Casa oferece receitas de forma amplas, visando vários públicos com seus inovadores filtros</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

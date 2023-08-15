@@ -17,7 +17,7 @@
 <body  class="body_login">
     <!--criação do cabecalho-->
     <nav class="cabecalho navbar navbar-expand-lg">
-        <a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+        <a href="index.php" class="logo"><img src="img/logo.png" alt="logo"></a>
     </nav>
     
     <!--div com classe reutilizada do cadastro pois modelam-se iguais-->
@@ -50,7 +50,7 @@
                     </div>
     
                     <div class="cad">
-                        <span class="col-10 offset-1">Não possui uma conta? <br><a href="cadastro.html">Clique aqui</a></span>
+                        <span class="col-10 offset-1">Não possui uma conta? <br><a href="cadastro.php">Clique aqui</a></span>
                     </div>
                 </form>
             </div>

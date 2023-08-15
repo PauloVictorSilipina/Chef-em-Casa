@@ -43,7 +43,7 @@ const login = element => {
         console.log("aaaaaaaaa")
         for (var i = 0; i < lista.length; i = i+2) {
             if ((username.value.trim() == lista[i]) && (password.value.trim() == lista[i+1])) {
-                window.location.assign("/index.html");
+                window.location.assign("/index.php");
             }
     }
  }};   

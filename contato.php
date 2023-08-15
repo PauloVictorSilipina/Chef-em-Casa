@@ -9,12 +9,14 @@
     <script src="https://kit.fontawesome.com/05b9e3a650.js" crossorigin="anonymous"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous" defer></script>
-    
-    <link rel="stylesheet" href="css/css_sobre.css">
+
+    <link rel="stylesheet" href="css/css_contato.css">
     <link rel="stylesheet" href="css/css_base.css">
+    
+    <title>Chef em Casa</title>
 </head>
 
-<body class="body_sobre">
+<body class="body_contato">
     <!--criação do cabecalho-->
     <nav class="cabecalho navbar navbar-expand-lg sticky-top">
 
@@ -34,7 +36,7 @@
                     </button>
     
                     <div class="usuario col-lg-1 offset-lg-2">
-                        <a href="perfil.html"><i class="fa-solid fa-circle-user fa-2xl"></i></a>
+                        <a href="perfil.php"><i class="fa-solid fa-circle-user fa-2xl"></i></a>
                     </div>
                 </div>
             </div>
@@ -48,7 +50,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" >
                 <i class="fa-solid fa-bars fa-xl"></i>
             </button>
-            <a href="index.html"><img class="img-logo" src="img/logo.png" alt="logo"></a>
+            <a href="index.php"><img class="img-logo" src="img/logo.png" alt="logo"></a>
 
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#div-pesquisa">
@@ -65,16 +67,16 @@
              <div class="menu collapse navbar-collapse offset-lg-1" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link"  href="sobre.html">Sobre</a>
+                  <a class="nav-link"  href="sobre.php">Sobre</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contato.html">Contato</a>
+                    <a class="nav-link" href="contato.php">Contato</a>
                 </li>            
                 <li class="nav-item">
-                  <a class="nav-link"  href="perfil.html">Perfil</a>
+                  <a class="nav-link"  href="perfil.php">Perfil</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link"  href="login.html">Login</a>
+                  <a class="nav-link"  href="login.php">Login</a>
                 </li>
                 
               </ul>
@@ -82,42 +84,36 @@
           </div>
     </nav>
 
-    <!--texto em paragráfos com a motivação da empresa-->
-    <div class="container texto_sobre">
-        <div class="col-lg-6 offset-lg-3 col-10 offset-1">
-            <h2 class="titulo">Quem somos?</h2>
-        
-            <p class="subtitulo">
-                Conheça o Chef em Casa
-            </p>
+    <!--container para a imagem à esquerda com o chef-->
 
-            <p>
-                Somos um pequeno grupo criado em 2022, que decidiu se juntar para mesclar conhecimentos de tecnologia e a comunidade culinária,
-                que tinhamos como ideia criar um site com alguma forma fácil e intuitiva de buscar receitas. Queriamos também ser útil
-                para o meio ambiente, combatendo o despercicio de alimentos.
-            </p>
 
-            <p>
-                Queremos oferecer uma experiência de navegação agradável e simples para o usuário, para que possam buscar
-                receitas independente da ocasião, sejam receitas fáceis à receitas mais elaboradas.
-                Temos fé que a culinária pode se tornar uma experiência divertida e prazerosa, e queremos tornar
-                essa ideia realidade.
-            </p>
-
-            <h2 class="pos-titulo">Conheça os chefs</h2>
-            <p>Desenvolvedor front-end: Paulo Victor</p>
-            <p>Desenvolvedor back-end: Pedro Antonio</p>
-            <p>Desenvolvedor do banco de dados: Ricardo Leite</p>
-            <p>Designer: Halisson Julio</p>
-
-            <h2 class="pos-titulo">Quem nos auxiliou nessa jornada</h2>
-            <p>Moises Savedra Omena</p>
-            <p>Felipe Frechiani de Oliveira</p>
-            <p>Marta Thalita</p>
-            <p>Daniel Ribeiro Trindade</p>
+    <div class="container-fluid div-container">
+        <div class="row">
+            <div class="col-lg-3 offset-lg-2 div-chef">
+                <img src="img/chef.png">
+            </div>
+    
+            
+            <div class="col-lg-3 offset-lg-2 div-formulario">
+                <form action="">
+                    <h2 class="col-10 offset-1">Fale conosco</h2>
+                    <div class="nome">
+                        <label for="nome" class="col-9 offset-1">Nome</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome" class="col-10 offset-1" maxlength="50" name="nome">
+                    </div>
+                    <div class="mensagem">
+                        <label for="message" class="col-9 offset-1">Mensagem</label>
+                        <textarea type="text" id="message" placeholder="Digite sua mensagem" class="col-10 offset-1" name="mensagem"></textarea>
+                    </div>
+                    <div class="">
+                        <button class="btn-enviar col-10 offset-1" type="submit" name="enviar">Enviar</button>
+                    </div>
+                </form>
+    
+            </div>
         </div>
     </div>
-    <!--rodapé-->
+
     <footer class="container-fluid">
         <div id="contact-area">
             <div class="container">

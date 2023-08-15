@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="css/css_home.css">
     <link rel="stylesheet" href="css/css_base.css">
     
-    
     <title>Chef em Casa</title>
 </head>
 <!--criação do corpo-->
@@ -26,68 +25,35 @@
             <div class="col-lg-12">
                 <div class="row">
 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" >
+                    <button class="navbar-toggler col-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" >
                         <i class="fa-solid fa-bars fa-xl"></i>
                     </button>
 
-                    <div class="div-logo col-lg-2">
+                    <!--<div class="div-logo col-lg-2 col-6">
                         <a><img src="img/logo.png"></a>
                     </div>
+                    -->
+                    <div class="div-logo col-lg-2 col-6">
+                        <h1 class="offset-lg-2">Chef em Casa</h1>
+                    </div>
     
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#div-pesquisa">
-                        <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+                    <button class="navbar-toggler col-3" type="button" data-bs-toggle="" data-bs-target="#">
+                        <i class="fa-solid fa-tags fa-xl"></i>
                     </button>
                     
-                    <div class="div-pesquisa col-12 col-lg-5 offset-lg-1 row no-gutters"  id="div-pesquisa">
+                    <div class="div-pesquisa col-12 col-lg-6 offset-lg-1 row no-gutters"  id="div-pesquisa">
                         <input type="text" placeholder="Digite uma receita, ingrediente ou categoria" id="input-pesquisa" class="input-pesquisa col-7 offset-1 col-lg-10 offset-lg-0">
                         <button type="submit" id="btn-pesquisa" class="btn-pesquisa col-4 col-lg-2"><i class="fa-solid fa-magnifying-glass fa-xl"></i></button>
                     </div>
 
-                    <div class="menu collapse navbar-collapse usuario col-lg-2 offset-lg-2" id="navbarSupportedContent">
-                        <a href="#"><i class="fa-solid fa-heart fa-2xl"></i></a>
-                        <a href="#"><i class="fa-solid fa-plus fa-2xl"></i></a>
-                        <a href="#"><i class="fa-regular fa-bell fa-2xl"></i></a>
-                        <a href="perfil.html"><i class="fa-solid fa-circle-user fa-2xl"></i></a>
+                    <div class="menu collapse navbar-collapse usuario col-lg-2 offset-lg-1" id="navbarSupportedContent">
+                        <a href="#"><i class="fa-solid fa-heart fa-2xl col-2 col-lg-0"></i></a>
+                        <a href="#"><i class="fa-solid fa-plus fa-2xl col-2 col-lg-0 offset-lg-4"></i></a>
+                        <a href="#"><i class="fa-regular fa-bell fa-2xl col-2 col-lg-0 offset-lg-4"></i></a>
+                        <a href="perfil.php"><i class="fa-solid fa-circle-user fa-2xl col-2 col-lg-0 offset-lg-4"></i></a>
                     </div>
                 </div>
             </div>
-        
-        <!--
-        <div class="container-fluid">
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" >
-                <i class="fa-solid fa-bars fa-xl"></i>
-            </button>
-            <a href="index.html"><img class="img-logo" src="img/logo.png" alt="logo"></a>
-
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#div-pesquisa">
-                <i class="fa-solid fa-magnifying-glass fa-xl"></i>
-            </button>
-            
-            <div class="col-12 col-lg-5 offset-lg-3 row no-gutters div-pesquisa" id="div-pesquisa">
-                <input type="text" placeholder="Digite uma receita, ingrediente ou categoria" id="input-pesquisa" class="input-pesquisa col-6 offset-1 col-lg-6 offset-lg-2">
-                <button type="submit" id="btn-pesquisa" class="btn-pesquisa col-4 col-lg-2">Pesquisar</button>
-            </div>
-             <div class="menu collapse navbar-collapse offset-lg-1" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <a class="nav-link"  href="sobre.html">Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contato.html">Contato</a>
-                </li>            
-                <li class="nav-item">
-                  <a class="nav-link"  href="perfil.html">Perfil</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link"  href="login.html">Login</a>
-                </li>
-                
-              </ul>
-            </div>
-          </div>
-        -->
     </nav>
 
     <div class="container div-receitas">
@@ -98,12 +64,12 @@
         <div class="imagens row">
             <div class="div-imagem col-lg-3 col-12">
                 <div class="imagem">
-                    <a href="receita.html"><img class="img-receitas" src="receitas/Bolo.jpg"></a>
+                    <a href="receita.php"><img class="img-receitas" src="receitas/Bolo.jpg"></a>
                 </div>
                 <div class="info-criador">
                     <img class="criador" src="img/chapeu com bg.png">
                 </div>
-                <a href="receita.html"><span>Bolo de Chocolate</span></a>
+                <a href="receita.php"><span>Bolo de Chocolate</span></a>
             </div>
             
             <div class="div-imagem col-lg-3 col-12">
@@ -173,12 +139,12 @@
         <div class="imagens row">
             <div class="div-imagem col-lg-3 col-12">
                 <div class="imagem">
-                    <a href="receita.html"><img class="img-receitas" src="receitas/batida de coco.jpg"></a>
+                    <a href="receita.php"><img class="img-receitas" src="receitas/batida de coco.jpg"></a>
                 </div>
                 <div class="info-criador">
                     <img class="criador" src="img/paulovictor.jpg">
                 </div>
-                <a href="receita.html"><span>Batida de Coco bem Gostosa</span></a>
+                <a href="receita.php"><span>Batida de Coco bem Gostosa</span></a>
             </div>
             
             <div class="div-imagem col-lg-3 col-12">

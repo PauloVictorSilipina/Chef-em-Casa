@@ -4,22 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/05b9e3a650.js" crossorigin="anonymous"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous" defer></script>
-    <script src="script/index.js" defer></script>
-
+    
+    <link rel="stylesheet" href="css/css_sobre.css">
     <link rel="stylesheet" href="css/css_base.css">
-    <link rel="stylesheet" href="css/css_receita.css">
-    
-    
-    <title>Chef em Casa</title>
 </head>
-<!--criação do corpo-->
-<body class="body_home">
+
+<body class="body_sobre">
     <!--criação do cabecalho-->
     <nav class="cabecalho navbar navbar-expand-lg sticky-top">
 
@@ -39,7 +34,7 @@
                     </button>
     
                     <div class="usuario col-lg-1 offset-lg-2">
-                        <a href="perfil.html"><i class="fa-solid fa-circle-user fa-2xl"></i></a>
+                        <a href="perfil.php"><i class="fa-solid fa-circle-user fa-2xl"></i></a>
                     </div>
                 </div>
             </div>
@@ -53,7 +48,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" >
                 <i class="fa-solid fa-bars fa-xl"></i>
             </button>
-            <a href="index.html"><img class="img-logo" src="img/logo.png" alt="logo"></a>
+            <a href="index.php"><img class="img-logo" src="img/logo.png" alt="logo"></a>
 
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#div-pesquisa">
@@ -70,16 +65,16 @@
              <div class="menu collapse navbar-collapse offset-lg-1" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link"  href="sobre.html">Sobre</a>
+                  <a class="nav-link"  href="sobre.php">Sobre</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contato.html">Contato</a>
+                    <a class="nav-link" href="contato.php">Contato</a>
                 </li>            
                 <li class="nav-item">
-                  <a class="nav-link"  href="perfil.html">Perfil</a>
+                  <a class="nav-link"  href="perfil.php">Perfil</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link"  href="login.html">Login</a>
+                  <a class="nav-link"  href="login.php">Login</a>
                 </li>
                 
               </ul>
@@ -87,108 +82,42 @@
           </div>
     </nav>
 
-     <!-- Infos da receitas -->
-     <div class="conteudo container">
-        <div class="receita container col-lg-6">
-            <div class="">
-                <h3 class="titulo-receita col-lg-12">Bolo de Chocolate</h3>
-            </div>
+    <!--texto em paragráfos com a motivação da empresa-->
+    <div class="container texto_sobre">
+        <div class="col-lg-6 offset-lg-3 col-10 offset-1">
+            <h2 class="titulo">Quem somos?</h2>
+        
+            <p class="subtitulo">
+                Conheça o Chef em Casa
+            </p>
 
-            <img class="img-receita col-lg-12" src="receitas/Bolo padrao.jpg">
-        </div>
-        <div class="info-receita container col-lg-6">
-            <div class="tempo-rendimento-serve">
-                <div class="div-tempo col-4 col-lg-4">
-                    <span><i class="fa-regular fa-clock fa-2xl"></i></span>
-                    <br>
-                    <span>1 hora</span>
-                </div>
-                <div class="div-rendimento col-4 col-lg-4">
-                    <span><i class="fa-solid fa-bowl-rice fa-2xl"></i></span>
-                    <br>
-                    <span>8 porções</span>
-                </div>
-                <div class="div-dificuldade col-4 col-lg-4">
-                    <span><i class="fa-solid fa-fire fa-2xl"></i></span>
-                    <br>
-                    <span>Fácil</span>
-                </div>
-            </div>
-        </div>
+            <p>
+                Somos um pequeno grupo criado em 2022, que decidiu se juntar para mesclar conhecimentos de tecnologia e a comunidade culinária,
+                que tinhamos como ideia criar um site com alguma forma fácil e intuitiva de buscar receitas. Queriamos também ser útil
+                para o meio ambiente, combatendo o despercicio de alimentos.
+            </p>
 
-        <div class="info-criador container col-lg-6">
-            <img src="img/chapeu com bg.png">
-            <span>Chef em Casa</span>
-        </div>
+            <p>
+                Queremos oferecer uma experiência de navegação agradável e simples para o usuário, para que possam buscar
+                receitas independente da ocasião, sejam receitas fáceis à receitas mais elaboradas.
+                Temos fé que a culinária pode se tornar uma experiência divertida e prazerosa, e queremos tornar
+                essa ideia realidade.
+            </p>
 
-        <!--Ingredientes-->
-        <div class="container col-lg-6">
-            <div class="titulo col-lg-12">
-                <span>Ingredientes</span>
-            </div>
-        </div>
-        <div class="container col-lg-6">
-            <div class="info-ingredientes col-lg-12">
-                <ul>
-                    <li>3 copos de trigo</li>
-                    <li>2 copos de açúcar</li>
-                    <li>1 copo de chocolate em pó</li>
-                    <li>1 copo de óleo</li>
-                    <li>Óleo</li>
-                    <li>Fermento</li>
-                </ul>
-            </div>
-        </div>
+            <h2 class="pos-titulo">Conheça os chefs</h2>
+            <p>Desenvolvedor front-end: Paulo Victor</p>
+            <p>Desenvolvedor back-end: Pedro Antonio</p>
+            <p>Desenvolvedor do banco de dados: Ricardo Leite</p>
+            <p>Designer: Halisson Julio</p>
 
-        <!--Modo de preparo-->
-        <div class="container col-lg-6">
-            <div class="titulo col-lg-12">
-                <span>Modo de Preparo</span>
-            </div>
+            <h2 class="pos-titulo">Quem nos auxiliou nessa jornada</h2>
+            <p>Moises Savedra Omena</p>
+            <p>Felipe Frechiani de Oliveira</p>
+            <p>Marta Thalita</p>
+            <p>Daniel Ribeiro Trindade</p>
         </div>
-        <div class="container col-lg-6">
-            <div class="info-preparo col-lg-12">
-                <ul>
-                    <li>Em uma tigela misturar o açúcar e o chocolate em pó</li>
-                    <li>Em seguida, misturar as gemas e o óleo</li>
-                    <li>Aos poucos acrescentar a água e o trigo</li>
-                    <li>Em seguida juntar o fermento e por fim juntar as claras em neve</li>
-                    <li>Óleo</li>
-                    <li>Despejar numa forma untada e colocar para assar por aproximadamente 40 minutos</li>
-                </ul>
-            </div>
-        </div>
-
-        <!--Seção de comentários-->
-        <div class="container col-lg-6">
-            <div class="titulo col-lg-12">
-                <span>Comentários</span>
-            </div>
-            <div class="comentario row">
-                <div class="usuario col-lg-3">
-                    <div class="img-usuario">
-                        <img src="img/pedroantonio.jpeg">
-                    </div>
-                    <span>Pedro Antônio</span>
-                </div>
-                <div class="texto-comentario col-lg-6">
-                    <span>Gostei muito dessa receita! Muito fácil de fazer</span>
-                </div>
-            </div>
-            <div class="comentario row">
-                <div class="usuario col-lg-3">
-                    <div class="img-usuario">
-                        <img src="img/deninho.jpg">
-                    </div>
-                    <span>Denninho Silva</span>
-                </div>
-                <div class="texto-comentario col-lg-6">
-                    <span>Gostei muito dessa receita! Muito fácil de fazer</span>
-                </div>
-            </div>
-        </div>
-     </div>
-
+    </div>
+    <!--rodapé-->
     <footer class="container-fluid">
         <div id="contact-area">
             <div class="container">
