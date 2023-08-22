@@ -17,72 +17,9 @@
 </head>
 
 <body class="body_contato">
-    <!--criação do cabecalho-->
-    <nav class="cabecalho navbar navbar-expand-lg sticky-top">
-
-        <!--
-            <div class="col-lg-12">
-                <div class="row">
-                    <div class="div-logo col-lg-2">
-                        <a><img src="img/logo.png"></a>
-                    </div>
-    
-                    <div class="div-pesquisa col-lg-6 offset-lg-1 row no-gutters"  id="div-pesquisa">
-                        <input type="text" placeholder="Digite uma receita, ingrediente ou categoria" id="input-pesquisa" class="input-pesquisa col-lg-9">
-                        <button type="submit" id="btn-pesquisa" class="btn-pesquisa col-lg-3">Pesquisar</button>
-                    </div>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#div-pesquisa">
-                        <i class="fa-solid fa-magnifying-glass fa-xl"></i>
-                    </button>
-    
-                    <div class="usuario col-lg-1 offset-lg-2">
-                        <a href="perfil.php"><i class="fa-solid fa-circle-user fa-2xl"></i></a>
-                    </div>
-                </div>
-            </div>
-        -->
-        
-        
-        
-        <!--Itens de menu a direita-->
-        <div class="container-fluid">
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" >
-                <i class="fa-solid fa-bars fa-xl"></i>
-            </button>
-            <a href="index.php"><img class="img-logo" src="img/logo.png" alt="logo"></a>
-
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#div-pesquisa">
-                <i class="fa-solid fa-magnifying-glass fa-xl"></i>
-            </button>
-            
-            <div class="col-12 col-lg-5 offset-lg-3 row no-gutters div-pesquisa" id="div-pesquisa">
-                <input type="text" placeholder="Digite uma receita, ingrediente ou categoria" id="input-pesquisa" class="input-pesquisa col-6 offset-1 col-lg-6 offset-lg-2">
-                <button type="submit" id="btn-pesquisa" class="btn-pesquisa col-4 col-lg-2">Pesquisar</button>
-            </div>
-            <!--responsividade-->
-
-            <!--Itens de menu a direita-->
-             <div class="menu collapse navbar-collapse offset-lg-1" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <a class="nav-link"  href="sobre.php">Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contato.php">Contato</a>
-                </li>            
-                <li class="nav-item">
-                  <a class="nav-link"  href="perfil.php">Perfil</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link"  href="login.php">Login</a>
-                </li>
-                
-              </ul>
-            </div>
-          </div>
-    </nav>
+    <?php
+    include "header.php";
+    ?>
 
     <!--container para a imagem à esquerda com o chef-->
 
@@ -113,33 +50,8 @@
             </div>
         </div>
     </div>
-
-    <footer class="container-fluid">
-        <div id="contact-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-lg-12">
-                        <h3 class="main-title">Chef em Casa</h3>
-                    </div>
-                    <div class="col-12 col-lg-3 offset-lg-1 contact-box">
-                        <ul class="col-10">
-                            <li>
-                                <a href="#" class="fa fa-facebook"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fa fa-google"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fa fa-instagram"></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-lg-5 offset-lg-3">
-                        <p>Chef em Casa oferece receitas de forma amplas, visando vários públicos com seus inovadores filtros</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php
+    include "footer.php";
+    ?>
 </body>
 </html>

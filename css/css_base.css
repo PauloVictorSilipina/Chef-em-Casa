@@ -47,15 +47,7 @@ body {
     font-family: 'Cookie', cursive;
     font-size: 3.2rem;
     color: #ff5200;
-    text-shadow: 2px 2px black;
-}
-
-.left-links {
-    margin-left: 15px;
-}
-
-.right-links {
-    margin-right: 15px;
+    text-shadow: -1.5px 1px black;
 }
 
 footer{
