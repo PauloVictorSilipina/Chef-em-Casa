@@ -6,17 +6,6 @@ posiciono o div com os dados ao centro e adiciono animação para quando aparece
     margin-left: auto;
     margin-right: auto;
 }
-.body_login {
-    background-image: url('./../img/bg_chocolate.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-
-.body_cadastro {
-    background-image: url('./../img/bg_comida.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
 
 .login {
     margin-top:auto;
@@ -45,6 +34,7 @@ posiciono o div com os dados ao centro e adiciono animação para quando aparece
     color: black;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    border: 1px solid black;
 }
 
 .dados h1{
@@ -66,6 +56,15 @@ posiciono o div com os dados ao centro e adiciono animação para quando aparece
 
 .div-btn {
     margin-bottom: 1.25rem;
+}
+
+.faz-login {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.faz-login a{
+    text-decoration: none;
 }
 
 .btn-valida {

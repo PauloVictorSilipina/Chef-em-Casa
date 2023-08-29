@@ -18,7 +18,7 @@
                     </div>
                     -->
                     <div class="div-logo col-lg-2 col-6">
-                        <h1 class="offset-lg-2">Chef em Casa</h1>
+                        <span class="offset-lg-2">Chef em Casa</span>
                     </div>
     
                     <button class="navbar-toggler col-3" type="button" data-bs-toggle="" data-bs-target="#">

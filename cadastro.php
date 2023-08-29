@@ -17,44 +17,44 @@
 <body class="body_cadastro">
 
     <!--criação do cabecalho-->
-    <nav class="cabecalho navbar navbar-expand-lg">
-        <a href="index.php" class="logo"><img src="img/logo.png" alt="logo"></a>
-    </nav>
+    <?php
+    include "headercadlog.php";
+    ?>
 
     <!--div para manipular os itens do cadastro-->
 
     <div class="login container">
-        <div class="row">
-            <div class="d-none d-lg-block img col-lg-4 offset-lg-2">
-                <img src="img/chapeu.png">
-            </div>
+        <div class="row"> 
 
-            <div class="dados col-lg-4 col-10 offset-1 offset-lg-0">
+            <div class="dados col-lg-4 col-10 offset-1 offset-lg-4">
                 <form id="form" action="cadastro.php" method="post">
                     <div class="col-lg-8 offset-lg-2">
                         <h1 class="">Cadastro</h1>
                     </div>
 
-                    <div class="col-lg-8 offset-lg-2 input-control">
+                    <div class="col-lg-12 input-control">
                         <label for="usuario" class="col-lg-12 col-10 offset-1">Usuário</label>
-                        <input type="text" name="usuario" id="usuario" placeholder="Digite o usuário" class="col-lg-12 col-10 offset-1" name="usuario">
+                        <input type="text" name="usuario" id="usuario" placeholder="Digite o usuário" class="col-lg-10 col-10 offset-1" name="usuario">
                         <div class="error"></div>
                     </div>
                     
-                    <div class="col-lg-8 offset-lg-2 input-control">
+                    <div class="col-lg-12 input-control">
                         <label for="password" class="col-lg-12 col-10 offset-1">Senha</label>
-                        <input type="password" name="senha" id="password" placeholder="Deve conter 6 caracteres ou mais" class="col-lg-12 col-10 offset-1" name="senha">
+                        <input type="password" name="senha" id="password" placeholder="Deve conter 6 caracteres ou mais" class="col-lg-10 col-10 offset-1" name="senha">
                         <div class="error"></div>
                     </div>
 
-                    <div class="col-lg-8 offset-lg-2 input-control">
+                    <div class="col-lg-12 input-control">
                         <label for="password" class="col-lg-12 col-10 offset-1">Confirme a senha</label>
-                        <input type="password" id="confirm-password" placeholder="Confirme sua senha" class="col-lg-12 col-10 offset-1" name="cfsenha">
+                        <input type="password" id="confirm-password" placeholder="Confirme sua senha" class="col-lg-10 col-10 offset-1" name="cfsenha">
                         <div class="error"></div>
                     </div>
 
-                    <div class="div-btn offset-lg-3 col-lg-6 col-10">
-                        <button class="btn-valida col-10 offset-1" type="submit">Fazer cadastro</button>
+                    <div class="div-btn offset-lg-1 col-lg-10 col-10">
+                        <button class="btn-valida" type="submit">Fazer cadastro</button>
+                    </div>
+                    <div class="faz-login offset-lg-1 col-lg-10">
+                        <a href="login.php">Fazer login</a>
                     </div>
                 </form>
             </div>
