@@ -19,7 +19,7 @@
     <title>Chef em Casa</title>
 </head>
 <!--criação do corpo-->
-<body class="body_home">
+<body>
     <?php
     include "header.php";
     ?>

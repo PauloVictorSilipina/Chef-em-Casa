@@ -9,7 +9,6 @@
         <script src="https://kit.fontawesome.com/05b9e3a650.js" crossorigin="anonymous"></script>
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous" defer></script>
-        <script src="script/cadastro.js" defer></script>
         <link rel="stylesheet" href="css/css_login.css">
         <link rel="stylesheet" href="css/css_base.css">
     </head>
@@ -19,6 +18,18 @@
     <!--criação do cabecalho-->
     <?php
     include "headercadlog.php";
+
+    if(isset($_GET['btn-valida'])):
+        $usuario = trim($_GET['usuario']);
+        $senha = trim($_GET['senha']);
+        $csenha = trim($_GET['cfsenha']);
+        
+        if(($usuario != "") or ($senha != "") and ($senha == $csenha)):
+            header("Location: /index.php");
+            exit();
+        endif;
+
+    endif;
     ?>
 
     <!--div para manipular os itens do cadastro-->
@@ -27,7 +38,7 @@
         <div class="row"> 
 
             <div class="dados col-lg-4 col-10 offset-1 offset-lg-4">
-                <form id="form" action="cadastro.php" method="post">
+                <form id="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
                     <div class="col-lg-8 offset-lg-2">
                         <h1 class="">Cadastro</h1>
                     </div>
@@ -51,7 +62,7 @@
                     </div>
 
                     <div class="div-btn offset-lg-1 col-lg-10 col-10">
-                        <button class="btn-valida" type="submit">Fazer cadastro</button>
+                        <button name="btn-valida" class="btn-valida" type="submit">Fazer cadastro</button>
                     </div>
                     <div class="faz-login offset-lg-1 col-lg-10">
                         <a href="login.php">Fazer login</a>

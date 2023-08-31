@@ -9,44 +9,49 @@
     <script src="https://kit.fontawesome.com/05b9e3a650.js" crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous" defer></script>
-    <script src="script/login.js" defer></script>
     <link rel="stylesheet" href="css/css_login.css">
     <link rel="stylesheet" href="css/css_base.css">
 </head>
 
 <body  class="body_login">
-    <!--criação do cabecalho-->
-    <nav class="cabecalho navbar navbar-expand-lg">
-        <a href="index.php" class="logo"><img src="img/logo.png" alt="logo"></a>
-    </nav>
-    
-    <!--div com classe reutilizada do cadastro pois modelam-se iguais-->
-    <div class="login container">
-        <div class="log row">
-            <div class="d-none d-lg-block img col-lg-4 offset-lg-2  ">
-                <img src="img/chapeu.png">
-            </div>
+    <?php
+    include "headercadlog.php";
 
-            <div class="dados col-lg-4 col-10 offset-1 offset-lg-0">
-                <form id="form" action="">
+    if(isset($_GET['btn-valida'])):
+        $usuario = trim($_GET['usuario']);
+        $senha = trim($_GET['senha']);
+        
+        if(($usuario != "") or ($senha != "")):
+            header("Location: /index.php");
+            exit();
+        endif;
+
+    endif;
+    ?>
+
+    <div class="login container">
+        <div class="row">
+
+            <div class="dados col-lg-4 col-10 offset-1 offset-lg-4">
+                <form id="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
                     <div class="col-lg-8 offset-lg-2">
                         <h1 class="">Login</h1>
                     </div>
     
-                    <div class="col-lg-8 offset-lg-2 input-control col-12">
+                    <div class="col-lg-12 input-control col-12">
                         <label for="usuario" class="col-lg-12 col-10 offset-1">Usuário</label>
-                        <input type="text" id="usuario" placeholder="Digite o usuário" class="col-lg-12 col-10 offset-1" name="usuario">
+                        <input type="text" id="usuario" placeholder="Digite o usuário" class="col-lg-10 col-10 offset-1" name="usuario">
                         <div class="error"></div>
                     </div>
     
-                    <div class="col-lg-8 offset-lg-2 input-control">    
+                    <div class="col-lg-12 input-control">    
                         <label for="password" class="col-lg-12 col-10 offset-1">Senha</label>
-                        <input type="password" id="password" placeholder="Digite sua senha" class="col-lg-12 col-10 offset-1" name="senha">
+                        <input type="password" id="password" placeholder="Digite sua senha" class="col-lg-10 col-10 offset-1" name="senha">
                         <div class="error"></div>
                     </div>
     
-                    <div class="div-btn offset-lg-4 col-lg-4 col-10 offset-1">
-                        <button class="btn-valida col-lg-12" type="submit">Fazer login</button>
+                    <div class="div-btn offset-lg-1 col-lg-10 col-10">
+                        <button name="btn-valida" class="btn-valida" type="submit">Fazer login</button>
                     </div>
     
                     <div class="cad">
