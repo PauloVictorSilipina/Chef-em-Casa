@@ -9,7 +9,7 @@
             <div class='col-lg-12'>
                 <div class='row'>
                     <div class='div-logo offset-lg-0 offset-6'>
-                        <span>Chef em Casa</span>
+                        <a href="index.php"><span>Chef em Casa</span></a>
                     </div>
                 </div>
             </div>

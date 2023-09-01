@@ -1,7 +1,9 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">    
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://kit.fontawesome.com/05b9e3a650.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="css/css_header.css">
 
 <nav class="cabecalho navbar navbar-expand-lg sticky-top">
@@ -13,12 +15,8 @@
                         <i class="fa-solid fa-bars fa-xl"></i>
                     </button>
 
-                    <!--<div class="div-logo col-lg-2 col-6">
-                        <a><img src="img/logo.png"></a>
-                    </div>
-                    -->
                     <div class="div-logo col-lg-2 col-6">
-                        <span class="offset-lg-2">Chef em Casa</span>
+                        <a href="index.php"><span class="offset-lg-2">Chef em Casa</span></a>
                     </div>
     
                     <button class="navbar-toggler col-3" type="button" data-bs-toggle="" data-bs-target="#">
@@ -34,7 +32,13 @@
                         <a href="#"><i class="fa-solid fa-heart fa-2xl col-2 col-lg-0"></i></a>
                         <a href="#"><i class="fa-solid fa-plus fa-2xl col-2 col-lg-0 offset-lg-4"></i></a>
                         <a href="#"><i class="fa-regular fa-bell fa-2xl col-2 col-lg-0 offset-lg-4"></i></a>
-                        <a href="perfil.php"><i class="fa-solid fa-circle-user fa-2xl col-2 col-lg-0 offset-lg-4"></i></a>
+                        <div class="dropdown">
+                        <button class="dropbtn"><i class="fa-solid fa-circle-user fa-2xl col-2 col-lg-0 offset-lg-4"></i></button>
+                        <div class="dropdown-content">
+                            <a href="cadastro.php">Cadastrar</a>
+                            <a href="login.php">Entrar</a>
+                        </div>
+                        </div> 
                     </div>
                 </div>
             </div>
