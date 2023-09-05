@@ -1,27 +1,46 @@
-<footer class="container-fluid">
-    <div id="contact-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-lg-12">
-                    <h3 class="main-title">Chef em Casa</h3>
-                </div>
-                <div class="col-12 col-lg-3 offset-lg-1 contact-box">
-                    <ul class="col-10">
-                        <li>
-                            <a href="#" class="fa fa-facebook"></a>
-                        </li>
-                        <li>
-                            <a href="#" class="fa fa-google"></a>
-                        </li>
-                        <li>
-                            <a href="#" class="fa fa-instagram"></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-10 offset-1 col-lg-5 offset-lg-3">
-                    <p>Chef em Casa oferece receitas de forma amplas, visando vários públicos com seus inovadores filtros</p>
-                </div>
+<link rel="stylesheet" href="css/css_footer.css">
+<footer class="">
+    <div class="container">
+        <div class="row">
+            <div class="titulo">
+                <span>Chef em Casa</span>
+            </div>
+            <div class="texto">
+                <span class="">Não é só sobre fazer receitas, é sobre ser um Chef em Casa.</span>
             </div>
         </div>
     </div>
+
+    <div class="fundo-footer">
+        <div class="tds-dir col-lg-12">
+            <span class="">Copyright © 2023 Chef em Casa. Todos direitos reservados.</span>
+            <a href="sobre.php"><span class="qm offset-lg-7">Quem somos</span></a>
+            <a href="contato.php"><span class="ctt">Contato</span></a>
+        </div>
+    </div>
+        
 </footer>
+
+<!--
+    <div class="container">
+            <div class="row">
+                <div class="titulo col-lg-12 col-6">
+                    <span>Chef em Casa</span>
+                </div>
+                <div class="texto col-lg-4 offset-lg-4">
+                    <span class="">Não é só sobre fazer receitas, é sobre ser um Chef em Casa.</span>
+                </div>
+            </div>
+        </div>
+        <div class="fundo-footer col-lg-12">
+            <div class="row">
+                <div class="tds-dir col-lg-5">
+                    <span>Copyright © 2023 Chef em Casa. Todos direitos reservados.</span>
+                </div>
+                <div class="qm-ctt col-lg-2 offset-lg-5">
+                    <span class="qm">Quem somos</span>
+                    <span class="ctt">Contato</span>
+                </div>
+            </div>
+        </div>
+-->
