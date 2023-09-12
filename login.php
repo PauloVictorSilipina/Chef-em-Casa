@@ -17,9 +17,9 @@
     <?php
     include "headercadlog.php";
 
-    if(isset($_GET['btn-valida'])):
-        $usuario = trim($_GET['usuario']);
-        $senha = trim($_GET['senha']);
+    if(isset($_POST['btn-valida'])):
+        $usuario = trim($_POST['usuario']);
+        $senha = trim($_POST['senha']);
         
         if(($usuario != "") or ($senha != "")):
             header("Location: /index.php");
@@ -33,7 +33,7 @@
         <div class="row">
 
             <div class="dados col-lg-4 col-10 offset-1 offset-lg-4">
-                <form id="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
+                <form id="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                     <div class="col-lg-8 offset-lg-2">
                         <h1 class="">Login</h1>
                     </div>
