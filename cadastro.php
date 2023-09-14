@@ -19,13 +19,20 @@
     <?php
     include "headercadlog.php";
 
-    if(isset($_GET['btn-valida'])):
-        $usuario = trim($_GET['usuario']);
-        $senha = trim($_GET['senha']);
-        $csenha = trim($_GET['cfsenha']);
+    if(isset($_POST['btn-valida'])):
+        $usuario = trim($_POST['usuario']);
+        $senha = trim($_POST['senha']);
+        $csenha = trim($_POST['cfsenha']);
         
         if(($usuario != "") or ($senha != "") and ($senha == $csenha)):
+            session_start();
+            $img_path = 'img/chef mito.png';
+            $_SESSION['img_path'] = $img_path;
             header("Location: /index.php");
+            
+
+            $_SESSION['id']=$senha;
+            $_SESSION['usuario']=$usuario;
             exit();
         endif;
 
@@ -38,7 +45,7 @@
         <div class="row"> 
 
             <div class="dados col-lg-4 col-10 offset-1 offset-lg-4">
-                <form id="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
+                <form id="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                     <div class="col-lg-8 offset-lg-2">
                         <h1 class="">Cadastro</h1>
                     </div>

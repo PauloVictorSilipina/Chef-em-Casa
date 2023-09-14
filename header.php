@@ -33,12 +33,27 @@
                         <a href="#"><i class="fa-solid fa-plus fa-2xl col-2 col-lg-0 offset-lg-4"></i></a>
                         <a href="#"><i class="fa-regular fa-bell fa-2xl col-2 col-lg-0 offset-lg-4"></i></a>
                         <div class="dropdown">
-                        <button class="dropbtn"><i class="fa-solid fa-circle-user fa-2xl col-2 col-lg-0 offset-lg-4"></i></button>
+
+                        <?php
+                        session_start();
+
+                        if (isset($_SESSION['img_path'])) {
+                            $img_path = $_SESSION['img_path'];
+                            // Agora, $img_path contém o caminho da imagem
+                        } else {
+                            $img_path = 'img/icon.png';
+                        }
+
+                        echo '<button class="dropbtn"><a href="perfil.php"><img class="header-perfil" src="' . $img_path . '"></img></a></button>';
+                        ?>
+                        
                         <div class="dropdown-content">
                             <a href="cadastro.php">Cadastrar</a>
                             <a href="login.php">Entrar</a>
                         </div>
                         </div> 
+
+                        <!--<i class="fa-solid fa-circle-user fa-2xl col-2 col-lg-0 offset-lg-4"></i>-->
                     </div>
                 </div>
             </div>

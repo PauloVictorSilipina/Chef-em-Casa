@@ -30,7 +30,7 @@
             </div>
     
             <div class="foto-usuario col-lg-12">
-                <img src="img/chef mito.jpg">
+                <img src="img/chef mito.png">
             </div>
     
             <div class="titulo-historico offset-lg-3 col-lg-6">
