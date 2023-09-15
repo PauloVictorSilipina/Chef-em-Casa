@@ -39,18 +39,29 @@
 
                         if (isset($_SESSION['img_path'])) {
                             $img_path = $_SESSION['img_path'];
+                            $caminho_pagina = 'perfil.php';
                             // Agora, $img_path contém o caminho da imagem
                         } else {
                             $img_path = 'img/icon.png';
+                            $caminho_pagina = 'cadastro.php';
                         }
 
-                        echo '<button class="dropbtn"><a href="perfil.php"><img class="header-perfil" src="' . $img_path . '"></img></a></button>';
-                        ?>
+                        echo '<button class="dropbtn"><a href="'.$caminho_pagina.'"><img class="header-perfil" src="' . $img_path . '"></img></a></button>';
+                        if (isset($_SESSION['user_id'])) {
+                            // Se o usuário estiver logado, mostrar o botão de logout
+                            echo '<div class="dropdown-content">';
+                            echo '<a href="logout.php">Sair</a>';
+                            echo '</div>';
+                        } else {
+                            // Se o usuário não estiver logado, mostrar os links de cadastro e login
+                            echo '<div class="dropdown-content">';
+                            echo '<a href="cadastro.php">Cadastrar</a>';
+                            echo '<a href="login.php">Entrar</a>';
+                            echo '</div>';
+                        }
+
                         
-                        <div class="dropdown-content">
-                            <a href="cadastro.php">Cadastrar</a>
-                            <a href="login.php">Entrar</a>
-                        </div>
+                        ?>
                         </div> 
 
                         <!--<i class="fa-solid fa-circle-user fa-2xl col-2 col-lg-0 offset-lg-4"></i>-->

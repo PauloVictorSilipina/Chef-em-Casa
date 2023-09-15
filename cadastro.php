@@ -24,15 +24,14 @@
         $senha = trim($_POST['senha']);
         $csenha = trim($_POST['cfsenha']);
         
-        if(($usuario != "") or ($senha != "") and ($senha == $csenha)):
+        if(($usuario != "") and ($senha != "") and ($senha == $csenha)):
             session_start();
             $img_path = 'img/chef mito.png';
             $_SESSION['img_path'] = $img_path;
-            header("Location: /index.php");
-            
-
+            $_SESSION['user_id'] = session_id();
             $_SESSION['id']=$senha;
             $_SESSION['usuario']=$usuario;
+            header("Location: /index.php");
             exit();
         endif;
 

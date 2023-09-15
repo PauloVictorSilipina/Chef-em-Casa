@@ -26,11 +26,24 @@
 
     <div class="container perfil">
             <div class="nome-usuario col-lg-12">
-                <span>Remy</span>
+                <?php
+                $usuario = $_SESSION['usuario'];
+                echo '<span>'.$usuario.'</span>';
+                ?>
             </div>
     
             <div class="foto-usuario col-lg-12">
-                <img src="img/chef mito.png">
+                <?php
+                if (isset($_SESSION['img_path'])) {
+                    $img_path = $_SESSION['img_path'];
+                    // Agora, $img_path contém o caminho da imagem
+                } else {
+                    $img_path = 'img/icon.png';
+                }
+
+                echo '<img src="'. $img_path .'">';
+                ?>
+                
             </div>
     
             <div class="titulo-historico offset-lg-3 col-lg-6">

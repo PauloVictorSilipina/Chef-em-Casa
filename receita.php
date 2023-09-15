@@ -97,32 +97,13 @@
         </div>
 
         <!--Seção de comentários-->
-        <div class="container col-lg-6">
-            <div class="titulo col-lg-12">
+        <div class="container">
+            <div class="titulo-comentario">
                 <span>Comentários</span>
             </div>
-            <div class="comentario row">
-                <div class="usuario col-lg-3">
-                    <div class="img-usuario">
-                        <img src="img/pedroantonio.jpeg">
-                    </div>
-                    <span>Pedro Antônio</span>
-                </div>
-                <div class="texto-comentario col-lg-6">
-                    <span>Gostei muito dessa receita! Muito fácil de fazer</span>
-                </div>
-            </div>
-            <div class="comentario row">
-                <div class="usuario col-lg-3">
-                    <div class="img-usuario">
-                        <img src="img/deninho.jpg">
-                    </div>
-                    <span>Denninho Silva</span>
-                </div>
-                <div class="texto-comentario col-lg-6">
-                    <span>Gostei muito dessa receita! Muito fácil de fazer</span>
-                </div>
-            </div>
+
+            
+            <div class="comentarios"></div>
         </div>
      </div>
     <?php
