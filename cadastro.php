@@ -20,9 +20,11 @@
     include "headercadlog.php";
 
     if(isset($_POST['btn-valida'])):
-        $usuario = trim($_POST['usuario']);
-        $senha = trim($_POST['senha']);
-        $csenha = trim($_POST['cfsenha']);
+        $usuario = filter_input(INPUT_POST, 'usuario', FILTER_SANITIZE_SPECIAL_CHARS);
+        $senha = $_POST['senha'];
+        $csenha = $_POST['cfsenha'];
+
+        //Area de filtragem
         
         if(($usuario != "") and ($senha != "") and ($senha == $csenha)):
             session_start();
