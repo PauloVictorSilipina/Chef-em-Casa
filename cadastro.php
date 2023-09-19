@@ -29,7 +29,7 @@
             $img_path = 'img/chef mito.png';
             $_SESSION['img_path'] = $img_path;
             $_SESSION['user_id'] = session_id();
-            $_SESSION['id']=$senha;
+            $_SESSION['senha']=$senha;
             $_SESSION['usuario']=$usuario;
             header("Location: /index.php");
             exit();
