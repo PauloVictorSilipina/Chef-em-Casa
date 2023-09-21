@@ -28,15 +28,14 @@
                         <button type="submit" id="btn-pesquisa" class="btn-pesquisa col-4 col-lg-2"><i class="fa-solid fa-magnifying-glass fa-xl"></i></button>
                     </div>
 
-                    <div class="menu collapse navbar-collapse usuario col-lg-2 offset-lg-1" id="navbarSupportedContent">
-                        <a href="#"><i class="fa-solid fa-heart fa-2xl col-2 col-lg-0"></i></a>
-                        <a href="#"><i class="fa-solid fa-plus fa-2xl col-2 col-lg-0 offset-lg-4"></i></a>
-                        <a href="#"><i class="fa-regular fa-bell fa-2xl col-2 col-lg-0 offset-lg-4"></i></a>
+                    <div class="menu collapse navbar-collapse col-lg-2 offset-lg-1" id="navbarSupportedContent">
+                        <a href="#"><i class="fa-solid fa-heart fa-xl col-2"></i></a>
+                        <a href="#"><i class="fa-solid fa-plus fa-xl col-2"></i></a>
+                        <a href="#"><i class="fa-regular fa-bell fa-xl col-2"></i></a>
                         <div class="dropdown">
 
                         <?php
                         session_start();
-
                         if (isset($_SESSION['img_path'])) {
                             $img_path = $_SESSION['img_path'];
                             $caminho_pagina = 'perfil.php';
@@ -59,12 +58,8 @@
                             echo '<a href="login.php">Entrar</a>';
                             echo '</div>';
                         }
-
-                        
                         ?>
-                        </div> 
-
-                        <!--<i class="fa-solid fa-circle-user fa-2xl col-2 col-lg-0 offset-lg-4"></i>-->
+                        </div>
                     </div>
                 </div>
             </div>

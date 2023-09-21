@@ -13,8 +13,7 @@
 
     <div class="fundo-footer">
         <div class="tds-dir col-lg-12">
-            <span class="">Copyright © 2023 Chef em Casa. Todos direitos reservados.</span>
-            <a href="sobre.php"><span class="qm offset-lg-7">Quem somos</span></a>
+            <a href="sobre.php"><span class="qm">Quem somos</span></a>
             <a href="contato.php"><span class="ctt">Contato</span></a>
         </div>
     </div>

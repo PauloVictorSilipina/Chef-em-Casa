@@ -84,3 +84,9 @@
 .ingredientes-preparo ol {
     margin-top: 1rem;
 }
+
+@media (max-width: 576px) {
+    .img-receita{
+        height: 2rem;
+    }
+}

@@ -26,7 +26,7 @@
 
      <!-- Infos da receitas -->
      <div class="conteudo container">
-        <div class="receita container col-lg-8">
+        <div class="receita container col-lg-8 col-12">
             <div class="">
                 <h3 class="titulo-receita col-lg-12">Bolo de Chocolate</h3>
             </div>

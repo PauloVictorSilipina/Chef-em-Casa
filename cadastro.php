@@ -69,7 +69,7 @@
                         <div class="error"></div>
                     </div>
 
-                    <div class="div-btn offset-lg-1 col-lg-10 col-10">
+                    <div class="div-btn offset-lg-1 col-lg-10 col-10 offset-1">
                         <button name="btn-valida" class="btn-valida" type="submit">Fazer cadastro</button>
                     </div>
                     <div class="faz-login offset-lg-1 col-lg-10">

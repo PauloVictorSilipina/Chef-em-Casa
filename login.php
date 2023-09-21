@@ -21,7 +21,7 @@
         $usuario = trim($_POST['usuario']);
         $senha = trim($_POST['senha']);
         
-        if(($usuario != "") or ($senha != "")):
+        if(($usuario != "") and ($senha != "")):
             header("Location: /index.php");
             exit();
         endif;
@@ -50,7 +50,7 @@
                         <div class="error"></div>
                     </div>
     
-                    <div class="div-btn offset-lg-1 col-lg-10 col-10">
+                    <div class="div-btn offset-lg-1 col-lg-10 col-10 offset-1">
                         <button name="btn-valida" class="btn-valida" type="submit">Fazer login</button>
                     </div>
     
