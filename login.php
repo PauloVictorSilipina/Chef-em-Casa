@@ -18,10 +18,25 @@
     include "headercadlog.php";
 
     if(isset($_POST['btn-valida'])):
-        $usuario = trim($_POST['usuario']);
-        $senha = trim($_POST['senha']);
+
+        //Sanitização
+        $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
+        $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+        $usuario = filter_input(INPUT_POST, 'usuario', FILTER_SANITIZE_SPECIAL_CHARS);
+        $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
         
-        if(($usuario != "") and ($senha != "")):
+        //Validação
+        $email = filter_input(INPUT_POST, $email, FILTER_VALIDATE_EMAIL);
+
+        //Verificação
+        if(($email != "") and ($usuario != "") and ($senha != "")):
+            session_start();
+            $img_path = 'img/chef mito.png';
+            $_SESSION['img_path'] = $img_path;
+            $_SESSION['email'] = $email;
+            $_SESSION['senha']=$senha;
+            $_SESSION['usuario']=$usuario;
+            $_SESSION['user_id'] = session_id();
             header("Location: /index.php");
             exit();
         endif;
@@ -36,6 +51,12 @@
                 <form id="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                     <div class="col-lg-8 offset-lg-2">
                         <h1 class="">Login</h1>
+                    </div>
+
+                    <div class="col-lg-12 input-control col-12">
+                        <label for="email" class="col-lg-12 col-10 offset-1">Email</label>
+                        <input type="text" id="email" placeholder="Digite o email" class="col-lg-10 col-10 offset-1" name="email">
+                        <div class="error"></div>
                     </div>
     
                     <div class="col-lg-12 input-control col-12">

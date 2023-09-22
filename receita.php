@@ -73,27 +73,30 @@
             </div>
         </div>
 
-        <div class="info-criador offset-lg-2">
+        <div class="info-criador container col-lg-8">
             <div class="row">
-                <div class="col-lg-1 col-3">
-                    <div class="img-criador bg-danger">
-                        <img src="img/chapeu com bg.png">
+                <!-- Div 1 - Lado a Lado -->
+                <div class="col-lg-1 d-flex align-items-center">
+                    <div class="img-criador">
+                    <img src="img/chapeu com bg.png">
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-9">
-                    <div class="nome-criador bg-secondary d-flex align-items-center">
-                        <span class="text-center">Nome de Criador wajidwauwdajwjiodwjiodawjioa</span>
+                <!-- Div 2 - Lado a Lado e Centralizada Verticalmente -->
+                <div class="col-lg-2 d-flex align-items-center">
+                    <div class="nome-criador">
+                        <span>Nome do criador grande muits</span>
                     </div>
                 </div>
 
-                <div class="col-lg-9 col-12">
-                    <div class="descricao-receita">
-                        <span>A bisnaguinha é uma ótima opção de lanche rápido e sempre faz sucesso com as crianças. Vamos ensinar a fazer uma bisnaguinha caseira, que é mais gostosa e bem mais saudável do que a versão industrializada que compramos no mercado. Você também vai aprender a congelar e ter bisnaguinhas frescas quando quiser!</span>
+                <div class="col-lg-8 offset-lg-1 d-flex align-items-center">
+                    <div class="nome-criador">
+                        <span>A bisnaguinha é um ótima opção de lanche rápido e sempre faz sucesso com as crianças. Vamos ensinar a fazer uma bisnaguinha caseira, que é mais gostosa e bem mais saudável do que a versão industrializada que compramos no mercado. Você também vai aprender a congelar e ter bisnaguinhas frescas quando quiser!</span>
                     </div>
                 </div>
             </div>
         </div>
+
 
 
 
@@ -121,7 +124,7 @@
             </div>
         </div>
         <div class="container col-lg-8">
-            <div class="ingredientes-preparo col-lg-12">
+            <div class="modo-preparo col-lg-12">
                 <ol>
                     <li>Em uma tigela misturar o açúcar e o chocolate em pó</li>
                     <li>Em seguida, misturar as gemas e o óleo</li>
@@ -138,9 +141,21 @@
             <div class="titulo col-lg-12">
                 <span>Comentários</span>
             </div>
-
-            
-            <div class="comentarios"></div>
+            <div class="comentarios col-lg-12">
+                <div class="comentario d-flex align-items-center">
+                    <div class="foto-comentario col-1">
+                        <img src="img/pedroantonio.jpeg">
+                    </div>
+                    <div class="info-comentario col-9 offset-2">
+                        <div class="nome-comentario">
+                            <span>Piedro Antonieta</span>
+                        </div>
+                        <div class="texto-comentario col-12">
+                            <span>Não gostei, asmei! Adoro receitas como essa!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
      </div>
     <?php

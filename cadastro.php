@@ -20,22 +20,28 @@
     include "headercadlog.php";
 
     if(isset($_POST['btn-valida'])):
+
+        //Sanitização
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
         $email = filter_var($email, FILTER_SANITIZE_EMAIL);
         $usuario = filter_input(INPUT_POST, 'usuario', FILTER_SANITIZE_SPECIAL_CHARS);
         $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
         $csenha = filter_input(INPUT_POST, 'cfsenha', FILTER_SANITIZE_SPECIAL_CHARS);
 
-        //Area de filtragem
-        
-        if(($usuario != "") and ($senha != "") and ($senha == $csenha)):
+        //Validação
+        $email = filter_input(INPUT_POST, $email, FILTER_VALIDATE_EMAIL);
+
+
+        //Verificação
+        if(($email != "") and ($usuario != "") and ($senha != "") and ($senha == $csenha)):
+            
             session_start();
             $img_path = 'img/chef mito.png';
-            $_SESSION['email'] = $email;
             $_SESSION['img_path'] = $img_path;
-            $_SESSION['user_id'] = session_id();
-            $_SESSION['senha']=$senha;
+            $_SESSION['email'] = $email;
             $_SESSION['usuario']=$usuario;
+            $_SESSION['senha']=$senha;
+            $_SESSION['user_id'] = session_id();
             header("Location: /index.php");
             exit();
         endif;

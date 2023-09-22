@@ -43,22 +43,22 @@
                 
                 <div class='div-imagem col-lg-4 col-12'>
                     <div class='imagem'>
-                        <img class='img-receitas' src='receitas/Macarrão com molho de tomate.jpg'>
+                        <a href='receita.php'><img class='img-receitas' src='receitas/Macarrão com molho de tomate.jpg'></a>
                     </div>
                     <div class='info-criador'>
                         <img class='criador' src='img/chapeu com bg.png'>
                     </div>
-                    <a href='#'><span>Macarrão com molho de tomate</span></a>
+                    <a href='receita.php'><span>Macarrão com molho de tomate</span></a>
                 </div>
     
                 <div class='div-imagem col-lg-4 col-12'>
                     <div class='imagem'>
-                        <img class='img-receitas' src='receitas/Pudim de leite condensado.png'>
+                        <a href='receita.php'><img class='img-receitas' src='receitas/Pudim de leite condensado.png'></a>
                     </div>
                     <div class='info-criador'>
                         <img class='criador' src='img/chapeu com bg.png'>
                     </div>
-                    <a href='#'><span>Pudim de leite condensado</span></a>
+                    <a href='receita.php'><span>Pudim de leite condensado</span></a>
                 </div>
             </div>
         </div>
@@ -67,22 +67,22 @@
             <div class='imagens row'>
                 <div class='div-imagem col-lg-4 col-12'>
                     <div class='imagem'>
-                        <img class='img-receitas' src='receitas/Mojito.jpg'>
+                        <a href='receita.php'><img class='img-receitas' src='receitas/Mojito.jpg'></a>
                     </div>
                     <div class='info-criador'>
                         <img class='criador' src='img/chapeu com bg.png'>
                     </div>
-                    <a href='#'><span>Mojito</span></a>
+                    <a href='receita.php'><span>Mojito</span></a>
                 </div>
         
                 <div class='div-imagem col-lg-8 col-12'>
                     <div class='imagem'>
-                        <img class='img-receitas' src='receitas/caldo verde.jpg'>
+                        <a href='receita.php'><img class='img-receitas' src='receitas/caldo verde.jpg'></a>
                     </div>
                     <div class='info-criador'>
                         <img class='criador' src='img/chapeu com bg.png'>
                     </div>
-                    <a href='#'><span>Caldo Verde</span></a>
+                    <a href='receita.php'><span>Caldo Verde</span></a>
                 </div>
             </div>
         </div>
