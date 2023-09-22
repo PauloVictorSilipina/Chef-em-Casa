@@ -34,49 +34,68 @@
             <img class="img-receita col-lg-12" src="receitas/Bolo padrao.jpg">
         </div>
 
-        <div class="info-receita col-lg-8 offset-lg-2">
+        <div class="info-receita col-lg-8 offset-lg-2 col-12">
             <div class="icones row">
-                <div class="col-lg-2">
+                <div class="col-4 offset-lg-3 col-lg-2">
                     <div>
                         <i class="fa-solid fa-bowl-rice fa-2xl"></i>
                     </div>
-                    <div>
+                    <div class="rend_temp_dif">
                         <span>Rendimento</span>
                     </div>
+                    <div>
+                        <span>De fato algo</span>
+                    </div>
                 </div>
-                <div class="col-lg-2">
+
+                <div class="col-4 col-lg-2">
                     <div>
                         <i class="fa-regular fa-clock fa-2xl"></i>
                     </div>
-                    <div>
+                    <div class="rend_temp_dif">
                         <span>Tempo</span>
                     </div>
+                    <div>
+                        <span>De fato algo</span>
+                    </div>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-4 col-lg-2">
                     <div>
                         <i class="fa-solid fa-fire fa-2xl"></i>
                     </div>
-                    <div>
+                    <div class="rend_temp_dif">
                         <span>Dificuldade</span>
+                    </div>
+                    <div>
+                        <span>De fato algo</span>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="info-criador offset-lg-2">
-            <div class="row col-lg-12">
-                <div class="col-lg-1">
-                    <img src="img/chapeu com bg.png">
-                </div>
-                <div class="nome-criador col-lg-2">
-                    <span>Nome de Criador Muito Grande, Grande Demais Extremamente Gigante Meu Deus Olha que Nome Grande</span>
-                </div>
-                <div class="descricao-receita col-lg-4 offset-2">
-                    <span>A bisnaguinha é um ótima opção de lanche rápido e sempre faz sucesso com as crianças. Vamos ensinar a fazer uma bisnaguinha caseira, que é mais gostosa e bem mais saudável do que a versão industrializada que compramos no mercado. Você também vai aprender a congelar e ter bisnaguinhas frescas quando quiser!</span>
+            <div class="row">
+                <div class="col-lg-1 col-3">
+                    <div class="img-criador bg-danger">
+                        <img src="img/chapeu com bg.png">
+                    </div>
                 </div>
 
+                <div class="col-lg-2 col-9">
+                    <div class="nome-criador bg-secondary d-flex align-items-center">
+                        <span class="text-center">Nome de Criador wajidwauwdajwjiodwjiodawjioa</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-9 col-12">
+                    <div class="descricao-receita">
+                        <span>A bisnaguinha é uma ótima opção de lanche rápido e sempre faz sucesso com as crianças. Vamos ensinar a fazer uma bisnaguinha caseira, que é mais gostosa e bem mais saudável do que a versão industrializada que compramos no mercado. Você também vai aprender a congelar e ter bisnaguinhas frescas quando quiser!</span>
+                    </div>
+                </div>
             </div>
         </div>
+
+
 
         <div class="container col-lg-8">
             <div class="titulo col-lg-12">
