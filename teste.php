@@ -11,13 +11,17 @@
 
 </head>
 <body>
-<div class="dropdown">
-  <button class="dropbtn">Dropdown</button>
-  <div class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-</div> 
+<?php
+$banana = "Email: ricardo@gmail.com";
+echo '<script>';
+echo 'console.log("Campo: ' . $banana . '");';
+echo '</script>';
+$batata = explode(": ", $banana);
+foreach($batata as $i){
+echo '<script>';
+echo 'console.log("Campo: ' . $i . '");';
+echo '</script>';
+}
+?>
 </body>
 </html>

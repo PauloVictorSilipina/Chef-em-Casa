@@ -20,28 +20,31 @@
     include "headercadlog.php";
 
     if(isset($_POST['btn-valida'])):
-
-        //Sanitização
+        
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
         $email = filter_var($email, FILTER_SANITIZE_EMAIL);
         $usuario = filter_input(INPUT_POST, 'usuario', FILTER_SANITIZE_SPECIAL_CHARS);
         $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
         $csenha = filter_input(INPUT_POST, 'cfsenha', FILTER_SANITIZE_SPECIAL_CHARS);
 
-        //Validação
-        $email = filter_input(INPUT_POST, $email, FILTER_VALIDATE_EMAIL);
-
-
-        //Verificação
+        $email = filter_var($email, FILTER_VALIDATE_EMAIL);
+        
         if(($email != "") and ($usuario != "") and ($senha != "") and ($senha == $csenha)):
-            
+
+            $dados = "Email: $email\nUsuário: $usuario\nSenha: $senha\n";
+
+            // Especifique o nome do arquivo
+            $arquivo = "dados.txt";
+
+            // Escreva os dados no arquivo (a flag FILE_APPEND é usada para anexar, não substituir)
+            file_put_contents($arquivo, $dados, FILE_APPEND);
+
             session_start();
             $img_path = 'img/chef mito.png';
             $_SESSION['img_path'] = $img_path;
-            $_SESSION['email'] = $email;
-            $_SESSION['usuario']=$usuario;
-            $_SESSION['senha']=$senha;
             $_SESSION['user_id'] = session_id();
+            $_SESSION['senha']=$senha;
+            $_SESSION['usuario']=$usuario;
             header("Location: /index.php");
             exit();
         endif;
@@ -65,7 +68,7 @@
                         <input type="text" name="email" id="email" placeholder="Digite o email" class="col-lg-10 col-10 offset-1" name="email">
                         <div class="error"></div>
                     </div>
-
+                    
                     <div class="col-lg-12 input-control">
                         <label for="usuario" class="col-lg-12 col-10 offset-1">Usuário</label>
                         <input type="text" name="usuario" id="usuario" placeholder="Digite o usuário" class="col-lg-10 col-10 offset-1" name="usuario">

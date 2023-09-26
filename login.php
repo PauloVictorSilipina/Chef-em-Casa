@@ -26,22 +26,51 @@
         $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
         
         //Validação
-        $email = filter_input(INPUT_POST, $email, FILTER_VALIDATE_EMAIL);
+        $email = filter_var($email, FILTER_VALIDATE_EMAIL);
+
+        $arquivo = "dados.txt";
 
         //Verificação
-        if(($email != "") and ($usuario != "") and ($senha != "")):
-            session_start();
-            $img_path = 'img/chef mito.png';
-            $_SESSION['img_path'] = $img_path;
-            $_SESSION['email'] = $email;
-            $_SESSION['senha']=$senha;
-            $_SESSION['usuario']=$usuario;
-            $_SESSION['user_id'] = session_id();
-            header("Location: /index.php");
-            exit();
-        endif;
 
-    endif;
+        if (file_exists($arquivo)) {
+            // Lê o conteúdo do arquivo
+            $conteudo = file_get_contents($arquivo);
+    
+            // Divide o conteúdo em linhas
+            $linhas = explode("\n", $conteudo);
+    
+            // Inicializa variáveis para armazenar os dados do arquivo
+            $arquivoEmail = "";
+            $arquivoUsuario = "";
+            $arquivoSenha = "";
+    
+            foreach ($linhas as $linha) {
+                $batata = explode(": ", $linha);
+                if(count($batata) == 2){
+                list($campo, $valor) = explode(": ", $linha);
+    
+                if ($campo === "Email") {
+                    $arquivoEmail = $valor;
+                } elseif ($campo === "Usuário") {
+                    $arquivoUsuario = $valor;
+                } elseif ($campo === "Senha") {
+                    $arquivoSenha = $valor;
+                }}
+            }
+            // Verifica se os dados do formulário correspondem aos dados do arquivo
+            if ($email === trim($arquivoEmail) && $usuario === trim($arquivoUsuario) && $senha === trim($arquivoSenha)) {
+                session_start();
+                $img_path = 'img/chef mito.png';
+                $_SESSION['img_path'] = $img_path;
+                $_SESSION['email'] = $email;
+                $_SESSION['senha']=$senha;
+                $_SESSION['usuario']=$usuario;
+                $_SESSION['user_id'] = session_id();
+                header("Location: /index.php");
+            }
+        }
+
+    endif;    
     ?>
 
     <div class="login container">
