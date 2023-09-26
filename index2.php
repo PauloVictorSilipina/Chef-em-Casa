@@ -23,43 +23,47 @@
     <?php
     include 'header.php';
 
-    $host = 'www.d4free.net';
-    $user = 'chefinhome';
-    $password = 'Bisnaguinha2023';
+    $servername = "localhost";
+    $username = "root";
+    $password = "serra";
+    $database = "chefemcasa";
 
-    $db = mysqli_connect($host, $user, $password);
-    if (!$db) {
-        die("Connection failed: " . mysqli_connect_error());
-      }
-      echo "Connected successfully";
-    /*$query = "
+    // Crie uma conexão
+    $db = new mysqli($servername, $username, $password, $database);
+
+    // Verifique a conexão
+    if ($db->connect_error) {
+        die("Falha na conexão: " . $db->connect_error);
+    }
+    
+    $query = "
     SELECT m.url FotoRec, r.nome NomeRec, u.img FotoUser from RECEITA r
     left join MIDIA m on m.FK_RECEITA_cod_rec = r.cod_rec
     left join USUARIO u on u.cod_perfil = r.FK_USUARIO_cod_perfil
-    limit 5
-    ";*/
+    where r.cod_rec <=5
+    ";
 
-    $result = pg_query($db, $query);
-     	 
-      	if(!($result = pg_query($db, $query))) {
-        	print("Invalid query: " . pg_last_error()."\n");
-        	print("SQL: $query\n");
-        	die();
-      	}
+    $result = $db->query($query);
 
-      	while ($row = pg_fetch_array($result)) {
-        	echo $row[0] . $row[1] . $row[2] . "<br />";
-      	}
-          	 
+    
+    
+    // Verifique se a consulta foi bem-sucedida
+    if (!$result) {
+        echo "Erro ao executar a consulta: " . $db->error;
+        exit;
+    }
 
-      	// Verificar se a consulta foi bem-sucedida
-      	if (!$result) {
-          	echo "Erro ao executar a consulta.";
-          	exit;
-      	}
+    $row = $result->fetch_assoc();
 
+    foreach($row as $i) {
 
-
+    
+    echo '<script>';
+    echo 'console.log("Result: ' . $i . '");';
+    echo '</script>';
+    }
+    // Feche a conexão
+    $db->close();
     ?>
 
     <div class='container div-receitas'>
@@ -71,14 +75,13 @@
             <div class='imagens row'>
                 <div class='div-imagem col-lg-4 col-12'>
                     <div class='imagem'>
-                        <a href='receita.php'><img class='img-receitas' src='receitas/Bolo.jpg'></a>
+                        <a href='receita.php'><img class='img-receitas' src='<?php echo $row["FotoRec"]; ?>'></a>
                     </div>
                     <div class='info-criador'>
                         <img class='criador' src='img/chapeu com bg.png'>
                     </div>
-                    <a href='receita.php'><span>Bolo de Chocolate</span></a>
+                    <a href='receita.php'><span><?php echo $row["NomeRec"]; ?></span></a>
                 </div>
-                
                 <div class='div-imagem col-lg-4 col-12'>
                     <div class='imagem'>
                         <a href='receita.php'><img class='img-receitas' src='receitas/Macarrão com molho de tomate.jpg'></a>
