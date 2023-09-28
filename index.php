@@ -74,7 +74,7 @@
                     <a href='receita.php'><img class='img-receitas' src='<?php echo str_replace(" ","",$banana[4]["FotoRec"]); ?>'></a>
                     </div>
                     <div class='info-criador'>
-                    <img class='criador' src='<?php echo str_replace(" ","",$banana[4]["FotoUser"]); ?>'>
+                    <img class='criador' src='<?php echo str_replace(" ","",$banana[3]["FotoUser"]); ?>'>
                     </div>
                     <a href='receita.php'><span><?php echo $banana[3]["NomeRec"]; ?></span></a>
                 </div>
