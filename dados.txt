@@ -4,3 +4,6 @@ Senha: 123123
 Email: coringa@gmail.com
 Usuário: Carlos
 Senha: 123123
+Email: ricardo@gmail.net
+Usuário: Ricardinho
+Senha: 123123

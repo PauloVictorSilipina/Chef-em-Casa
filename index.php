@@ -21,7 +21,12 @@
 <body>
     
     <?php
-    include 'header.php';
+    include_once 'header.php';
+    include_once 'initialize.php';
+    
+    $post = new Post($db);
+    $banana = $post -> dadosIndex();
+    
     ?>
 
     <div class='container div-receitas'>
@@ -33,32 +38,31 @@
             <div class='imagens row'>
                 <div class='div-imagem col-lg-4 col-12'>
                     <div class='imagem'>
-                        <a href='receita.php'><img class='img-receitas' src='receitas/Bolo.jpg'></a>
+                        <a href='receita.php'><img class='img-receitas' src='<?php echo $banana[0]["FotoRec"]; ?>'></a>
                     </div>
                     <div class='info-criador'>
-                        <img class='criador' src='img/chapeu com bg.png'>
+                        <img class='criador' src='<?php echo $banana[0]["FotoUser"]; ?>'>
                     </div>
-                    <a href='receita.php'><span>Bolo de Chocolate</span></a>
+                    <a href='receita.php'><span><?php echo $banana[0]["NomeRec"]; ?></span></a>
                 </div>
-                
                 <div class='div-imagem col-lg-4 col-12'>
                     <div class='imagem'>
-                        <a href='receita.php'><img class='img-receitas' src='receitas/Macarrão com molho de tomate.jpg'></a>
+                        <a href='receita.php'><img class='img-receitas' src='<?php echo $banana[1]["FotoRec"]; ?>'></a>
                     </div>
                     <div class='info-criador'>
-                        <img class='criador' src='img/chapeu com bg.png'>
+                        <img class='criador' src='<?php echo $banana[1]["FotoUser"]; ?>'>
                     </div>
-                    <a href='receita.php'><span>Macarrão com molho de tomate</span></a>
+                    <a href='receita.php'><span><?php echo $banana[1]["NomeRec"]; ?></span></a>
                 </div>
     
                 <div class='div-imagem col-lg-4 col-12'>
                     <div class='imagem'>
-                        <a href='receita.php'><img class='img-receitas' src='receitas/Pudim de leite condensado.png'></a>
+                        <a href='receita.php'><img class='img-receitas' src='<?php echo $banana[2]["FotoRec"]; ?>'></a>
                     </div>
                     <div class='info-criador'>
-                        <img class='criador' src='img/chapeu com bg.png'>
+                        <img class='criador' src='<?php echo $banana[2]["FotoUser"]; ?>'>
                     </div>
-                    <a href='receita.php'><span>Pudim de leite condensado</span></a>
+                    <a href='receita.php'><span><?php echo $banana[2]["NomeRec"]; ?></span></a>
                 </div>
             </div>
         </div>
@@ -67,22 +71,22 @@
             <div class='imagens row'>
                 <div class='div-imagem col-lg-4 col-12'>
                     <div class='imagem'>
-                        <a href='receita.php'><img class='img-receitas' src='receitas/Mojito.jpg'></a>
+                    <a href='receita.php'><img class='img-receitas' src='<?php echo str_replace(" ","",$banana[4]["FotoRec"]); ?>'></a>
                     </div>
                     <div class='info-criador'>
-                        <img class='criador' src='img/chapeu com bg.png'>
+                    <img class='criador' src='<?php echo str_replace(" ","",$banana[4]["FotoUser"]); ?>'>
                     </div>
-                    <a href='receita.php'><span>Mojito</span></a>
+                    <a href='receita.php'><span><?php echo $banana[3]["NomeRec"]; ?></span></a>
                 </div>
         
                 <div class='div-imagem col-lg-8 col-12'>
                     <div class='imagem'>
-                        <a href='receita.php'><img class='img-receitas' src='receitas/caldo verde.jpg'></a>
+                    <a href='receita.php'><img class='img-receitas' src='<?php echo str_replace(" ","",$banana[4]["FotoRec"]); ?>'></a>
                     </div>
                     <div class='info-criador'>
-                        <img class='criador' src='img/chapeu com bg.png'>
+                    <img class='criador' src='<?php echo str_replace(" ","",$banana[4]["FotoUser"]); ?>'>
                     </div>
-                    <a href='receita.php'><span>Caldo Verde</span></a>
+                    <a href='receita.php'><span><?php echo $banana[4]["NomeRec"]; ?></span></a>
                 </div>
             </div>
         </div>
