@@ -1,15 +1,3 @@
-Email: ricardo@gmail.com
-Usuário: Ricardo
-Senha: 123123
-Email: coringa@gmail.com
-Usuário: Carlos
-Senha: 123123
-Email: ricardo@gmail.net
-Usuário: Ricardinho
-Senha: 123123
-Email: lulu@gmail.com
-Usuário: Lulu
-Senha: 123123
-Email: paulovictoralves.contato@gmail.com
-Usuário: Paulo Victor
+Email: kiwi@gmail.com
+Usuário: Kiwi
 Senha: 123123

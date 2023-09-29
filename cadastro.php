@@ -17,40 +17,44 @@
 
     <!--criação do cabecalho-->
     <?php
+    include "headercadlog.php";
     include_once 'initialize.php';
 
     if(isset($_POST['btn-valida'])):
         
-        $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
-        $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-        $usuario = filter_input(INPUT_POST, 'usuario', FILTER_SANITIZE_SPECIAL_CHARS);
-        $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
-        $csenha = filter_input(INPUT_POST, 'cfsenha', FILTER_SANITIZE_SPECIAL_CHARS);
+        $email = trim(filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS));
+        $usuario = trim(filter_input(INPUT_POST, 'usuario', FILTER_SANITIZE_SPECIAL_CHARS));
+        $senha = trim(filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS));
+        $csenha = trim(filter_input(INPUT_POST, 'cfsenha', FILTER_SANITIZE_SPECIAL_CHARS));
 
-        $email = filter_var($email, FILTER_VALIDATE_EMAIL);
+        $email = filter_var($email, FILTER_SANITIZE_EMAIL);
         
-        if(($email != "") and ($usuario != "") and ($senha != "") and ($senha == $csenha)):
+        if((filter_var($email, FILTER_VALIDATE_EMAIL)) and ($usuario != "") and (strlen($senha)>= 6) and ($senha == $csenha)) {
 
             $post = new Post($db);
             $cadastro = $post -> cadastroUsuario($usuario, $email, $senha);
 
-            $dados = "Email: $email\nUsuário: $usuario\nSenha: $senha\n";
-
-            // Especifique o nome do arquivo
-            $arquivo = "dados.txt";
-
-            // Escreva os dados no arquivo (a flag FILE_APPEND é usada para anexar, não substituir)
-            file_put_contents($arquivo, $dados, FILE_APPEND);
-
-            session_start();
-            $img_path = 'img/chef mito.png';
-            $_SESSION['img_path'] = $img_path;
-            $_SESSION['user_id'] = session_id();
-            $_SESSION['senha']=$senha;
-            $_SESSION['usuario']=$usuario;
-            header("Location: /index.php");
-            exit();
-        endif;
+            if($cadastro == True) {
+                session_start();
+                $img_path = 'img/chef mito.png';
+                $_SESSION['img_path'] = $img_path;
+                $_SESSION['user_id'] = session_id();
+                $_SESSION['senha']=$senha;
+                $_SESSION['usuario']=$usuario;
+                header("Location: /index.php");
+                exit();
+            } else {
+                echo "<script>window.alert('Email já em uso!')</script>";
+            }
+        } else if($email == "" or $usuario == "" or $senha == "" or $csenha == ""){
+            echo "<script>window.alert('Preencha os campos')</script>";
+        } else if(!(filter_var($email, FILTER_VALIDATE_EMAIL))) {
+            echo "<script>window.alert('Insira um email válido')</script>";
+        } else if (strlen($senha) < 6) {
+            echo "<script>window.alert('Insira uma senha com seis caracteres ou mais')</script>";
+        } else if ($senha !== $csenha) {
+            echo "<script>window.alert('Senhas não coincidem')</script>";
+        }
 
     endif;
     ?>

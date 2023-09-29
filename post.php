@@ -51,6 +51,40 @@ class POST{
 		}
 	}
 
+	public function loginUsuario($email, $usuario, $senha) {
+		$query1 = "
+		SELECT * from USUARIO";
+		$stmt = $this->conn->prepare($query1);
+		$stmt->execute();
+		
+		$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		$batata = False;
+
+		foreach($results as $i) {
+			
+		echo "<script>console.log(" . $email . ")</script>";
+		echo "<script>console.log(" . $i['email'] . ")</script>";
+		echo "<script>console.log(" . $senha. ")</script>";
+		echo "<script>console.log(" . $i['senha'] . ")</script>";
+		echo "<script>console.log(" . $usuario . ")</script>";
+		echo "<script>console.log(" . $i['nome']. ")</script>";
+		echo "<script>console.log('\n')</script>";
+			if(($i['email'] === $email) and ($i['senha'] === $senha) and ($i['nome'] === $usuario)) {
+				$batata = True;
+				$user = array($usuario, $i['img']);
+				echo "<script>console.log(" . $user[0] . ")</script>";
+				echo "<script>console.log(" . $user[1] . ")</script>";
+			}
+		}
+
+		if($batata === True) {
+			return $user;
+		} else {
+			return False;
+		}
+
+	}
+
 	/*
 	//Construtor - cria uma instância PDO que representa a conexão com o banco de dados
 	public function __construct($db){

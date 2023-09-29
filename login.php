@@ -15,62 +15,33 @@
 
 <body  class="body_login">
     <?php
-    include "headercadlog.php";
+    include_once 'initialize.php';
 
-    if(isset($_POST['btn-valida'])):
+    if(isset($_POST['btn-valida'])){
 
         //Sanitização
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
-        $email = filter_var($email, FILTER_SANITIZE_EMAIL);
         $usuario = filter_input(INPUT_POST, 'usuario', FILTER_SANITIZE_SPECIAL_CHARS);
         $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
-        
-        //Validação
-        $email = filter_var($email, FILTER_VALIDATE_EMAIL);
 
-        $arquivo = "dados.txt";
+        $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 
-        //Verificação
+        $post = new Post($db);
+        $login = $post -> loginUsuario($email, $usuario, $senha);
 
-        if (file_exists($arquivo)) {
-            // Lê o conteúdo do arquivo
-            $conteudo = file_get_contents($arquivo);
-    
-            // Divide o conteúdo em linhas
-            $linhas = explode("\n", $conteudo);
-    
-            // Inicializa variáveis para armazenar os dados do arquivo
-            $arquivoEmail = "";
-            $arquivoUsuario = "";
-            $arquivoSenha = "";
-    
-            foreach ($linhas as $linha) {
-                $batata = explode(": ", $linha);
-                if(count($batata) == 2){
-                list($campo, $valor) = explode(": ", $linha);
-    
-                if ($campo === "Email") {
-                    $arquivoEmail = $valor;
-                } elseif ($campo === "Usuário") {
-                    $arquivoUsuario = $valor;
-                } elseif ($campo === "Senha") {
-                    $arquivoSenha = $valor;
-                }}
-            }
-            // Verifica se os dados do formulário correspondem aos dados do arquivo
-            if ($email === trim($arquivoEmail) && $usuario === trim($arquivoUsuario) && $senha === trim($arquivoSenha)) {
-                session_start();
-                $img_path = 'img/chef mito.png';
-                $_SESSION['img_path'] = $img_path;
-                $_SESSION['email'] = $email;
-                $_SESSION['senha']=$senha;
-                $_SESSION['usuario']=$usuario;
-                $_SESSION['user_id'] = session_id();
-                header("Location: /index.php");
-            }
+        if($login != False) {
+
+
+            $_SESSION['usuario']=$login[0];
+            $img_path = $login[1];
+            $_SESSION['img_path'] = $img_path;
+
+            $_SESSION['user_id'] = session_id();
+            header("Location: /index.php");
+        } else {
+            echo "<script>window.alert('Dados inválidos!')</script>";
         }
-
-    endif;    
+    }   
     ?>
 
     <div class="login container">
