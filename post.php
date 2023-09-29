@@ -4,11 +4,6 @@ class POST{
 	
 
 	private $conn;
-	private $table='RECEITA';
-	
-	//Propriedades POST
-	public $id;
-	public $titulo;
 	
 	public function __construct($db){
 		$this->conn = $db;
@@ -26,6 +21,34 @@ class POST{
 	$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 	return $results;
+	}
+
+	public function cadastroUsuario($usuario, $email, $senha) {
+		
+		$query1 = "
+		SELECT email FROM USUARIO";
+		$stmt = $this->conn->prepare($query1);
+		$stmt->execute();
+		
+		$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+		$batata = True;
+		foreach($results as $i) {
+			if($i['email'] === $email){
+				$batata = False;
+			}
+		}
+		if($batata === True) {
+		$query2 = "
+		INSERT INTO USUARIO(nome, email, senha, img) VALUES('$usuario', '$email', '$senha', 'https://pm1.aminoapps.com/6324/71ad536b28ec83adc5070a41d26ce288d091473d_00.jpg')";
+
+		$stmt = $this->conn->prepare($query2);
+		$stmt->execute();
+
+		return True;
+		} else {
+			return False;
+		}
 	}
 
 	/*

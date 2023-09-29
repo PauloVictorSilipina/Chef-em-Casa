@@ -22,13 +22,3 @@ body {
     flex-direction: column;
     min-height: 100%;
 }
-
-.usuario {
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.usuario a{
-    margin-left: 0.75rem;
-}

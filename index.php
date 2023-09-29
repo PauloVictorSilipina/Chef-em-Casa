@@ -71,7 +71,7 @@
             <div class='imagens row'>
                 <div class='div-imagem col-lg-4 col-12'>
                     <div class='imagem'>
-                    <a href='receita.php'><img class='img-receitas' src='<?php echo str_replace(" ","",$banana[4]["FotoRec"]); ?>'></a>
+                    <a href='receita.php'><img class='img-receitas' src='<?php echo str_replace(" ","",$banana[3]["FotoRec"]); ?>'></a>
                     </div>
                     <div class='info-criador'>
                     <img class='criador' src='<?php echo str_replace(" ","",$banana[3]["FotoUser"]); ?>'>

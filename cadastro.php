@@ -17,7 +17,7 @@
 
     <!--criação do cabecalho-->
     <?php
-    include "headercadlog.php";
+    include_once 'initialize.php';
 
     if(isset($_POST['btn-valida'])):
         
@@ -30,6 +30,9 @@
         $email = filter_var($email, FILTER_VALIDATE_EMAIL);
         
         if(($email != "") and ($usuario != "") and ($senha != "") and ($senha == $csenha)):
+
+            $post = new Post($db);
+            $cadastro = $post -> cadastroUsuario($usuario, $email, $senha);
 
             $dados = "Email: $email\nUsuário: $usuario\nSenha: $senha\n";
 

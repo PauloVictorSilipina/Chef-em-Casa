@@ -7,3 +7,9 @@ Senha: 123123
 Email: ricardo@gmail.net
 Usuário: Ricardinho
 Senha: 123123
+Email: lulu@gmail.com
+Usuário: Lulu
+Senha: 123123
+Email: paulovictoralves.contato@gmail.com
+Usuário: Paulo Victor
+Senha: 123123
