@@ -35,11 +35,9 @@
 
             if($cadastro !== False) {
                 session_start();
-                $img_path = 'img/chef mito.png';
-                $_SESSION['img_path'] = $img_path;
-                $_SESSION['user_id'] = $cadastro;
-                $_SESSION['senha']=$senha;
-                $_SESSION['usuario']=$usuario;
+                $_SESSION['usuario']=$cadastro[0];
+                $_SESSION['user_id'] = $cadastro[1];
+                $_SESSION['img_path'] = $cadastro[2];
                 header("Location: /index.php");
                 exit();
             } else {

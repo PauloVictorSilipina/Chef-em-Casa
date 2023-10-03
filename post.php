@@ -30,10 +30,10 @@ class POST{
 		$stmt = $this->conn->prepare($query1);
 		$stmt->execute();
 		
-		$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		$results1 = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 		$batata = True;
-		foreach($results as $i) {
+		foreach($results1 as $i) {
 			if($i['email'] === $email){
 				$batata = False;
 			}
@@ -53,9 +53,11 @@ class POST{
 
 		$stmt = $this->conn->prepare($query3);
 		$stmt->execute();
-		$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		$results3 = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-		return $results[0]['cod_perfil'];
+		$resultado = array($usuario, $results3, 'https://pm1.aminoapps.com/6324/71ad536b28ec83adc5070a41d26ce288d091473d_00.jpg');
+
+		return $resultado;
 		} else {
 			return False;
 		}
@@ -92,7 +94,7 @@ class POST{
 
 	public function receitasFavoritas($id) {
 		$query1 = "
-		SELECT r.nome RecNome, m.url RecImg, u.nome  from CURTIR c 
+		SELECT r.nome RecNome, m.url RecImg from CURTIR c 
 		inner join RECEITA r on r.cod_rec = c.fk_RECEITA_cod_rec 
 		inner join USUARIO u on u.cod_perfil = c.fk_USUARIO_cod_perfil 
 		left join MIDIA m on m.FK_RECEITA_cod_rec = r.cod_rec 
@@ -100,10 +102,10 @@ class POST{
 
 		$stmt = $this->conn->prepare($query1);
 		$stmt->execute();
-		
 		$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-	}
 
+		return $results;
+	}
 
 	/*
 	//Construtor - cria uma instância PDO que representa a conexão com o banco de dados

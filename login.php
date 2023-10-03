@@ -33,7 +33,7 @@
             session_start();
             $_SESSION['usuario']=$login[0];
             $_SESSION['img_path'] = $login[1];
-            $_SESSION['user_id'] = session_id();
+            $_SESSION['user_id'] = $login[2];
             header("Location: /index.php");
         } else {
             echo "<script>window.alert('Dados inválidos!')</script>";
