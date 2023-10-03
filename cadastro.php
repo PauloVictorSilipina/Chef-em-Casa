@@ -15,9 +15,8 @@
 <!--criação do body-->
 <body class="body_cadastro">
 
-    <!--criação do cabecalho-->
     <?php
-    include "headercadlog.php";
+    include_once "headercadlog.php";
     include_once 'initialize.php';
 
     if(isset($_POST['btn-valida'])):
@@ -34,11 +33,11 @@
             $post = new Post($db);
             $cadastro = $post -> cadastroUsuario($usuario, $email, $senha);
 
-            if($cadastro == True) {
+            if($cadastro !== False) {
                 session_start();
                 $img_path = 'img/chef mito.png';
                 $_SESSION['img_path'] = $img_path;
-                $_SESSION['user_id'] = session_id();
+                $_SESSION['user_id'] = $cadastro;
                 $_SESSION['senha']=$senha;
                 $_SESSION['usuario']=$usuario;
                 header("Location: /index.php");

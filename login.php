@@ -30,12 +30,9 @@
         $login = $post -> loginUsuario($email, $usuario, $senha);
 
         if($login != False) {
-
-
+            session_start();
             $_SESSION['usuario']=$login[0];
-            $img_path = $login[1];
-            $_SESSION['img_path'] = $img_path;
-
+            $_SESSION['img_path'] = $login[1];
             $_SESSION['user_id'] = session_id();
             header("Location: /index.php");
         } else {

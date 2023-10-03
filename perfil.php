@@ -22,6 +22,8 @@
 <body>
     <?php
     include "header.php";
+
+    echo "<script>console.log(".$_SESSION['user_id'].")</script>;";
     ?>
 
     <div class="container perfil">
@@ -47,7 +49,7 @@
             </div>
     
             <div class="titulo-historico offset-lg-3 col-lg-6">
-                <span>Histórico de receitas visualizadas</span>
+                <span>Histórico de receitas curtidas</span>
             </div>
 
         <div class="container">

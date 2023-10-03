@@ -45,7 +45,17 @@ class POST{
 		$stmt = $this->conn->prepare($query2);
 		$stmt->execute();
 
-		return True;
+		$query3 = "SELECT cod_perfil FROM USUARIO WHERE email = '" . $email."'";
+		
+		/*$arquivo = fopen("banana.txt","w");
+		echo fwrite($arquivo, $query3);
+		fclose($arquivo);*/
+
+		$stmt = $this->conn->prepare($query3);
+		$stmt->execute();
+		$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+		return $results[0]['cod_perfil'];
 		} else {
 			return False;
 		}
@@ -61,19 +71,15 @@ class POST{
 		$batata = False;
 
 		foreach($results as $i) {
-			
-		echo "<script>console.log(" . $email . ")</script>";
-		echo "<script>console.log(" . $i['email'] . ")</script>";
-		echo "<script>console.log(" . $senha. ")</script>";
-		echo "<script>console.log(" . $i['senha'] . ")</script>";
-		echo "<script>console.log(" . $usuario . ")</script>";
-		echo "<script>console.log(" . $i['nome']. ")</script>";
-		echo "<script>console.log('\n')</script>";
+
 			if(($i['email'] === $email) and ($i['senha'] === $senha) and ($i['nome'] === $usuario)) {
+				$query2 = "SELECT cod_perfil FROM USUARIO WHERE email = '" . $email."'";
+				$stmt = $this->conn->prepare($query2);
+				$stmt->execute();
+				$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 				$batata = True;
-				$user = array($usuario, $i['img']);
-				echo "<script>console.log(" . $user[0] . ")</script>";
-				echo "<script>console.log(" . $user[1] . ")</script>";
+				$user = array($usuario, $i['img'], $results[0]['cod_perfil']);
 			}
 		}
 
@@ -82,8 +88,22 @@ class POST{
 		} else {
 			return False;
 		}
-
 	}
+
+	public function receitasFavoritas($id) {
+		$query1 = "
+		SELECT r.nome RecNome, m.url RecImg, u.nome  from CURTIR c 
+		inner join RECEITA r on r.cod_rec = c.fk_RECEITA_cod_rec 
+		inner join USUARIO u on u.cod_perfil = c.fk_USUARIO_cod_perfil 
+		left join MIDIA m on m.FK_RECEITA_cod_rec = r.cod_rec 
+		where u.cod_perfil = " . $id;
+
+		$stmt = $this->conn->prepare($query1);
+		$stmt->execute();
+		
+		$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	}
+
 
 	/*
 	//Construtor - cria uma instância PDO que representa a conexão com o banco de dados
