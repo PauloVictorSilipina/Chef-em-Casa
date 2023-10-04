@@ -15,6 +15,7 @@
 
 <body  class="body_login">
     <?php
+    include_once 'headercadlog.php';
     include_once 'initialize.php';
 
     if(isset($_POST['btn-valida'])){
