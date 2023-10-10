@@ -25,15 +25,15 @@
         <div class="col-lg-12">
             <h1>Envie sua receita</h1>
         </div>
-        <div class='dados-cad-red row'>
-            <div class='col-lg-4 offset-lg-1 bg-danger'>
-                <div class='imagem'><img src='img/chapeucombg.png'></div>
+        <div class='dados-cad-rec row'>
+            <div class='adicionar-imagem col-lg-4 offset-lg-1'>
+                <div class='imagem'><img src='img/icon.png'></div>
                 <input type="file" id="file-input" name="file-input"/>
                 <label id="file-input-label" for="file-input">Envie a imagem da sua receita</label>
             </div>
             <div class="col-lg-5 offset-lg-1 ">
-                <div class='titulo-rec'><input type='text' placeholder='Titulo da Receita'></div>
-                <div class='desc-rec'><input type='text' placeholder='Descrição da Receita' id='desc-red'></div>
+                <div class='col-lg-12 titulo-rec'><input type='text' placeholder='Titulo da Receita'></div>
+                <div class='col-lg-12 desc-rec'><textarea placeholder='Descrição da receita' id='desc-red'></textarea></div>
             </div>
         </div>
     </div>

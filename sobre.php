@@ -14,7 +14,7 @@
     <link rel='stylesheet' href='css/css_base.css'>
 </head>
 
-<body>
+<body class='d-flex flex-column min-vh-100'>
     <?php
     include 'header.php';
     ?>

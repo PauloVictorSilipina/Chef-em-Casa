@@ -18,7 +18,7 @@
     <title>Chef em Casa</title>
 </head>
 <!--criação do corpo-->
-<body>
+<body class='d-flex flex-column min-vh-100'>
     
     <?php
     include_once 'header.php';

@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="css/css_footer.css">
-<footer class="">
+<footer class="mt-auto">
     <div class="container">
         <div class="row">
             <div class="titulo-footer">

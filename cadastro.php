@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="css/css_base.css">
     </head>
 <!--criação do body-->
-<body class="body_cadastro">
+<body class='d-flex flex-column min-vh-100'>
 
     <?php
     include_once "headercadlog.php";

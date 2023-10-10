@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/css_base.css">
 </head>
 
-<body  class="body_login">
+<body class='d-flex flex-column min-vh-100'>
     <?php
     include_once 'headercadlog.php';
     include_once 'initialize.php';

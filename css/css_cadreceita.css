@@ -1,9 +1,15 @@
-.envio-receitas {
-    margin-top: 7.5rem;
+.dados-cad-rec {
+    max-width: fit-content;
+    height: auto;
 }
 
-.imagem img {
+.adicionar-imagem {
+    width: 50rem;
+    height: 50rem;
+}
+.acidionar-imagem img {
     max-width: 100%;
+    height: 100%;
 }
 #file-input {
     display: none;
@@ -17,14 +23,28 @@
     border-radius: 4%;
 }
 
-.titulo-rec input{
-    width: 100%;
+.titulo-rec {
+    height: 7.5%
 }
 
-.desc-rec input{
+.desc-rec {
+    height: 92.5%;
+}
+
+.titulo-rec input{
+    height: 100%;
     width: 100%;
-    height: auto;
-    min-height: 1.75rem;
+    padding-left: 0.5rem;
+}
+
+.desc-rec textarea{
+    width: 100%;
+    height: 100%;
     resize: none;
-    overflow-y: hidden;
+    padding-left: 0.5rem;
+}
+
+.titulo-rec input:focus,
+.desc-rec textarea:focus {
+    outline: none;
 }
