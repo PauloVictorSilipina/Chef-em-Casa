@@ -1,0 +1,30 @@
+.envio-receitas {
+    margin-top: 7.5rem;
+}
+
+.imagem img {
+    max-width: 100%;
+}
+#file-input {
+    display: none;
+    border: 1px solid black;
+}
+
+#file-input-label{
+    font-size: 1.3em;
+    padding: 10px 15px;
+    border: 1px solid black;
+    border-radius: 4%;
+}
+
+.titulo-rec input{
+    width: 100%;
+}
+
+.desc-rec input{
+    width: 100%;
+    height: auto;
+    min-height: 1.75rem;
+    resize: none;
+    overflow-y: hidden;
+}
