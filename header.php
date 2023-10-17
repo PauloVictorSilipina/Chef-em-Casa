@@ -6,6 +6,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="css/css_header.css">
 
+<?php
+    session_start();
+?>
 <nav class="cabecalho navbar navbar-expand-lg sticky-top">
     <div class="col-lg-12">
         <div class="row">
@@ -34,7 +37,6 @@
                 <div class="dropdown">
 
                 <?php
-                session_start();
                 if (isset($_SESSION['img_path'])) {
                     $img_path = $_SESSION['img_path'];
                     $caminho_pagina = 'perfil.php';
