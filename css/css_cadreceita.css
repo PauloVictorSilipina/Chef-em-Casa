@@ -26,13 +26,13 @@
 }
 
 .titulo-rec {
-    height: 10%;
+    height: 2rem;
 }
 .vazia {
-    height: 5%;
+    height: 1rem;
 }
 .desc-rec {
-    height: 85%;
+    height: 17rem;
 }
 
 .titulo-rec input{
@@ -67,6 +67,9 @@
     text-align: center;
 }
 
+.dificuldades label {
+    color: rgba(0, 0, 0, 0.75);
+}
 .facil {
     border-bottom: 0!important;
 }
@@ -75,7 +78,75 @@
     border-bottom: none!important;
 }
 
-.dificuldades input:checked ~ .dificuldades{
-    /* Or `#a1:checked+label` if you only want it for that input */
-    background-color: #0F6;
+/* Estilo padrão para a div que contém o input */
+.col-lg-6.facil {
+    background-color: #fff; /* Cor de fundo padrão */
 }
+
+/* Estilo para a div quando o input estiver marcado */
+.col-lg-6.marked {
+    background-color: rgb(200, 200, 200); /* Cor de fundo quando marcado */
+}
+
+.dificuldades input[type="radio"]:checked + label {
+    color: #000000; /* Cor do texto quando marcado */
+    font-weight: bold;
+}
+
+.sr-only {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+.clock {
+    display: flex;
+    font-size: 2em;
+    align-items: center;
+}
+  
+.clock {
+    cursor: pointer;
+}
+
+.hour {
+    margin-right: 1rem;
+}
+
+.minute {
+    margin-left: 1rem;
+}
+.hour div {
+    padding: 0.5rem 4rem 0.5rem 4rem;
+    border: 1px solid black;
+}
+
+.minute div{
+    padding: 0.5rem 4rem 0.5rem 4rem;
+    border: 1px solid black;
+}
+.previous, .next {
+    display: block;
+    opacity: 0.5;
+    font-size: 0.5em;
+}
+
+@media (max-width: 576px) {
+    .titulo-rec{
+        height: 2rem;
+    }
+
+    .vazia {
+        height: 0;
+    }
+
+    .desc-rec{
+        height: 10rem;
+    }
+}
+  

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 
 .espaco {
-  height: 6rem;
+  height: 10rem;
 }
 .cabecalho {
     position: fixed;
@@ -9,7 +9,6 @@
     left: 0;
     background-color: white;
     border-bottom: 1px solid black;
-    height: 6rem;
 }
 
 .cabecalho a {
