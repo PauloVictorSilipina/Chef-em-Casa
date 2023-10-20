@@ -33,9 +33,9 @@
         <div class="col-lg-12">
             <h1>Envie sua receita</h1>
         </div>
-        <div class='dados-cad-rec row'>
-            <div class='adicionar-imagem col-lg-3 offset-lg-0 col-8 offset-2'>
-                <div class='imagem'><img src='img/icon.png'></div>
+        <div class='dados-cad-rec col-12 col-lg-0 row'>
+            <div class='adicionar-imagem col-lg-3 offset-lg-0 col-12'>
+                <div class='imagem'><img src=''></div>
                 <input type="file" id="file-input" name="file-input"/>
                 <label id="file-input-label" for="file-input">Escolha uma imagem</label>
             </div>
@@ -98,7 +98,10 @@
                     <span>Ingredientes e porções</span>
                 </div>
                 <div class="sub-titulos col-lg-12">
-                    <span>Número de pessoas ou porções</span>
+                    <span>Número de pessoas ou porções</span><br>
+                    <div class='qtd-pess-porc col-lg-3'>
+                        <input type='number' min='1' max='20' class='col-lg-12'></input>
+                    </div>
                 </div>
                 <div class="sub-titulos col-lg-12">
                     <span>Ingredientes</span>
