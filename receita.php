@@ -22,16 +22,20 @@
 <body>
     <?php
     include 'header.php';
+    include_once 'initialize.php';
+    
+    $post = new Post($db);
+    $infoRecDesc = $post -> infoRec($_GET['id']);
     ?>
 
      <!-- Infos da receitas -->
      <div class="conteudo container">
         <div class="receita container col-lg-8 col-12">
             <div class="">
-                <h3 class="titulo-receita col-lg-12">Bolo de Chocolate</h3>
+                <h3 class="titulo-receita col-lg-12"><?php echo $infoRecDesc[0]["RecNome"]; ?></h3>
             </div>
 
-            <img class="img-receita col-lg-12" src="receitas/Bolo padrao.jpg">
+            <img class="img-receita col-lg-12" src="<?php echo $infoRecDesc[0]["RecImg"]; ?>">
         </div>
 
         <div class="info-receita col-lg-8 offset-lg-2 col-12">
@@ -44,7 +48,7 @@
                         <span>Rendimento</span>
                     </div>
                     <div>
-                        <span>De fato algo</span>
+                        <span><?php echo $infoRecDesc[0]["RecRend"]; ?></span>
                     </div>
                 </div>
 
@@ -56,7 +60,7 @@
                         <span>Tempo</span>
                     </div>
                     <div>
-                        <span>De fato algo</span>
+                        <span><?php echo $infoRecDesc[0]["RecTemp"]; ?></span>
                     </div>
                 </div>
                 <div class="col-4 col-lg-2">
@@ -67,7 +71,7 @@
                         <span>Dificuldade</span>
                     </div>
                     <div>
-                        <span>De fato algo</span>
+                        <span><?php echo $infoRecDesc[0]["RecDif"]; ?></span>
                     </div>
                 </div>
             </div>
@@ -78,20 +82,20 @@
                 <!-- Div 1 - Lado a Lado -->
                 <div class="col-lg-1 d-flex align-items-center">
                     <div class="img-criador">
-                    <img src="img/chapeucombg.png">
+                    <img src="<?php echo $infoRecDesc[0]["UsuImg"]; ?>">
                     </div>
                 </div>
 
                 <!-- Div 2 - Lado a Lado e Centralizada Verticalmente -->
                 <div class="col-lg-2 d-flex align-items-center">
                     <div class="nome-criador">
-                        <span>Nome do criador grande muits</span>
+                        <span><?php echo $infoRecDesc[0]["UsuNome"]; ?></span>
                     </div>
                 </div>
 
                 <div class="col-lg-8 offset-lg-1 d-flex align-items-center">
                     <div class="nome-criador">
-                        <span>A bisnaguinha é um ótima opção de lanche rápido e sempre faz sucesso com as crianças. Vamos ensinar a fazer uma bisnaguinha caseira, que é mais gostosa e bem mais saudável do que a versão industrializada que compramos no mercado. Você também vai aprender a congelar e ter bisnaguinhas frescas quando quiser!</span>
+                        <span><?php echo $infoRecDesc[0]["RecDesc"]; ?></span>
                     </div>
                 </div>
             </div>

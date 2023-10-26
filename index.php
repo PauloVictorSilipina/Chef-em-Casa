@@ -22,7 +22,6 @@
     
     $post = new Post($db);
     $banana = $post -> dadosIndex();
-    
     ?>
 
 
@@ -35,7 +34,7 @@
             <div class='imagens row'>
                 <div class='div-imagem col-lg-4 col-12'>
                     <div class='imagem'>
-                        <a href='receita.php'><img class='img-receitas' src='<?php echo $banana[0]["FotoRec"]; ?>'></a>
+                        <a href="receita.php?id='<?php echo $banana[0]["CodRec"]; ?>'"><img class='img-receitas' src='<?php echo $banana[0]["FotoRec"]; ?>'></a>
                     </div>
                     <div class='info-criador'>
                         <img class='criador' src='<?php echo $banana[0]["FotoUser"]; ?>'>
@@ -44,7 +43,7 @@
                 </div>
                 <div class='div-imagem col-lg-4 col-12'>
                     <div class='imagem'>
-                        <a href='receita.php'><img class='img-receitas' src='<?php echo $banana[1]["FotoRec"]; ?>'></a>
+                        <a href='receita.php' id='<?php echo $banana[1]["CodRec"]; ?>'><img class='img-receitas' src='<?php echo $banana[1]["FotoRec"]; ?>'></a>
                     </div>
                     <div class='info-criador'>
                         <img class='criador' src='<?php echo $banana[1]["FotoUser"]; ?>'>
@@ -54,7 +53,7 @@
     
                 <div class='div-imagem col-lg-4 col-12'>
                     <div class='imagem'>
-                        <a href='receita.php'><img class='img-receitas' src='<?php echo $banana[2]["FotoRec"]; ?>'></a>
+                        <a href='receita.php' id='<?php echo $banana[2]["CodRec"]; ?>'><img class='img-receitas' src='<?php echo $banana[2]["FotoRec"]; ?>'></a>
                     </div>
                     <div class='info-criador'>
                         <img class='criador' src='<?php echo $banana[2]["FotoUser"]; ?>'>
@@ -68,7 +67,7 @@
             <div class='imagens row'>
                 <div class='div-imagem col-lg-4 col-12'>
                     <div class='imagem'>
-                    <a href='receita.php'><img class='img-receitas' src='<?php echo str_replace(" ","",$banana[3]["FotoRec"]); ?>'></a>
+                    <a href='receita.php' id='<?php echo $banana[3]["CodRec"]; ?>'><img class='img-receitas' src='<?php echo str_replace(" ","",$banana[3]["FotoRec"]); ?>'></a>
                     </div>
                     <div class='info-criador'>
                     <img class='criador' src='<?php echo str_replace(" ","",$banana[3]["FotoUser"]); ?>'>
@@ -78,7 +77,7 @@
         
                 <div class='div-imagem col-lg-8 col-12'>
                     <div class='imagem'>
-                    <a href='receita.php'><img class='img-receitas' src='<?php echo str_replace(" ","",$banana[4]["FotoRec"]); ?>'></a>
+                    <a href='receita.php' id='<?php echo $banana[4]["CodRec"]; ?>'><img class='img-receitas' src='<?php echo str_replace(" ","",$banana[4]["FotoRec"]); ?>'></a>
                     </div>
                     <div class='info-criador'>
                     <img class='criador' src='<?php echo str_replace(" ","",$banana[4]["FotoUser"]); ?>'>

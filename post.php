@@ -11,7 +11,7 @@ class POST{
 
 	public function dadosIndex() {
 		$query = "
-		SELECT m.url FotoRec, r.nome NomeRec, u.img FotoUser from RECEITA r
+		SELECT m.url FotoRec, r.nome NomeRec, u.img FotoUser, r.cod_rec CodRec from RECEITA r
     	left join MIDIA m on m.FK_RECEITA_cod_rec = r.cod_rec
     	left join USUARIO u on u.cod_perfil = r.FK_USUARIO_cod_perfil
     	where r.cod_rec <=5";
@@ -107,6 +107,19 @@ class POST{
 		return $results;
 	}
 
+	public function infoRec($id) {
+		$query1 = "
+		SELECT r.nome RecNome, m.url RecImg, r.porcao RecRend, r.temp_preparo RecTemp, r.dificuldade RecDif, u.img UsuImg, u.nome UsuNome, r.descricao RecDesc From RECEITA r
+		LEFT JOIN MIDIA m on m.FK_RECEITA_cod_rec = r.cod_rec 
+		LEFT JOIN USUARIO u on u.cod_perfil = r.FK_USUARIO_cod_perfil 
+		WHERE r.cod_rec = " . $id;
+
+		$stmt = $this->conn->prepare($query1);
+		$stmt->execute();
+		$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+		return $results;
+	}
 	/*
 	//Construtor - cria uma instância PDO que representa a conexão com o banco de dados
 	public function __construct($db){

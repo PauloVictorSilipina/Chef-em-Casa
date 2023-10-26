@@ -41,7 +41,7 @@
             </div>
 
             <div class="col-lg-7 col-12">
-                <div class='col-lg-12 titulo-rec'><input type='text' placeholder='Titulo da Receita'></div>
+                <div class='col-lg-12 titulo-rec'><input class='col-12' type='text' placeholder='Titulo da Receita'></div>
                 <div class="vazia"></div>
                 <div class='col-lg-12 desc-rec'><textarea placeholder='Descrição da receita' id='desc-red'></textarea></div>
             </div>
@@ -99,8 +99,8 @@
                 </div>
                 <div class="sub-titulos col-lg-12">
                     <span>Número de pessoas ou porções</span><br>
-                    <div class='qtd-pess-porc col-lg-3'>
-                        <input type='number' min='1' max='20' class='col-lg-12'></input>
+                    <div class='qtd-pess-porc col-lg-6 offset-lg-0 col-4 offset-4'>
+                        <input type='number' min='1' max='20' class='col-12 col-4'></input>
                     </div>
                 </div>
                 <div class="sub-titulos col-lg-12">
