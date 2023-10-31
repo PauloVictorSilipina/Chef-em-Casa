@@ -26,6 +26,10 @@
     
     $post = new Post($db);
     $infoRecDesc = $post -> infoRec($_GET['id']);
+    $infoIngredientes = $post -> infoIngredientes($_GET['id']);
+    $infoPreparo = $post -> infoPreparo($_GET['id']);
+    $comentarios = $post -> comentario($_GET['id']);
+
     ?>
 
      <!-- Infos da receitas -->
@@ -82,7 +86,7 @@
                 <!-- Div 1 - Lado a Lado -->
                 <div class="col-lg-1 d-flex align-items-center">
                     <div class="img-criador">
-                    <img src="<?php echo $infoRecDesc[0]["UsuImg"]; ?>">
+                    <img src="<?php echo str_replace(" ", "",$infoRecDesc[0]["UsuImg"]); ?>">
                     </div>
                 </div>
 
@@ -112,12 +116,11 @@
         <div class="container col-lg-8">
             <div class="ingredientes-preparo col-lg-12">
                 <ol>
-                    <li>3 copos de trigo</li>
-                    <li>2 copos de açúcar</li>
-                    <li>1 copo de chocolate em pó</li>
-                    <li>1 copo de óleo</li>
-                    <li>Óleo</li>
-                    <li>Fermento</li>
+                    <?php
+                        foreach($infoIngredientes as $i) {
+                            echo "<li>". $i['qtd'] ." ". $i['medida'] ." ". $i['nome']."</li>";
+                        }
+                    ?>
                 </ol>
             </div>
         </div>
@@ -130,12 +133,11 @@
         <div class="container col-lg-8">
             <div class="modo-preparo col-lg-12">
                 <ol>
-                    <li>Em uma tigela misturar o açúcar e o chocolate em pó</li>
-                    <li>Em seguida, misturar as gemas e o óleo</li>
-                    <li>Aos poucos acrescentar a água e o trigo</li>
-                    <li>Em seguida juntar o fermento e por fim juntar as claras em neve</li>
-                    <li>Óleo</li>
-                    <li>Despejar numa forma untada e colocar para assar por aproximadamente 40 minutos</li>
+                    <?php
+                        foreach($infoPreparo as $i) {
+                            echo "<li>". $i['desc_da_ordem'] ."</li>";
+                        }
+                    ?>
                 </ol>
             </div>
         </div>
@@ -146,20 +148,15 @@
                 <span>Comentários</span>
             </div>
             <div class="comentarios col-lg-12">
-                <div class="comentario d-flex align-items-center">
-                    <div class="foto-comentario col-1">
-                        <img src="img/pedroantonio.jpeg">
-                    </div>
-                    <div class="info-comentario col-9 offset-2">
-                        <div class="nome-comentario">
-                            <span>Piedro Antonieta</span>
-                        </div>
-                        <div class="texto-comentario col-12">
-                            <span>Não gostei, asmei! Adoro receitas como essa!</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php
+                foreach($comentarios as $i) {
+                    echo "<div class='comentario d-flex align-items-center'>";
+                    echo "<div class='foto-comentario col-1'><img src=". $i['img']."></div>";
+                    echo "<div class='info-comentario col-9 offset-2'><div class='nome-comentario'><span>".$i['nome']."</span></div><div class='texto-comentario col-12'><span>".$i['COMENTARIO']."</span></div></div>";
+                    echo "</div>";
+                    echo "</div>";
+                }
+            ?>
         </div>
      </div>
     <?php

@@ -120,6 +120,49 @@ class POST{
 
 		return $results;
 	}
+
+	public function infoIngredientes($id){
+		$query1 = "
+		SELECT ri.qtd, m.medida, i.nome FROM RECEITA r
+		left join RECEITA_INGREDIENTE ri on ri.fk_RECEITA_cod_rec = r.cod_rec 
+		LEFT JOIN INGREDIENTE i on i.cod_ingrediente  = ri.fk_INGREDIENTE_cod_ingrediente 
+		LEFT JOIN MEDIDA m on m.cod_medida = ri.fk_MEDIDA_cod_medida_ 
+		WHERE r.cod_rec = " . $id;
+
+		$stmt = $this->conn->prepare($query1);
+		$stmt->execute();
+		$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+		return $results;
+	}
+
+	public function infoPreparo($id) {
+		$query1 = "
+		SELECT mp.desc_da_ordem FROM MODO_PREPARO mp 
+		left join RECEITA r on r.cod_rec = mp.FK_RECEITA_cod_rec 
+		WHERE r.cod_rec = " . $id;
+
+		$stmt = $this->conn->prepare($query1);
+		$stmt->execute();
+		$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+		return $results;
+	}
+
+	public function comentario($id) {
+		$query1 = "
+		SELECT u.img, u.nome, c.COMENTARIO FROM COMENTA c  
+		left join RECEITA r on r.cod_rec = c.fk_RECEITA_cod_rec 
+		LEFT JOIN USUARIO u on u.cod_perfil = c.fk_USUARIO_cod_perfil 
+		WHERE r.cod_rec = " . $id;
+
+		$stmt = $this->conn->prepare($query1);
+		$stmt->execute();
+		$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+		return $results;
+	}
+
 	/*
 	//Construtor - cria uma instância PDO que representa a conexão com o banco de dados
 	public function __construct($db){
