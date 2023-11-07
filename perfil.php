@@ -19,37 +19,39 @@
     <title>Chef em Casa</title>
 </head>
 <!--criação do corpo-->
-<body class='d-flex flex-column min-vh-100'>
+<body>
     <?php
     include "header.php";
-    
     ?>
 
     <div class="container perfil">
-            <div class="nome-usuario col-lg-12">
-                <?php
-                $usuario = $_SESSION['usuario'];
-                echo '<span>'.$usuario.'</span>';
-                ?>
-            </div>
+        <div class="editar col-lg-2 offset-lg-10">
+            <a href='editarperfil.html'><i class="fa-solid fa-pen-to-square fa-2xl"></i></a>
+        </div>
+        
+        <div class="nome-usuario col-lg-12">
+            <?php
+            $usuario = $_SESSION['usuario'];
+            echo '<span>'.$usuario.'</span>';
+            ?>
+        </div>
     
-            <div class="foto-usuario col-lg-12">
-                <?php
-                if (isset($_SESSION['img_path'])) {
-                    $img_path = $_SESSION['img_path'];
-                    // Agora, $img_path contém o caminho da imagem
-                } else {
-                    $img_path = 'img/icon.png';
-                }
-
-                echo '<img src="'. $img_path .'">';
-                ?>
-                
-            </div>
+        <div class="foto-usuario col-lg-12">
+            <?php
+            if (isset($_SESSION['img_path'])) {
+                $img_path = $_SESSION['img_path'];
+                // Agora, $img_path contém o caminho da imagem
+            } else {
+                $img_path = 'img/icon.png';
+            }
+            echo '<img src="'. $img_path .'">';
+            ?>
+            
+        </div>
     
-            <div class="titulo-historico offset-lg-3 col-lg-6">
-                <span>Histórico de receitas curtidas</span>
-            </div>
+        <div class="titulo-historico offset-lg-3 col-lg-6">
+            <span>Histórico de receitas curtidas</span>
+        </div>
 
         <div class="container">
             <div class="row receitas-visualizadas">

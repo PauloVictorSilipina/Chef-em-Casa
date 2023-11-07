@@ -31,6 +31,7 @@
                 <div class="dropdown">
 
                 <?php
+                session_start();
                 if (isset($_SESSION['img_path'])) {
                     $img_path = $_SESSION['img_path'];
                     $caminho_pagina = 'perfil.php';

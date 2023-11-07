@@ -72,6 +72,7 @@
 
 .dificuldades label {
     color: rgba(0, 0, 0, 0.75);
+    width: 100%;
 }
 .facil {
     border-bottom: 0!important;
