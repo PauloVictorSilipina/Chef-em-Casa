@@ -1,27 +1,20 @@
 <?php
 
-// Abre uma conexao com o BD.
+$db_user='chefinhome';
+$db_password='Bisnaguinha2023';
+$db_name='chefinhome';
 
-$host        = "host = www.db4free.net;";
-$port        = "port = 3306;";
-$dbname      = "dbname = chefinhome;";
-$dbuser 	 = "chefinhome";
-$dbpassword	 = "Bisnaguinha2023";
+/*para conectar ao POSTGRESQL "pgsql:host=$host;port=5432*/
 
-
-/*
-	// dados de conexao com o b4app. Usar somente caso esteja usando b4app
-	$host        = "host = " . getenv("BD_HOST") . ";";
-	$port        = "port = " . getenv("BD_PORT") . ";";
-	$dbname      = "dbname = " . getenv("BD_DATABASE") . ";";
-	$dbuser 	 = getenv("BD_USER");
-	$dbpassword	 = getenv("BD_PASSWORD");
-*/
-
-// para conectar ao mysql, substitua pgsql por mysql
-$db_con= new PDO('mysql:' . $host . $port . $dbname, $dbuser, $dbpassword);
+//$db= new PDO('mysql:host=localhost;dbname='. $db_name . ';charset=utf8', $db_user,$db_password);
+$db_con= new PDO('mysql:host=www.db4free.net;port=3306;dbname='. $db_name . ';charset=utf8', $db_user,$db_password);
 
 //alguns atributos de performance.
 $db_con->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
+$db_con->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY,true);
 $db_con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+//define('APP_NAME', 'PHP REST API TUTORIAL - PROFA MARTA');
+
+
 ?>
