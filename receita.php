@@ -133,11 +133,15 @@
         <div class="container col-lg-8">
             <div class="modo-preparo col-lg-12">
                 <ol>
-                    <?php
-                        foreach($infoPreparo as $i) {
-                            echo "<li>". $i['desc_da_ordem'] ."</li>";
+                <?php
+                    foreach($infoPreparo as $i) {
+                        $passos = explode(';', $i['modo_preparo']);
+                        foreach ($passos as $passo) {
+                            echo '<li>' . $passo . '</li>';
                         }
-                    ?>
+                    }
+                ?>
+
                 </ol>
             </div>
         </div>
