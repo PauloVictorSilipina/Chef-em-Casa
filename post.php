@@ -152,7 +152,7 @@ class POST{
 
 	public function comentario($id) {
 		$query1 = "
-		SELECT u.img, u.nome, c.COMENTARIO FROM COMENTA c  
+		SELECT u.cod_perfil UsuCod, u.img, u.nome, c.COMENTARIO FROM COMENTA c  
 		left join RECEITA r on r.cod_rec = c.fk_RECEITA_cod_rec 
 		LEFT JOIN USUARIO u on u.cod_perfil = c.fk_USUARIO_cod_perfil 
 		WHERE r.cod_rec = " . $id;

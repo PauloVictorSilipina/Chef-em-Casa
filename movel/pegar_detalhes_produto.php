@@ -25,11 +25,35 @@ if(autenticar($db_con)) {
 		$id = $_GET['id'];
 	 
 		// Obtem do BD os detalhes do produto com id especificado na requisicao GET
-		$consulta = $db_con->prepare("SELECT * FROM produtos WHERE id = $id");
+
+		$consultaInfoReceita = $db_con->prepare("
+		SELECT r.nome RecNome, m.url RecImg, r.porcao RecRend, r.temp_preparo RecTemp, d.dificuldade RecDif, u.img UsuImg, u.nome UsuNome, r.descricao RecDesc From RECEITA r
+		LEFT JOIN MIDIA m on m.FK_RECEITA_cod_rec = r.cod_rec 
+		LEFT JOIN USUARIO u on u.cod_perfil = r.FK_USUARIO_cod_perfil 
+		left join DIFICULDADE d on d.cod_dificuldade = r.FK_DIFICULDADE_cod_dificuldade 
+		WHERE r.cod_rec = " . $id); // Referente ao criador, foto, dificuldade, etc (primeira coisa que aparece no web tbm)
+
+		$consultaIngrediente = $db_con->prepare("
+		SELECT ri.qtd, m.medida, i.nome FROM RECEITA r
+		left join RECEITA_INGREDIENTE ri on ri.fk_RECEITA_cod_rec = r.cod_rec 
+		LEFT JOIN INGREDIENTE i on i.cod_ingrediente  = ri.fk_INGREDIENTE_cod_ingrediente 
+		LEFT JOIN MEDIDA m on m.cod_medida = ri.fk_MEDIDA_cod_medida_ 
+		WHERE r.cod_rec = " . $id);
+
+		$consultaModoPreparo = $db_con->prepare("SELECT mp.modo_preparo FROM MODO_PREPARO mp 
+		left join RECEITA r on r.cod_rec = mp.FK_RECEITA_cod_rec 
+		WHERE r.cod_rec = " . $id);
+
+		$consultaComentarios = $db_con->prepare("SELECT u.cod_perfil UsuCod, u.img, u.nome, c.COMENTARIO FROM COMENTA c  
+		left join RECEITA r on r.cod_rec = c.fk_RECEITA_cod_rec 
+		LEFT JOIN USUARIO u on u.cod_perfil = c.fk_USUARIO_cod_perfil 
+		WHERE r.cod_rec = " . $id);
 	 
 		if ($consulta->execute()) {
 			if ($consulta->rowCount() > 0) {
-	 
+
+				// Fazer todos os selects se a receita existir (fazer ainda)
+
 				// Se o produto existe, os dados completos do produto 
 				// sao adicionados no array de resposta. A imagem nao 
 				// e entregue agora pois ha um php exclusivo para obter 

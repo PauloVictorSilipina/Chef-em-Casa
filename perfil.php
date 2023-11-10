@@ -28,7 +28,6 @@
         <div class="editar col-lg-2 offset-lg-10">
             <a href='editarperfil.html'><i class="fa-solid fa-pen-to-square fa-2xl"></i></a>
         </div>
-        
         <div class="nome-usuario col-lg-12">
             <?php
             $usuario = $_SESSION['usuario'];
@@ -46,7 +45,6 @@
             }
             echo '<img src="'. $img_path .'">';
             ?>
-            
         </div>
     
         <div class="titulo-historico offset-lg-3 col-lg-6">
