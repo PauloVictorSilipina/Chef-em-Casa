@@ -40,11 +40,13 @@ if(autenticar($db_con)) {
 		LEFT JOIN MEDIDA m on m.cod_medida = ri.fk_MEDIDA_cod_medida_ 
 		WHERE r.cod_rec = " . $id);
 
-		$consultaModoPreparo = $db_con->prepare("SELECT mp.modo_preparo FROM MODO_PREPARO mp 
+		$consultaModoPreparo = $db_con->prepare("
+		SELECT mp.modo_preparo FROM MODO_PREPARO mp 
 		left join RECEITA r on r.cod_rec = mp.FK_RECEITA_cod_rec 
 		WHERE r.cod_rec = " . $id);
 
-		$consultaComentarios = $db_con->prepare("SELECT u.cod_perfil UsuCod, u.img, u.nome, c.COMENTARIO FROM COMENTA c  
+		$consultaComentarios = $db_con->prepare("
+		SELECT u.cod_perfil UsuCod, u.img, u.nome, c.COMENTARIO FROM COMENTA c  
 		LEFT JOIN USUARIO u on u.cod_perfil = c.fk_USUARIO_cod_perfil 
 		WHERE c.FK_RECEITA_cod_rec = " . $id);
 	 
@@ -54,7 +56,7 @@ if(autenticar($db_con)) {
 				// Fazer todos os selects se a receita existir (fazer ainda)
 
 				// Se o produto existe, os dados completos do produto 
-				// sao adicionados no array de resposta. A imagem nao 
+				// sao adicionados no array de resposta. A imagem nao                              
 				// e entregue agora pois ha um php exclusivo para obter 
 				// a imagem do produto.
 				$linha = $consulta->fetch(PDO::FETCH_ASSOC);

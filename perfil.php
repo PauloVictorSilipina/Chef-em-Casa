@@ -26,7 +26,7 @@
 
     <div class="container perfil">
         <div class="editar col-lg-2 offset-lg-10">
-            <a href='editarperfil.html'><i class="fa-solid fa-pen-to-square fa-2xl"></i></a>
+            <a href='editarperfil.php'><i class="fa-solid fa-pen-to-square fa-2xl"></i></a>
         </div>
         <div class="nome-usuario col-lg-12">
             <?php

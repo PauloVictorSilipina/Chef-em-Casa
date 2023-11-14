@@ -27,3 +27,11 @@
     border: 1px solid #ff6e29;
     border-radius: 2rem;
 }
+
+.editar-usuario input{
+    margin-top: 0.5rem;
+}
+
+.botoes button{
+    height: 4rem;
+}

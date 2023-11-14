@@ -164,6 +164,14 @@ class POST{
 		return $results;
 	}
 
+	public function deletarPerfil($id) {
+		$query1 = "
+		delete from USUARIO where cod_perfil=" . $id;
+
+		$stmt = $this->conn->prepare($query1);
+		$stmt->execute();	
+	}
+
 	/*
 	//Construtor - cria uma instância PDO que representa a conexão com o banco de dados
 	public function __construct($db){
