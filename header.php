@@ -31,9 +31,8 @@
                 <div class="dropdown">
 
                 <?php
-                if (!($_SESSION['user_id'])) {
-                    session_start();
-                }
+
+                session_start();
                 
                 if (isset($_SESSION['img_path'])) {
                     $img_path = $_SESSION['img_path'];
