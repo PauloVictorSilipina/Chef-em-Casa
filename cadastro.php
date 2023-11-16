@@ -69,19 +69,19 @@
 
                     <div class="col-lg-12 input-control">
                         <label for="email" class="col-lg-12 col-10 offset-1">Email</label>
-                        <input type="text" name="email" id="email" placeholder="Digite o email" class="col-lg-10 col-10 offset-1" name="email">
+                        <input type="text" id="email" placeholder="Digite o email" class="col-lg-10 col-10 offset-1" name="email">
                         <div class="error"></div>
                     </div>
                     
                     <div class="col-lg-12 input-control">
                         <label for="usuario" class="col-lg-12 col-10 offset-1">Usuário</label>
-                        <input type="text" name="usuario" id="usuario" placeholder="Digite o usuário" class="col-lg-10 col-10 offset-1" name="usuario">
+                        <input type="text" id="usuario" placeholder="Digite o usuário" class="col-lg-10 col-10 offset-1" name="usuario">
                         <div class="error"></div>
                     </div>
                     
                     <div class="col-lg-12 input-control">
                         <label for="password" class="col-lg-12 col-10 offset-1">Senha</label>
-                        <input type="password" name="senha" id="password" placeholder="Deve conter 6 caracteres ou mais" class="col-lg-10 col-10 offset-1" name="senha">
+                        <input type="password" id="password" placeholder="Deve conter 6 caracteres ou mais" class="col-lg-10 col-10 offset-1" name="senha">
                         <div class="error"></div>
                     </div>
 

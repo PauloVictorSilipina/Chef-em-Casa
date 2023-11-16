@@ -166,12 +166,46 @@ class POST{
 
 	public function deletarPerfil($id) {
 		$query1 = "
-		delete from USUARIO where cod_perfil=" . $id;
+		delete from USUARIO where cod_perfil=" . $id[0]['cod_perfil'];
 
 		$stmt = $this->conn->prepare($query1);
 		$stmt->execute();	
 	}
 
+	public function alterarNome($id, $nome) {
+		$query1 = "
+		UPDATE USUARIO SET nome='". $nome ."'WHERE cod_perfil='". $id[0]['cod_perfil']."'";
+
+		$stmt = $this->conn->prepare($query1);
+		$stmt->execute();	
+	}
+
+	public function alterarEmail($id, $email) {
+		$query1 = "
+		UPDATE USUARIO SET email='". $email ."'WHERE cod_perfil='". $id[0]['cod_perfil']."'";
+
+		$stmt = $this->conn->prepare($query1);
+		$stmt->execute();	
+	}
+
+	public function alterarSenha($id, $novasenha) {
+		$query1 = "
+		UPDATE USUARIO SET senha='". $novasenha ."'WHERE cod_perfil='". $id[0]['cod_perfil']."'";
+
+		$stmt = $this->conn->prepare($query1);
+		$stmt->execute();
+	}
+
+	public function senhaUsuario($id) {
+		$query1 = "
+		SELECT senha from USUARIO where cod_perfil=" . $id[0]['cod_perfil'];
+
+		$stmt = $this->conn->prepare($query1);
+		$stmt->execute();
+		$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+		return $results;
+	}
 	/*
 	//Construtor - cria uma instância PDO que representa a conexão com o banco de dados
 	public function __construct($db){

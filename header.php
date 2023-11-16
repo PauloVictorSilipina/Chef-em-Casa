@@ -32,7 +32,10 @@
                 <div class="dropdown">
 
                 <?php
+<<<<<<< HEAD
+=======
 
+>>>>>>> b13e6e07de9033f246ea72e699efa98af9eff821
                 if (isset($_SESSION['img_path'])) {
                     $img_path = $_SESSION['img_path'];
                     $caminho_pagina = 'perfil.php';

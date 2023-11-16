@@ -60,10 +60,6 @@
     font-size: 2.25rem;
 }
 
-.sub-titulos span {
-    font-size: 1.5rem;
-}
-
 .dificuldades div{
     border: 1px solid black;
     padding: 0.5rem;
@@ -108,53 +104,8 @@
     border: 0;
 }
 
-.clock {
-    display: flex;
-    font-size: 2em;
-    align-items: center;
-}
-  
-.clock {
-    cursor: pointer;
-}
-
-.hour {
-    margin-right: 1rem;
-}
-
-.minute {
-    margin-left: 1rem;
-}
-.hour div {
-    padding: 0.5rem 3.5rem 0.5rem 3.5rem;
-    border: 1px solid black;
-}
-
-.minute div{
-    padding: 0.5rem 3.5rem 0.5rem 3.5rem;
-    border: 1px solid black;
-}
-.previous, .next {
-    display: block;
-    opacity: 0.5;
-    font-size: 0.5em;
-}
-
-.qtd-pess-porc input{
-    background-color: white;
-    border: none;
-    outline: none;
-    height: 4rem;
-    font-size: 1.25rem;
-}
-
-.qtd-pess-porc {
-    border: 1px solid black;
-}
-
 @media (max-width: 576px) {
     .qtd-pess-porc input{
       
     }
 }
-

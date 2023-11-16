@@ -76,18 +76,10 @@
                 </div>
                 <div class="sub-titulos col-lg-12">
                     <span>Tempo de Preparo</span>
-
                     <div class="clock">
-                        <div class="hour">
-                            <div><span class="previous"></span></div>
-                            <div><span class="current">00</span></div>
-                            <div><span class="next"></span></div>
-                        </div>
-                    <span>:</span>
-                        <div class="minute">
-                            <div><span class="previous"></span></div>
-                            <div><span class="current">00</span></div>
-                            <div><span class="next"></span></div>
+                        <div class="col-lg-6 no-gutters">
+                            <input class="col-lg-5">
+                            <input class="col-lg-5">
                         </div>
                     </div>
                 </div>
