@@ -41,10 +41,10 @@
             <div class="col-lg-6 offset-lg-6 col-12">
                 <div class="col-lg-12 botoes row no-gutters">
                     <form class="col-lg-4" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-                        <button onclick="" class="col-lg-12" type="submit">Deletar usuário</button>
+                        <button onclick="" class="col-lg-12" type="submit">Alterar usuário</button>
                     </form>
                     <form class="col-lg-4" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-                        <button onclick="" class="col-lg-12" type="submit">Deletar usuário</button>
+                        <button onclick="" class="col-lg-12" type="submit">Descartar alterações</button>
                     </form>
                     <form class="col-lg-4" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                         <button name="btn-deletar" class="col-lg-12" type="submit">Deletar usuário</button>
