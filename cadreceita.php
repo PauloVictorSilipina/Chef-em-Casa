@@ -76,17 +76,26 @@
                 </div>
                 <div class="sub-titulos col-lg-12">
                     <span>Tempo de Preparo</span>
+
                     <div class="clock">
-                        <div class="col-lg-6 no-gutters">
-                            <input class="col-lg-5">
-                            <input class="col-lg-5">
+                        <div class="hour">
+                            <div><span class="previous"></span></div>
+                            <div><span class="current">00</span></div>
+                            <div><span class="next"></span></div>
+                        </div>
+                    <span>:</span>
+                        <div class="minute">
+                            <div><span class="previous"></span></div>
+                            <div><span class="current">00</span></div>
+                            <div><span class="next"></span></div>
                         </div>
                     </div>
                 </div>
             </div>
         
-            <div class="ingredientes col-lg-6">
-            <div class="titulos col-lg-12">
+            <div class="col-lg-6">
+                
+                <div class="titulos col-lg-12">
                     <span>Ingredientes e porções</span>
                 </div>
                 <div class="sub-titulos col-lg-12">
@@ -95,10 +104,24 @@
                         <input type='number' min='1' max='20' class='col-12 col-4'></input>
                     </div>
                 </div>
-                <div class="sub-titulos col-lg-12">
+
+                <div class="sub-titulos col-lg-6">
                     <span>Ingredientes</span>
                 </div>
+
+                <div class="ing-inicio col-lg-6" id="ingrediente-inicio">
+                    <div class="ingrediente col-lg-12" id="ingrediente">
+                    <input class="col-lg-4" placeholder="Ingrediente">
+                    <input class="col-lg-2" placeholder="Qtd">
+                    <select class="col-lg-4" name="medida" id="medida">
+                        <option value="ml">ML</option>
+                        <option value="gramas">Gramas</option>
+                    </select>
+                    <button class="btnAdiciona" onclick="copy()">+</button>
+                    </div>
                 </div>
+                
+            </div>
         </div>
     </div>
     <?php

@@ -2,7 +2,6 @@
 
 <link rel="stylesheet" href="css/css_header.css">
 
-<?php session_start(); ?>
 <nav class="cabecalho navbar navbar-expand-lg sticky-top">
     <div class="col-lg-12 col-12">
         <div class="row">
@@ -32,10 +31,7 @@
                 <div class="dropdown">
 
                 <?php
-<<<<<<< HEAD
-=======
-
->>>>>>> b13e6e07de9033f246ea72e699efa98af9eff821
+                session_start();
                 if (isset($_SESSION['img_path'])) {
                     $img_path = $_SESSION['img_path'];
                     $caminho_pagina = 'perfil.php';

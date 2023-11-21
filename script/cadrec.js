@@ -81,6 +81,9 @@ minuteCurrentElement.addEventListener('wheel', (e) => {
 });
 
 updateClock();
-
-
-
+  
+function copy() {
+    const node = document.getElementById("ingrediente");
+    const clone = node.cloneNode(true);
+    document.getElementById("ingrediente-inicio").appendChild(clone);
+}
