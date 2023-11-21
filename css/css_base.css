@@ -13,10 +13,17 @@ importação de fonte e adicionando ela em todos itens, utilizado também o bord
     box-sizing:border-box;
 }
 
+:root {
+    --main-bg-color: #fff;
+    --bg2-color: rgb(238, 238, 238);
+    --main-border-color: rgb(238, 238, 238);
+}
+
 html {
     height: 100%;
 
 }
+
 body {
     display: flex;
     flex-direction: column;

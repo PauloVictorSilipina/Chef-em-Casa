@@ -5,16 +5,20 @@ a{
     text-decoration: none;
 }
 
+:root {
+    background-color: var(--bg2-color);
+}
+
 .login {
-    margin-top:auto;
+    margin-top: auto;
     margin-bottom: auto;
 }
 
 .dados {
-    background-color: rgb(238, 238, 238);
+    background-color: var(--main-bg-color);
     color: black;
     border-radius: 10px;
-    border: 1px solid rgb(238, 238, 238);
+    border: 1px solid var(--main-border-color);
 }
 
 .dados h1{
