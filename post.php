@@ -172,6 +172,15 @@ class POST{
 		$stmt->execute();	
 	}
 
+	public function pesquisaReceita($pesquisa) {
+		$query = "
+		SELECT * from RECEITA where nome like '%".$pesquisa."%';";
+		$stmt = $this->conn->prepare($query);
+		$stmt->execute();
+		
+		$results = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+		return $results;
+	}
 	/*
 	//Construtor - cria uma instância PDO que representa a conexão com o banco de dados
 	public function __construct($db){

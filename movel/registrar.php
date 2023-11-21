@@ -20,7 +20,7 @@ if (isset($_POST['novo_email']) && isset($_POST['novo_nome']) && isset($_POST['n
 	
 	// o bd não armazena diretamente a senha do usuário, mas sim 
 	// um código hash que é gerado a partir da senha.
-	//$token = password_hash($nova_senha, PASSWORD_DEFAULT);
+	$token = password_hash($nova_senha, PASSWORD_DEFAULT);
 	
 	// antes de registrar o novo usuário, verificamos se ele já
 	// não existe.
@@ -35,7 +35,7 @@ if (isset($_POST['novo_email']) && isset($_POST['novo_nome']) && isset($_POST['n
 	}
 	else {
 		// se o usuário ainda não existe, inserimos ele no bd.
-		$consulta = $db_con->prepare("INSERT INTO USUARIO(nome,email,senha) VALUES('$novo_nome','$novo_email', '$nova_senha')");
+		$consulta = $db_con->prepare("INSERT INTO USUARIO(nome,email,senha) VALUES('$novo_nome','$novo_email', '$token')");
 	 
 		if ($consulta->execute()) {
 			// se a consulta deu certo, indicamos sucesso na operação.
