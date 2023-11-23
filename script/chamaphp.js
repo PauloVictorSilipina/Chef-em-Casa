@@ -1,10 +1,7 @@
-function loadPHP() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("content").innerHTML = this.responseText;
-      }
-    };
-    xhttp.open("GET", "header.php", true);
-    xhttp.send();
-  }
+function chamaheader() {
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "header.php");
+  xhr.onload = function () {
+    console.log(this.response);
+  };
+}

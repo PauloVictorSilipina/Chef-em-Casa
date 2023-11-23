@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/css_search.css">
 </head>
 <body>
+    <div  id="resultados"></div>
     <div class="resultados container">
         <div class="row receita offset-lg-2 col-lg-8">
             <div class="col-lg-4">
@@ -30,4 +31,13 @@
         </div>
     </div>
 </body>
+<script>
+    function friends(){
+     var x=document.getElementById("resultados");
+     x.innerHTML = '<?php include_once "header.php";?>';
+     }      
+    friends();    
+    console.log("penis");
+ </script>
+
 </html>
