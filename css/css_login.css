@@ -19,6 +19,7 @@ a{
     color: black;
     border-radius: 10px;
     border: 1px solid var(--main-border-color);
+    font-family: var(--default-font-family);
 }
 
 .dados h1{
@@ -26,6 +27,7 @@ a{
     font-size: 2.5rem;
     padding-top: 3rem;
     margin-bottom: 1.5rem;
+    font-weight: 600;
 }
 
 .dados input {
@@ -36,6 +38,14 @@ a{
     border-bottom: 1px solid black;
     background-color: transparent;
     outline: 0;
+}
+
+.dados input:hover {
+    border-bottom: 1px solid var(--main-color);
+}
+
+.dados label {
+    font-weight: 500;
 }
 
 .div-btn {
@@ -55,12 +65,21 @@ a{
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
     padding: 0.25rem;
+    border-radius: 1.2rem;
+    padding: .5rem .5rem .5rem .5rem;
+    font-weight: 600;
+    font-size: 1.2rem;
 }
 
 .btn-valida:hover{
-    -moz-transform: scale(1.1);
-	-webkit-transform: scale(1.1);
-	transform: scale(1.1);
+    /* -moz-transform: scale(1.1); */
+	/* -webkit-transform: scale(1.1); */
+	/* transform: scale(1.1); */
+    background-color: var(--main-color);
+    color: #fff;
+    cursor: pointer;
+    -webkit-transition: color background-color 1s ease-out;
+    transition: color background-color 1s ease-out;
 }
 
 .cad {

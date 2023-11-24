@@ -8,7 +8,7 @@ body {
     position: fixed;
     right: 0;
     left: 0;
-    background-color: var(--main-bg-color);
+    background-color: var(--secondary-bg-color);
 }
 
 .cabecalho a {
@@ -19,57 +19,13 @@ body {
 .div-logo span{
     font-family: 'Cookie';
     font-size: 3.25rem;
-    color: #ff5200;
+    color: var(--secondary-color);
     text-shadow: -1.5px 1px black;
     font-weight: bold;
 }
 
-.div-pesquisa{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.input-pesquisa{
-    border-top-left-radius: 22px;
-    border-bottom-left-radius: 22px;
-    border: 1px lightgray;
-    box-shadow: 0 0 1px 0 rgb(245, 169, 83);
-    background-color: white;
-    padding: 0.6rem;
-    padding-left: 1rem;
-    outline: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 .div-logo{
     text-align: center;
-}
-
-.usuario {
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.usuario a{
-    margin-left: 0.75rem;
-}
-
-.input-pesquisa::placeholder {
-    color: black;
-}
-
-.btn-pesquisa{
-    border-top-right-radius: 22px;
-    border-bottom-right-radius: 22px;
-    border-left: 0;
-    border: 0.1px solid #ff7533;
-    background-color: #ff7533;
-    padding: 0.6rem;
-}
-
-.btn-pesquisa i{
-    color: white;
 }
 
 .navbar-toggler {

@@ -5,6 +5,8 @@ importação de fonte e adicionando ela em todos itens, utilizado também o bord
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 
 * {
@@ -14,8 +16,14 @@ importação de fonte e adicionando ela em todos itens, utilizado também o bord
 }
 
 :root {
+    --default-font-family: "Quicksand", arial, sans-serif;
     --main-bg-color: #fff;
+    --secondary-bg-color: rgb(41, 49, 51, 20);
     --bg2-color: rgb(238, 238, 238);
+
+    --main-color: #ff5200;
+    --secondary-color: #00C7FF;
+
     --main-border-color: rgb(238, 238, 238);
 }
 
