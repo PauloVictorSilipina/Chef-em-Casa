@@ -29,7 +29,8 @@ if(autenticar($db_con)) {
 		$offset = $_GET['offset'];
  
 		// Realiza uma consulta ao BD e obtem todos os produtos.
-		$consulta = $db_con->prepare("SELECT * FROM produtos LIMIT " . $limit . " OFFSET " . $offset);
+		$consulta = $db_con->prepare("select cod_rec, nome, url from RECEITA r 
+		inner join MIDIA m on m.FK_RECEITA_cod_rec = r.cod_rec  LIMIT " . $limit . " OFFSET " . $offset);
 		if($consulta->execute()) {
 			// Caso existam produtos no BD, eles sao armazenados na 
 			// chave "produtos". O valor dessa chave e formado por um 
@@ -49,10 +50,9 @@ if(autenticar($db_con)) {
 					// os detalhes de um produto somente serao transferidos ao cliente 
 					// em caso de real interesse.
 					$produto = array();
-					$produto["id"] = $linha["id"];
+					$produto["id"] = $linha["cod_rec"];
 					$produto["nome"] = $linha["nome"];
-					$produto["preco"] = $linha["preco"];
-					$produto["img"] = $linha["img"];
+					$produto["img"] = $linha["url"];
 			 
 					// Adiciona o produto no array de produtos.
 					array_push($resposta["produtos"], $produto);
