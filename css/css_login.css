@@ -1,7 +1,16 @@
 /*
 posiciono o div com os dados ao centro e adiciono animação para quando aparecer
 */
-a{
+html * {
+    font-family: var(--main-font-family);
+
+}
+
+body {
+    background-color: var( --secondary-bg-color) !important;
+}
+
+a {
     text-decoration: none;
 }
 
@@ -11,17 +20,22 @@ a{
 }
 
 .dados {
-    background-color: rgb(238, 238, 238);
+    background-color: var(--main-bg-color);
     color: black;
     border-radius: 10px;
-    border: 1px solid rgb(238, 238, 238);
+    /* border: 1px solid rgb(0, 0, 0, calc(100% / 4)); */
+    box-shadow: rgba(149, 157, 165, 0.9) 0px 8px 24px;
+    /* font-family: "Quicksand"; */
+
+
 }
 
 .dados h1{
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     padding-top: 3rem;
     margin-bottom: 1.5rem;
+    font-weight: 700;
 }
 
 .dados input {
@@ -50,13 +64,19 @@ a{
 	-moz-transition: all 0.3s;
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
-    padding: 0.25rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    border-radius: 1.2rem;
+    font-weight: 600;
 }
 
 .btn-valida:hover{
-    -moz-transform: scale(1.1);
-	-webkit-transform: scale(1.1);
-	transform: scale(1.1);
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+
+	-webkit-transform: background-color color 1s ease-in-out;
+    -moz-transform: background-color color 1s ease-in-out;
+    transform: background-color color 1s ease-in-out;
 }
 
 .cad {
