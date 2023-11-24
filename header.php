@@ -1,5 +1,4 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-<script src="script/header.js" defer></script>
 <link rel="stylesheet" href="css/css_header.css">
 
 <nav class="cabecalho navbar navbar-expand-lg sticky-top">
@@ -19,8 +18,10 @@
             </button>
             
             <div class="div-pesquisa col-12 col-lg-6 offset-lg-1 row no-gutters"  id="div-pesquisa">
-                <input type="text" placeholder="Digite uma receita, ingrediente ou categoria" id="input-pesquisa" class="input-pesquisa col-7 offset-1 col-lg-10 offset-lg-0">
-                <button type="submit" id="btn-pesquisa" class="btn-pesquisa col-4 col-lg-2"><i class="fa-solid fa-magnifying-glass fa-xl"></i></button>
+                <form class="col-lg-12 row no-gutters" action="pesquisa.php" method="post">
+                    <input type="text" placeholder="Digite uma receita, ingrediente ou categoria" id="input-pesquisa" name="input-pesquisa" class="input-pesquisa col-7 offset-1 col-lg-10 offset-lg-0">
+                    <button type="submit" name="btn-pesquisa" id="btn-pesquisa" class="btn-pesquisa col-4 col-lg-2"><i class="fa-solid fa-magnifying-glass fa-xl"></i></button>
+                </form>
             </div>
 
             
