@@ -2,7 +2,7 @@ async function pesquisa() {
     let text = document.getElementById("input-pesquisa").value;
     let dados = {"pesquisa": text};
     let json = JSON.stringify(dados);
-    let resposta = await fetch('http://localhost:80/php/search.php', {
+    let resposta = await fetch('http://localhost:4443/php/search.php', {
     method: 'POST',
     body: json,
     headers: { 'Content-Type': 'application/json'}
