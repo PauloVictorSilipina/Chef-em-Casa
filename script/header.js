@@ -23,6 +23,6 @@ function write(item, index){
     texto+='</div>';
     texto+='</div>';
     texto+='</div>';
-    container.innerHTML=texto;
+    container.innerHTML+=texto;
 }
 document.getElementById("btn-pesquisa").addEventListener("click", pesquisa);

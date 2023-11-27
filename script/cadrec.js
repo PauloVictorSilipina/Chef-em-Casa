@@ -82,5 +82,22 @@ minuteCurrentElement.addEventListener('wheel', (e) => {
 
 updateClock();
 
+function copy() {
+  const node = document.getElementById("ingrediente");
+  const clone = node.cloneNode(true);
+  document.getElementById("ingrediente-inicio").appendChild(clone);
+}
 
+async function cadastro() {
+  let dados = {"pesquisa": search};
+  let json = JSON.stringify(dados);
+  let resposta = await fetch('http://localhost:4443/php/search.php', {
+  method: 'POST',
+  body: json,
+  headers: { 'Content-Type': 'application/json'}
+  });
+  let sendJson = await resposta.json();
+  sendJson.forEach(write);   
+}
 
+document.getElementById("btnCadastrar").addEventListener("click", cadastro); 

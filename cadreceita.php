@@ -27,6 +27,7 @@
 <body>
     <?php
     include 'header.php';
+
     ?>
     
     <div class="container envio-receitas">
@@ -72,8 +73,8 @@
                             <label for="dificil">Díficil</label>
                         </div>
                     </fieldset>
-
                 </div>
+
                 <div class="sub-titulos col-lg-12">
                     <span>Tempo de Preparo</span>
 
@@ -83,7 +84,7 @@
                             <div><span class="current">00</span></div>
                             <div><span class="next"></span></div>
                         </div>
-                    <span>:</span>
+                        <span>:</span>
                         <div class="minute">
                             <div><span class="previous"></span></div>
                             <div><span class="current">00</span></div>
@@ -92,23 +93,35 @@
                     </div>
                 </div>
             </div>
-        
-            <div class="ingredientes col-lg-6">
-            <div class="titulos col-lg-12">
+
+            <div class="col-lg-6">
+                <div class="titulos col-lg-12">
                     <span>Ingredientes e porções</span>
                 </div>
+
                 <div class="sub-titulos col-lg-12">
-                    <span>Quantidade de porções</span><br>
-                    <div class='qtd-pess-porc col-lg-6 offset-lg-0 col-4 offset-4'>
-                        <input type='number' min='1' max='20' class='col-12 col-4'></input>
+                    <input type='number' min='1' max='20' class='col-8'></input>
+                </div>
+
+                <div class="sub-titulos col-lg-6">
+
+                    <span>Ingredientes</span>
+                    <div class="ing-inicio col-lg-12" id="ingrediente-inicio">
+                        <div class="ingrediente col-lg-12" id="ingrediente">
+                            <input class="col-lg-4" placeholder="Ingrediente" id="nome-ing">
+                            <input class="col-lg-2" placeholder="Qtd" id="qtd">
+                            <select class="col-lg-4" name="medida" id="medida">
+                                <option value="ml">ML</option>
+                                <option value="gramas">Gramas</option>
+                            </select>
+                            <button class="btnAdiciona" onclick="copy()">+</button>
+                        </div>
                     </div>
                 </div>
-                <div class="sub-titulos col-lg-12">
-                    <span>Ingredientes</span>
-                </div>
-                </div>
+            </div>
         </div>
-    </div>
+        <button type="submit" class="offset-lg-5 col-lg-2 btnCadastrar" id="btnCadastrar">CADASTRAR RECEITA</button>
+    </div> 
     <?php
     include "footer.php";
     ?>
