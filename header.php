@@ -1,5 +1,5 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-
+<script src="script/header.js" defer></script>
 <link rel="stylesheet" href="css/css_header.css">
 <?php
 session_start();
@@ -32,16 +32,15 @@ session_start();
                 <a href="#"><i class="fa-regular fa-bell fa-xl col-2"></i></a>
                 <div class="dropdown">
 
-                    <?php
-
-                    if (isset($_SESSION['img_path'])) {
-                        $img_path = $_SESSION['img_path'];
-                        $caminho_pagina = 'perfil.php';
-                        // Agora, $img_path contém o caminho da imagem
-                    } else {
-                        $img_path = 'img/icon.png';
-                        $caminho_pagina = 'cadastro.php';
-                    }
+                <?php
+                if (isset($_SESSION['img_path'])) {
+                    $img_path = $_SESSION['img_path'];
+                    $caminho_pagina = 'perfil.php';
+                    // Agora, $img_path contém o caminho da imagem
+                } else {
+                    $img_path = 'img/icon.png';
+                    $caminho_pagina = 'cadastro.php';
+                }
 
                     echo '<button class="dropbtn"><a href="' . $caminho_pagina . '"><img class="header-perfil" src="' . $img_path . '"></img></a></button>';
                     if (isset($_SESSION['user_id'])) {

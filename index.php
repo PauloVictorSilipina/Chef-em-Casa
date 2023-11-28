@@ -8,7 +8,7 @@
 
     <?php include_once 'imports.html' ?>
 
-    <script src='script/index.js' defer></script>
+    
 
     <link rel='stylesheet' href='css/css_home.css'>
 

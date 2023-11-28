@@ -57,17 +57,17 @@
                 <div class="sub-titulos col-lg-12">
                     <span>Dificuldade</span>
                     <fieldset class='dificuldades'>
-                        <div class="col-lg-6 facil">
+                        <div for="facil" class="col-lg-6 facil">
                             <input class="radiostyle sr-only" type="radio" id="facil" name="dificuldades" />
                             <label for="facil">Fácil</label>
                         </div>
 
-                        <div class="col-lg-6 medio">
+                        <div for="medio" class="col-lg-6 medio">
                             <input class="radiostyle sr-only" type="radio" id="medio" name="dificuldades" />
                             <label for="medio">Médio</label>
                         </div>
 
-                        <div class="col-lg-6 dificil">
+                        <div for="dificil" class="col-lg-6 dificil">
                             <input class="radiostyle sr-only" type="radio" id="dificil" name="dificuldades"/>
                             <label for="dificil">Díficil</label>
                         </div>
@@ -98,7 +98,7 @@
                     <span>Ingredientes e porções</span>
                 </div>
                 <div class="sub-titulos col-lg-12">
-                    <span>Número de pessoas ou porções</span><br>
+                    <span>Quantidade de porções</span><br>
                     <div class='qtd-pess-porc col-lg-6 offset-lg-0 col-4 offset-4'>
                         <input type='number' min='1' max='20' class='col-12 col-4'></input>
                     </div>

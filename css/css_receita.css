@@ -99,4 +99,8 @@
         align-items: center;
         height: 100%;
     }
+
+    .rend_temp_dif span {
+        font-size: 0.9rem;
+    }
 }

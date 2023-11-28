@@ -133,11 +133,15 @@
         <div class="container col-lg-8">
             <div class="modo-preparo col-lg-12">
                 <ol>
-                    <?php
-                        foreach($infoPreparo as $i) {
-                            echo "<li>". $i['desc_da_ordem'] ."</li>";
+                <?php
+                    foreach($infoPreparo as $i) {
+                        $passos = explode(';', $i['modo_preparo']);
+                        foreach ($passos as $passo) {
+                            echo '<li>' . $passo . '</li>';
                         }
-                    ?>
+                    }
+                ?>
+
                 </ol>
             </div>
         </div>
@@ -151,7 +155,7 @@
             <?php
                 foreach($comentarios as $i) {
                     echo "<div class='comentario d-flex align-items-center'>";
-                    echo "<div class='foto-comentario col-1'><img src=". $i['img']."></div>";
+                    echo "<div class='foto-comentario col-1'><a href='perfil.php?" . $i['UsuCod'] . "'>" . "<img src='" . $i['img'] . "'></a></div>";
                     echo "<div class='info-comentario col-9 offset-2'><div class='nome-comentario'><span>".$i['nome']."</span></div><div class='texto-comentario col-12'><span>".$i['COMENTARIO']."</span></div></div>";
                     echo "</div>";
                     echo "</div>";

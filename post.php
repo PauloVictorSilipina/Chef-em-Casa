@@ -109,9 +109,10 @@ class POST{
 
 	public function infoRec($id) {
 		$query1 = "
-		SELECT r.nome RecNome, m.url RecImg, r.porcao RecRend, r.temp_preparo RecTemp, r.dificuldade RecDif, u.img UsuImg, u.nome UsuNome, r.descricao RecDesc From RECEITA r
+		SELECT r.nome RecNome, m.url RecImg, r.porcao RecRend, r.temp_preparo RecTemp, d.dificuldade RecDif, u.img UsuImg, u.nome UsuNome, r.descricao RecDesc From RECEITA r
 		LEFT JOIN MIDIA m on m.FK_RECEITA_cod_rec = r.cod_rec 
 		LEFT JOIN USUARIO u on u.cod_perfil = r.FK_USUARIO_cod_perfil 
+		left join DIFICULDADE d on d.cod_dificuldade = r.FK_DIFICULDADE_cod_dificuldade 
 		WHERE r.cod_rec = " . $id;
 
 		$stmt = $this->conn->prepare($query1);
@@ -138,7 +139,7 @@ class POST{
 
 	public function infoPreparo($id) {
 		$query1 = "
-		SELECT mp.desc_da_ordem FROM MODO_PREPARO mp 
+		SELECT mp.modo_preparo FROM MODO_PREPARO mp 
 		left join RECEITA r on r.cod_rec = mp.FK_RECEITA_cod_rec 
 		WHERE r.cod_rec = " . $id;
 
@@ -151,7 +152,7 @@ class POST{
 
 	public function comentario($id) {
 		$query1 = "
-		SELECT u.img, u.nome, c.COMENTARIO FROM COMENTA c  
+		SELECT u.cod_perfil UsuCod, u.img, u.nome, c.COMENTARIO FROM COMENTA c  
 		left join RECEITA r on r.cod_rec = c.fk_RECEITA_cod_rec 
 		LEFT JOIN USUARIO u on u.cod_perfil = c.fk_USUARIO_cod_perfil 
 		WHERE r.cod_rec = " . $id;
@@ -163,6 +164,23 @@ class POST{
 		return $results;
 	}
 
+	public function deletarPerfil($id) {
+		$query1 = "
+		delete from USUARIO where cod_perfil=" . $id;
+
+		$stmt = $this->conn->prepare($query1);
+		$stmt->execute();	
+	}
+
+	public function pesquisaReceita($pesquisa) {
+		$query = "
+		SELECT * from RECEITA where nome like '%".$pesquisa."%';";
+		$stmt = $this->conn->prepare($query);
+		$stmt->execute();
+		
+		$results = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+		return $results;
+	}
 	/*
 	//Construtor - cria uma instância PDO que representa a conexão com o banco de dados
 	public function __construct($db){
