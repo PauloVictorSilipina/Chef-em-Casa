@@ -8,12 +8,11 @@
 <link rel='stylesheet' href='css/css_base.css'>
 
 <nav class='cabecalho navbar navbar-expand-lg sticky-top'>
-
-            <div class='col-lg-12'>
-                <div class='row'>
-                    <div class='div-logo offset-lg-0 offset-6'>
-                        <a href="index.php"><span>Chef em Casa</span></a>
-                    </div>
-                </div>
+    <div class='col-lg-12'>
+        <div class='row'>
+            <div class='div-logo offset-lg-0 offset-6'>
+                <a href="index.php"><span>Chef em Casa</span></a>
             </div>
-    </nav>
+        </div>
+    </div>
+</nav>

@@ -44,7 +44,6 @@
 
     <div class="login container">
         <div class="row">
-
             <div class="dados col-lg-4 col-10 offset-1 offset-lg-4">
                 <form id="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                     <div class="col-lg-8 offset-lg-2">
@@ -65,7 +64,7 @@
     
                     <div class="col-lg-12 input-control">    
                         <label for="password" class="col-lg-12 col-10 offset-1">Senha</label>
-                        <input type="password" id="password" placeholder="Digite sua senha" class="col-lg-10 col-10 offset-1" name="senha">
+                        <input type="password" id="password" placeholder="Digite sua senha" class="col-lg-10 col-10 offset-1" name="senha" required>
                         <div class="error"></div>
                     </div>
     
@@ -74,7 +73,7 @@
                     </div>
     
                     <div class="cad">
-                        <span class="col-10 offset-1">Não possui uma conta? <br><a href="cadastro.php">Clique aqui</a></span>
+                        <span class="">Não possui uma conta? <br><a href="cadastro.php">Clique aqui</a></span>
                     </div>
                 </form>
             </div>
