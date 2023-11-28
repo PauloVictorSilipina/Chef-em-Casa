@@ -174,7 +174,9 @@ class POST{
 
 	public function pesquisaReceita($pesquisa) {
 		$query = "
-		SELECT * from RECEITA where nome like '%".$pesquisa."%';";
+		SELECT r.cod_rec CodRec, m.url FotoRec, r.nome NomeRec, r.descricao  from RECEITA r
+		left join MIDIA m on m.FK_RECEITA_cod_rec = r.cod_rec
+		where r.nome like '%".$pesquisa."%';";
 		$stmt = $this->conn->prepare($query);
 		$stmt->execute();
 		

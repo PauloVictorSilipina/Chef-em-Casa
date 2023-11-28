@@ -9,8 +9,6 @@
     <script src="https://kit.fontawesome.com/05b9e3a650.js" crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous" defer></script>
-
-    <link rel="stylesheet" href="css/css_base.css">
     <link rel="stylesheet" href="css/css_login.css">
 </head>
 
@@ -54,19 +52,19 @@
 
                     <div class="col-lg-12 input-control col-12">
                         <label for="email" class="col-lg-12 col-10 offset-1">Email</label>
-                        <input type="text" id="email" placeholder="Digite o email" class="col-lg-10 col-10 offset-1" name="email">
+                        <input type="text" id="email" placeholder="Digite o email" class="col-lg-10 col-10 offset-1" name="email" required autofocus>
                         <div class="error"></div>
                     </div>
     
                     <div class="col-lg-12 input-control col-12">
                         <label for="usuario" class="col-lg-12 col-10 offset-1">Usuário</label>
-                        <input type="text" id="usuario" placeholder="Digite o usuário" class="col-lg-10 col-10 offset-1" name="usuario">
+                        <input type="text" id="usuario" placeholder="Digite o usuário" class="col-lg-10 col-10 offset-1" name="usuario" required>
                         <div class="error"></div>
                     </div>
     
                     <div class="col-lg-12 input-control">    
                         <label for="password" class="col-lg-12 col-10 offset-1">Senha</label>
-                        <input type="password" id="password" placeholder="Digite sua senha" class="col-lg-10 col-10 offset-1" name="senha">
+                        <input type="password" id="password" placeholder="Digite sua senha" class="col-lg-10 col-10 offset-1" name="senha" required>
                         <div class="error"></div>
                     </div>
     
