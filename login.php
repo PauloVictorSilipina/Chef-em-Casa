@@ -65,7 +65,7 @@
     
                     <div class="col-lg-12 input-control">    
                         <label for="password" class="col-lg-12 col-10 offset-1">Senha</label>
-                        <input type="password" id="password" placeholder="Digite sua senha" class="col-lg-10 col-10 offset-1" name="senha" required> 
+                        <input type="password" id="password" placeholder="Digite sua senha" class="col-lg-10 col-10 offset-1" name="senha">
                         <div class="error"></div>
                     </div>
     

@@ -172,6 +172,17 @@ class POST{
 		$stmt->execute();	
 	}
 
+	public function pesquisaReceita($pesquisa) {
+		$query = "
+		SELECT r.cod_rec CodRec, m.url FotoRec, r.nome NomeRec, r.descricao  from RECEITA r
+		left join MIDIA m on m.FK_RECEITA_cod_rec = r.cod_rec
+		where r.nome like '%".$pesquisa."%';";
+		$stmt = $this->conn->prepare($query);
+		$stmt->execute();
+		
+		$results = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+		return $results;
+	}
 	/*
 	//Construtor - cria uma instância PDO que representa a conexão com o banco de dados
 	public function __construct($db){

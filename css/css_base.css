@@ -5,14 +5,28 @@ importação de fonte e adicionando ela em todos itens, utilizado também o bord
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 
 * {
     padding: 0;
     margin: 0;
-    box-sizing:border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg-color: #fff;
+    --secondary-bg-color:  #eee;
+
+    --primary-color: #ff5200;
+    --secondary-color: #fff;
+
+    --main-font-family: "Quicksand", arial, sans-serif;
+}
+
+:root {
+    --login-container-color: #fff;
+    --login-container-border-color: rgb(238, 238, 238);
+    --login-background-color: rgb(0, 0, 0);
 }
 
 :root {

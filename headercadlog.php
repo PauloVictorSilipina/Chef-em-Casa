@@ -5,14 +5,15 @@
 
 <link rel='stylesheet' href='css/css_base.css'>
 <link rel='stylesheet' href='css/css_headercadlog.css'>
+<link rel='stylesheet' href='css/css_base.css'>
 
 <nav class='cabecalho navbar navbar-expand-lg sticky-top'>
-        <div class='col-lg-12'>
-            <div class='row'>
-                <div class='div-logo offset-lg-0 offset-6'>
-                    <a href="index.php"><span>Chef em Casa</span></a>
+
+            <div class='col-lg-12'>
+                <div class='row'>
+                    <div class='div-logo offset-lg-0 offset-6'>
+                        <a href="index.php"><span>Chef em Casa</span></a>
+                    </div>
                 </div>
             </div>
-        </div>
-</nav>
-
+    </nav>
