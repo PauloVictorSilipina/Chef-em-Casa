@@ -1,8 +1,12 @@
 /*
 posiciono o div com os dados ao centro e adiciono animação para quando aparecer
 */
-a{
+a   {
     text-decoration: none;
+}
+
+body {
+    background-color: var(--login-background-color) !important;
 }
 
 .login {
@@ -11,10 +15,10 @@ a{
 }
 
 .dados {
-    background-color: rgb(238, 238, 238);
+    background-color: var(--login-container-color);
     color: black;
     border-radius: 10px;
-    border: 1px solid rgb(238, 238, 238);
+    border: 1px solid var(--login-border-color);
 }
 
 .dados h1{
