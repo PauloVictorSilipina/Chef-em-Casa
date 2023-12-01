@@ -88,6 +88,27 @@
     background-color: white;
     border: 1px solid black;
     padding: 0.5rem;
+<<<<<<< HEAD
+=======
+}
+
+.divTempoDePreparo {
+    height: 2rem;
+}
+
+.divTempoDePreparo span {
+    height: 2rem;
+}
+
+.btnAdiciona {
+    border: 0;
+    width: 1.5rem;
+}
+@media (max-width: 576px) {
+    .qtd-pess-porc input{
+      
+    }
+>>>>>>> 6e71a2efd97b4059041030a534dba83dacb293d9
 }
 
 .divTempoDePreparo {

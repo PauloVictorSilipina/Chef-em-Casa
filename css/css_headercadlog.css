@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 
+body {
+    background: none;
+}
+
 .cabecalho {
     position: fixed;
     right: 0;
     left: 0;
-    background-color: white;
+    background-color: var(--login-color-3);
 }
 
 .cabecalho a {
@@ -15,7 +19,7 @@
 .div-logo span{
     font-family: 'Cookie';
     font-size: 3.25rem;
-    color: #ff5200;
+    color: var(--login-color-1);
     text-shadow: -1.5px 1px black;
     font-weight: bold;
 }

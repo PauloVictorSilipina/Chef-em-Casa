@@ -2,6 +2,11 @@
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 <script src='https://kit.fontawesome.com/05b9e3a650.js' crossorigin='anonymous'></script>
 <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe' crossorigin='anonymous' defer></script>
+<<<<<<< HEAD
+=======
+
+<link rel='stylesheet' href='css/css_base.css'>
+>>>>>>> 6e71a2efd97b4059041030a534dba83dacb293d9
 <link rel='stylesheet' href='css/css_headercadlog.css'>
 <link rel='stylesheet' href='css/css_base.css'>
 

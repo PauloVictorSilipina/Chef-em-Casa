@@ -68,11 +68,21 @@
 
     <div class="container">
         <div class="col-lg-12">
+<<<<<<< HEAD
+=======
+            <div class="titulos col-lg-4">
+                <span>Ingredientes e porções</span>
+            </div>
+>>>>>>> 6e71a2efd97b4059041030a534dba83dacb293d9
             <div class="row">
                 <div class="sub-titulos col-lg-6">
                     <span>Ingredientes</span>
                     <div class="ing-inicio col-lg-6" id="ingrediente-inicio">
+<<<<<<< HEAD
                         <div class="ingrediente col-lg-12 row" id="ingrediente">
+=======
+                        <div class="ingrediente col-lg-12" id="ingrediente">
+>>>>>>> 6e71a2efd97b4059041030a534dba83dacb293d9
                             <input class="col-lg-4" placeholder="Ingrediente" id="nome-ing">
                             <input class="col-lg-3" placeholder="Qtd" id="qtd">
                             <select class="col-lg-3" name="medida" id="medida">
@@ -87,10 +97,15 @@
                 </div>
                 
                 <div class="sub-titulos col-lg-6">
+<<<<<<< HEAD
                     <span>Modo de preparo</span>
                     <div class="modopreparo col-lg-6">
                         <textarea class="col-lg-12"></textarea>
                     </div>
+=======
+                    <textarea class="col-lg-12">
+                    </textarea>
+>>>>>>> 6e71a2efd97b4059041030a534dba83dacb293d9
                 </div>
             </div>
         </div>

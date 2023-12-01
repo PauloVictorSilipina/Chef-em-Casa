@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/css_login.css">
 </head>
 
-<body class='d-flex flex-column min-vh-100'>
+<body>
     <?php
     include_once 'headercadlog.php';
     include_once 'initialize.php';
@@ -43,7 +43,6 @@
 
     <div class="login container">
         <div class="row">
-
             <div class="dados col-lg-4 col-10 offset-1 offset-lg-4">
                 <form id="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                     <div class="col-lg-8 offset-lg-2">
@@ -73,7 +72,7 @@
                     </div>
     
                     <div class="cad">
-                        <span class="col-10 offset-1">Não possui uma conta? <br><a href="cadastro.php">Clique aqui</a></span>
+                        <span class="">Não possui uma conta? <br><a href="cadastro.php">Clique aqui</a></span>
                     </div>
                 </form>
             </div>

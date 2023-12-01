@@ -7,6 +7,7 @@ importação de fonte e adicionando ela em todos itens, utilizado também o bord
 @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+
 * {
     padding: 0;
     margin: 0;
@@ -14,6 +15,7 @@ importação de fonte e adicionando ela em todos itens, utilizado também o bord
 }
 
 :root {
+<<<<<<< HEAD
     --main-bg-color: #fff;
     --secondary-bg-color:  #eee;
 
@@ -30,8 +32,15 @@ importação de fonte e adicionando ela em todos itens, utilizado também o bord
 }
 
 html {
+=======
+>>>>>>> 6e71a2efd97b4059041030a534dba83dacb293d9
     height: 100%;
 
+    --login-color-1: #fff;
+    --login-color-2: rgb(238, 238, 238);
+    --login-color-3: #ff5200;
+
+    --default-font-family: "Quicksand", arial, sans-serif;
 }
 
 body {
