@@ -1,14 +1,14 @@
 /*
 posiciono o div com os dados ao centro e adiciono animação para quando aparecer
 */
-<<<<<<< HEAD
 a{
     text-decoration: none;
 }
 
 body {
     background-color: var(--login-background-color) !important;
-=======
+}
+
 :root {
     background-color: var(--login-color-2) !important;
 }
@@ -16,7 +16,6 @@ body {
 a{
     text-decoration: none;
     color: #000AC7;
->>>>>>> 6e71a2efd97b4059041030a534dba83dacb293d9
 }
 
 a:hover:visited {
@@ -30,19 +29,16 @@ a:hover:visited {
 }
 
 .dados {
-<<<<<<< HEAD
     background-color: rgb(238, 238, 238);
     color: black;
     border-radius: 10px;
     border: 1px solid rgb(238, 238, 238);
-=======
     background-color: var(--login-color-1);
     color: black;
     box-shadow: 0 0 0.8rem 0.1rem rgba(0, 0, 0, 0.2);
 
     border-radius: 1rem;
     font-family: var(--default-font-family);
->>>>>>> 6e71a2efd97b4059041030a534dba83dacb293d9
 }
 
 .dados h1 {

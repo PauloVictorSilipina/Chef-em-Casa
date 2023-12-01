@@ -183,6 +183,16 @@ class POST{
 		$results = $stmt->fetchAll(PDO::FETCH_ASSOC); 
 		return $results;
 	}
+
+	public function cadastroReceita($dados) {
+		$query = "
+		insert into RECEITA (nome, temp_preparo, porcao, descricao, FK_USUARIO_cod_perfil, FK_DIFICULDADE_cod_dificuldade) value 
+		("+$dados['titulo']+","+$dados['tempopreparo']+","+$dados['quatidade']+","+$dados['descrição']+","+$dados['user']+","+$dados['dificuldade']+")";
+
+		$stmt = $this->conn->prepare($query);
+		$stmt->execute();
+		return true
+	}
 	/*
 	//Construtor - cria uma instância PDO que representa a conexão com o banco de dados
 	public function __construct($db){

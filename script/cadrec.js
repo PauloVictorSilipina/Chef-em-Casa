@@ -10,20 +10,19 @@ async function cadastro() {
   let desc = document.getElementById("desc-red").value;
   let tempPrep = document.getElementById("tempoDePreparo").value;
   let quant = document.getElementById("porc").value;
-  document.getElementById("desc-red").value;
-  let dados = {};
-  let json = JSON.stringify(dados);
   let image = document.getElementById('file-input').files;
-  console.log(image);
-  /*
+  let prep = document.getElementById('prep'); 
+  let nomeIng = document.querySelectorAll("#name-ing")
+  let quantIng = document.querySelectorAll("qtd")
+  let medidaIng = document.querySelectorAll("#medida")
+  let dados = {"dificuldade":dif,"titulo":titulo,"descrição":desc,"tempopreparo":tempPrep,"quantidade":quant,"imagem":image,"modopreparo":prep,"nomeIng":nomeIng,"quantidadeIng":quantIng,"medidaIng":medidaIng};
+  let json = JSON.stringify(dados);
   let resposta = await fetch('http://localhost:4443/php/search.php', {
   method: 'POST',
   body: json,
   headers: { 'Content-Type': 'application/json'}
   });
   let sendJson = await resposta.json();
-  sendJson.forEach(write);   
-  */
 }
 
 function updateImageDisplay(){
