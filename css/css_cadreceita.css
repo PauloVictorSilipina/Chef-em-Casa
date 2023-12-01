@@ -4,7 +4,7 @@
     text-align: center;
 }
 
-.adicionar-imagem img{
+.imagem img{
     width: 18rem;
     height: 18rem;
     margin-bottom: 1rem;
@@ -63,82 +63,6 @@
     font-size: 1.5rem;
 }
 
-.dificuldades div{
-    border: 1px solid black;
-    padding: 0.5rem;
-    text-align: center;
-}
-
-.dificuldades label {
-    color: rgba(0, 0, 0, 0.75);
-    width: 100%;
-}
-.facil {
-    border-bottom: 0!important;
-}
-
-.medio {
-    border-bottom: none!important;
-}
-
-/* Estilo padrão para a div que contém o input */
-.col-lg-6.facil {
-    background-color: #fff; /* Cor de fundo padrão */
-}
-
-/* Estilo para a div quando o input estiver marcado */
-.col-lg-6.marked {
-    background-color: rgb(200, 200, 200); /* Cor de fundo quando marcado */
-}
-
-.dificuldades input[type="radio"]:checked + label {
-    color: #000000; /* Cor do texto quando marcado */
-    font-weight: bold;
-}
-
-.sr-only {
-    position: absolute;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    width: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-}
-
-.clock {
-    display: flex;
-    font-size: 2em;
-    align-items: center;
-}
-  
-.clock {
-    cursor: pointer;
-}
-
-.hour {
-    margin-right: 1rem;
-}
-
-.minute {
-    margin-left: 1rem;
-}
-.hour div {
-    padding: 0.5rem 3.5rem 0.5rem 3.5rem;
-    border: 1px solid black;
-}
-
-.minute div{
-    padding: 0.5rem 3.5rem 0.5rem 3.5rem;
-    border: 1px solid black;
-}
-.previous, .next {
-    display: block;
-    opacity: 0.5;
-    font-size: 0.5em;
-}
-
 .qtd-pess-porc input{
     background-color: white;
     border: none;
@@ -160,10 +84,53 @@
     font-size: 1.2rem;
 }
 
-
-@media (max-width: 576px) {
-    .qtd-pess-porc input{
-      
-    }
+.dificuldades select {
+    background-color: white;
+    border: 1px solid black;
+    padding: 0.5rem;
 }
 
+.divTempoDePreparo {
+    height: 2rem;
+}
+
+.divTempoDePreparo span {
+    height: 2rem;
+}
+
+.btnAdiciona {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: #ff6e29;
+    color: white;
+    padding-bottom: 0.2rem;
+}
+
+.ingrediente input, .ingrediente button, .ingrediente select {
+    height: 2rem;
+}
+
+.ingrediente {
+    margin-bottom: 0.25rem;
+    border-radius: 10px;
+    background-color: #dddbda;
+    padding: 0.5rem;
+    border: 1px solid #c9c9c9;
+    box-shadow: 0 0 0.25rem 0.25rem #dddbda;
+}
+
+.modopreparo {
+    margin-bottom: 0.25rem;
+    border-radius: 10px;
+    background-color: #dddbda;
+    padding: 0.5rem;
+    box-shadow: 0 0 0.15rem 0.4rem #dddbda;
+}
+
+.modopreparo textarea{
+    border: 1px solid black;
+}

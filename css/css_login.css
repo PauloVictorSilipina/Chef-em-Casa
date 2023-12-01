@@ -1,17 +1,12 @@
 /*
 posiciono o div com os dados ao centro e adiciono animação para quando aparecer
 */
-html * {
-    font-family: var(--main-font-family);
-
+a{
+    text-decoration: none;
 }
 
 body {
-    background-color: var( --secondary-bg-color) !important;
-}
-
-a {
-    text-decoration: none;
+    background-color: var(--login-background-color) !important;
 }
 
 .login {
@@ -20,14 +15,10 @@ a {
 }
 
 .dados {
-    background-color: var(--main-bg-color);
+    background-color: rgb(238, 238, 238);
     color: black;
     border-radius: 10px;
-    /* border: 1px solid rgb(0, 0, 0, calc(100% / 4)); */
-    box-shadow: rgba(149, 157, 165, 0.9) 0px 8px 24px;
-    /* font-family: "Quicksand"; */
-
-
+    border: 1px solid rgb(238, 238, 238);
 }
 
 .dados h1{
