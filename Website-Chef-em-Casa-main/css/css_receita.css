@@ -1,0 +1,106 @@
+.titulo-receita{
+    font-size: 2.5rem;
+    text-align: center;
+}
+.img-receita{
+    width: 20rem;
+    height: 37.5rem;
+    margin-top: 1rem;
+    border-radius: 1.5rem;
+    border: 1px solid black;
+}
+
+.info-receita {
+    background-color: rgb(243, 243, 243);
+    border: 1px solid rgb(167, 167, 167);
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    height: 6rem;
+}
+
+.icones {
+    align-items: center;
+    height: 100%;
+}
+
+.icones div{
+    text-align: center;
+}
+
+.icones i{
+    color: #ff6e29;
+}
+
+.info-criador {
+    margin-top: 1rem;
+}
+.img-criador img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.titulo {
+    background-color: rgb(219, 219, 219);
+    padding: 0.75rem;
+    margin-top: 1rem;
+    text-align: center; 
+    border: 1px solid rgb(167, 167, 167);
+    border-radius: 0.5rem;
+}
+
+.titulo span {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.ingredientes-preparo ol {
+    margin-top: 1rem;
+    list-style: disc;
+}
+
+.modo-preparo ol {
+    margin-top: 1rem;
+}
+
+.comentarios {
+    margin-top: 1rem;
+}
+
+.comentario {
+    background-color: rgb(219, 219, 219);
+    border-radius: 10px;
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+}
+.foto-comentario {
+    align-self: flex-start;
+}
+
+.foto-comentario img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.nome-comentario {
+    font-weight: bold;
+}
+.texto-comentario span{
+    word-break: break-word;
+}
+
+@media (max-width: 576px) {
+    .icones icon{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+    }
+
+    .rend_temp_dif span {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,31 @@
+/*
+importação de fonte e adicionando ela em todos itens, utilizado também o border-box para ser posivel justificar os itens dentro das boxes
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    height: 100%;
+
+    --login-color-1: #fff;
+    --login-color-2: rgb(238, 238, 238);
+    --login-color-3: #ff5200;
+
+    --default-font-family: "Quicksand", arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
