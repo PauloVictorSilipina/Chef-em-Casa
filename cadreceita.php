@@ -81,6 +81,7 @@
                             <select class="col-lg-3" name="medida" id="medida">
                                 <option value="ml">ML</option>
                                 <option value="gramas">Gramas</option>
+                                <option value="unidade">Unidades</option>
                             </select>
                             <div class="col-lg-2">
                                 <button class="btnAdiciona" onclick="copy()"><span>+<span></button>
