@@ -118,7 +118,7 @@
                 <ol>
                     <?php
                         foreach($infoIngredientes as $i) {
-                            echo "<li>". $i['qtd'] ." ". $i['medida'] ." ". $i['nome']."</li>";
+                            echo "<li>". $i['qtd'] ." ". $i['medida'] ." ". $i['ingrediente']."</li>";
                         }
                     ?>
                 </ol>

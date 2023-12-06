@@ -109,10 +109,9 @@ class POST{
 
 	public function infoRec($id) {
 		$query1 = "
-		SELECT r.nome RecNome, m.url RecImg, r.porcao RecRend, r.temp_preparo RecTemp, d.dificuldade RecDif, u.img UsuImg, u.nome UsuNome, r.descricao RecDesc From RECEITA r
+		SELECT r.nome RecNome, m.url RecImg, r.porcao RecRend, r.temp_preparo RecTemp, r.dificuldade RecDif, u.img UsuImg, u.nome UsuNome, r.descricao RecDesc From RECEITA r
 		LEFT JOIN MIDIA m on m.FK_RECEITA_cod_rec = r.cod_rec 
 		LEFT JOIN USUARIO u on u.cod_perfil = r.FK_USUARIO_cod_perfil 
-		left join DIFICULDADE d on d.cod_dificuldade = r.FK_DIFICULDADE_cod_dificuldade 
 		WHERE r.cod_rec = " . $id;
 
 		$stmt = $this->conn->prepare($query1);
@@ -124,11 +123,9 @@ class POST{
 
 	public function infoIngredientes($id){
 		$query1 = "
-		SELECT ri.qtd, m.medida, i.nome FROM RECEITA r
-		left join RECEITA_INGREDIENTE ri on ri.fk_RECEITA_cod_rec = r.cod_rec 
-		LEFT JOIN INGREDIENTE i on i.cod_ingrediente  = ri.fk_INGREDIENTE_cod_ingrediente 
-		LEFT JOIN MEDIDA m on m.cod_medida = ri.fk_MEDIDA_cod_medida_ 
-		WHERE r.cod_rec = " . $id;
+		SELECT ri.qtd, ri.medida, ri.ingrediente from RECEITA_INGREDIENTE ri 
+		left join RECEITA r on r.cod_rec = ri.fk_RECEITA_cod_rec 
+		where r.cod_rec = " . $id;
 
 		$stmt = $this->conn->prepare($query1);
 		$stmt->execute();

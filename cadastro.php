@@ -96,7 +96,7 @@
                         <button name="btn-valida" class="btn-valida" type="submit">Fazer cadastro</button>
                     </div>
                     <div class="cad">
-                        <span class="">Possui uma conta? <br><a href="cadastro.php">Fazer login</a></span>
+                        <span class="">Possui uma conta? <br><a href="login.php">Fazer login</a></span>
                     </div>
                 </form>
             </div>
