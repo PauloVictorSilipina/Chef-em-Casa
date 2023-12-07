@@ -24,6 +24,7 @@
 
     $post = new Post($db);
     $banana = $post->dadosIndex();
+
     ?>
 
 
@@ -34,58 +35,19 @@
         </div>
         <div class='col-lg-10 offset-lg-1'>
             <div class='imagens row'>
-                <div class='div-imagem col-lg-4 col-12'>
-                    <div class='imagem'>
-                        <a href="receita.php?id='<?php echo $banana[0]["CodRec"]; ?>'"><img class='img-receitas' src='<?php echo $banana[0]["FotoRec"]; ?>'></a>
-                    </div>
-                    <div class='info-criador'>
-                        <img class='criador' src='<?php echo $banana[0]["FotoUser"]; ?>'>
-                    </div>
-                    <a href="receita.php?id='<?php echo $banana[0]["CodRec"]; ?>'"><?php echo $banana[0]["NomeRec"]; ?></span></a>
-                </div>
-                <div class='div-imagem col-lg-4 col-12'>
-                    <div class='imagem'>
-                        <a href="receita.php?id='<?php echo $banana[1]["CodRec"]; ?>'"><img class='img-receitas' src='<?php echo $banana[1]["FotoRec"]; ?>'></a>
-                    </div>
-                    <div class='info-criador'>
-                        <img class='criador' src='<?php echo $banana[1]["FotoUser"]; ?>'>
-                    </div>
-                    <a href="receita.php?id='<?php echo $banana[1]["CodRec"]; ?>'"><span><?php echo $banana[1]["NomeRec"]; ?></span></a>
-                </div>
-
-                <div class='div-imagem col-lg-4 col-12'>
-                    <div class='imagem'>
-                        <a href="receita.php?id='<?php echo $banana[2]["CodRec"]; ?>'"><img class='img-receitas' src='<?php echo $banana[2]["FotoRec"]; ?>'></a>
-                    </div>
-                    <div class='info-criador'>
-                        <img class='criador' src='<?php echo $banana[2]["FotoUser"]; ?>'>
-                    </div>
-                    <a href="receita.php?id='<?php echo $banana[2]["CodRec"]; ?>'"><?php echo $banana[2]["NomeRec"]; ?></span></a>
-                </div>
-            </div>
-        </div>
-
-        <div class='col-lg-10 offset-lg-1'>
-            <div class='imagens row'>
-                <div class='div-imagem col-lg-4 col-12'>
-                    <div class='imagem'>
-                        <a href="receita.php?id='<?php echo $banana[3]["CodRec"]; ?>'"><img class='img-receitas' src='<?php echo str_replace(" ", "", $banana[3]["FotoRec"]); ?>'></a>
-                    </div>
-                    <div class='info-criador'>
-                        <img class='criador' src='<?php echo str_replace(" ", "", $banana[3]["FotoUser"]); ?>'>
-                    </div>
-                    <a href="receita.php?id='<?php echo $banana[3]["CodRec"]; ?>'"><span><?php echo $banana[3]["NomeRec"]; ?></span></a>
-                </div>
-
-                <div class='div-imagem col-lg-8 col-12'>
-                    <div class='imagem'>
-                        <a href="receita.php?id='<?php echo $banana[4]["CodRec"]; ?>'"><img class='img-receitas' src='<?php echo str_replace(" ", "", $banana[4]["FotoRec"]); ?>'></a>
-                    </div>
-                    <div class='info-criador'>
-                        <img class='criador' src='<?php echo str_replace(" ", "", $banana[4]["FotoUser"]); ?>'>
-                    </div>
-                    <a href="receita.php?id='<?php echo $banana[4]["CodRec"]; ?>'"><?php echo $banana[4]["NomeRec"]; ?></span></a>
-                </div>
+                <?php
+                foreach ($banana as $value) {
+                    echo "<div class='div-imagem col-lg-4 col-12'>";
+                    echo "<div class='imagem'>";
+                    echo "<a href='receita.php?id=".$value["CodRec"]."'><img class='img-receitas' src='".$value["FotoRec"]."'></a>";
+                    echo "</div>";
+                    echo "<div class='info-criador'>";
+                    echo "<img class='criador' src='".$value["FotoUser"]."'>";
+                    echo "</div>";
+                    echo "<a href='receita.php?id=".$value["CodRec"]."'><span>".$value["NomeRec"]."</span></a>";
+                    echo "</div>";
+                }
+                ?>
             </div>
         </div>
     </div>

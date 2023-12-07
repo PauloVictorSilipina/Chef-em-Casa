@@ -14,7 +14,7 @@ class POST{
 		SELECT m.url FotoRec, r.nome NomeRec, u.img FotoUser, r.cod_rec CodRec from RECEITA r
     	left join MIDIA m on m.FK_RECEITA_cod_rec = r.cod_rec
     	left join USUARIO u on u.cod_perfil = r.FK_USUARIO_cod_perfil
-    	where r.cod_rec <=5";
+		order by r.cod_rec DESC";
 
 	$stmt = $this->conn->prepare($query);
 	$stmt->execute();
@@ -92,13 +92,9 @@ class POST{
 		}
 	}
 
-	public function receitasFavoritas($id) {
+	public function receitasCriadas($id) {
 		$query1 = "
-		SELECT r.nome RecNome, m.url RecImg from CURTIR c 
-		inner join RECEITA r on r.cod_rec = c.fk_RECEITA_cod_rec 
-		inner join USUARIO u on u.cod_perfil = c.fk_USUARIO_cod_perfil 
-		left join MIDIA m on m.FK_RECEITA_cod_rec = r.cod_rec 
-		where u.cod_perfil = " . $id;
+		SELECT r.cod_rec CodRec, r.nome NomeRec, m.url FotoRec from RECEITA r left join MIDIA m on m.FK_RECEITA_cod_rec = r.cod_rec where r.fk_USUARIO_cod_perfil =" . $id;
 
 		$stmt = $this->conn->prepare($query1);
 		$stmt->execute();

@@ -22,6 +22,10 @@
 <body>
     <?php
     include "header.php";
+    include_once 'initialize.php';
+    $post = new Post($db);
+    $banana = $post;
+    $banana = $post -> receitasCriadas($_SESSION['user_id']);
     ?>
 
     <div class="container perfil">
@@ -48,37 +52,19 @@
         </div>
     
         <div class="titulo-historico offset-lg-3 col-lg-6">
-            <span>Histórico de receitas curtidas</span>
+            <span>Receitas do Usuário</span>
         </div>
 
         <div class="container">
             <div class="row receitas-visualizadas">
-                <div class="col-lg-4 col-12">
-                    <img src="receitas/ratatouille.webp">
-                    <a href="#"><span>Ratatouille du chef</span></a>
-                </div>
-                <div class="col-lg-4 col-12">
-                    <img src="receitas/bife acebolado.jpg">
-                    <a href="#"><span>Bife acebolado</span></a>
-                </div>
-                <div class="col-lg-4 col-12">
-                    <img src="receitas/Bolo padrao.jpg">
-                    <a href="#"><span>Bolo de chocolate</span></a>
-                </div>
-            </div>
-            <div class="row receitas-visualizadas">
-                <div class="col-lg-4 col-12">
-                    <img src="receitas/dadinho.jpeg">
-                    <a href="#"><span>Dadinho de Queijo Coalho</span></a>
-                </div>
-                <div class="col-lg-4 col-12">
-                    <img src="receitas/caldo verde.jpg">
-                    <a href="#"><span>Caldo verde</span></a>
-                </div>
-                <div class="col-lg-4 col-12">
-                    <img src="receitas/camarao internacional.jpg">
-                    <a href="#"><span>Camarão internacional</span></a>
-                </div>
+                <?php
+                    foreach ($banana as $value) {
+                        echo "<div class='col-lg-4 col-12>";
+                        echo "<a href='receita.php?id=".$value["CodRec"]."'><img src='".$value["FotoRec"]."'></a>";
+                        echo "<a href='receita.php?id=".$value["CodRec"]."'><span>".$value["NomeRec"]."</span></a>";
+                        echo "</div>";
+                    }
+                ?>
             </div>
         </div>
     </div>

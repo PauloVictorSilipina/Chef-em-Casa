@@ -25,17 +25,20 @@
         include_once './initialize.php';
         $post = new Post($db);
         $banana = $post -> pesquisaReceita($_POST['input-pesquisa']);
+        
         foreach ($banana as $value) {
             echo'<div class="recdiv">';
-            echo '<div class="row receita offset-lg-2 col-lg-8 offset-1 col-10">';
-            echo '<div class="col-lg-2 col-4 row g-0">';
-            echo '<img class="imgRec" src="'. $value['FotoRec'] .'" alt="">';
-            echo '</div>';
-            echo '<div class="offset-lg-1 col-lg-9 offset-1 col-5">';
-            echo '<h3 class="titulorec">'.$value['NomeRec'].'</h3>';
-            echo '<span id="descrec" class="descrec">'.$value['descricao'].'</span>';
-            echo '</div>';
-            echo '</div>';
+                echo '<div class="row receita offset-lg-2 col-lg-8 offset-1 col-10">';
+
+                    echo '<div class="col-lg-2 col-4 row g-0">';
+                        echo "<a href='receita.php?id=".$value["CodRec"]."'><img class='imgRec' src='". $value['FotoRec']."'></a>";
+                    echo '</div>';
+
+                    echo '<div class="offset-lg-1 col-lg-9 offset-1 col-5">';
+                        echo "<a href='receita.php?id=".$value["CodRec"]."'><h3 class='titulorec'>".$value['NomeRec']."</h3></a>";
+                        echo '<span id="descrec" class="descrec">'.$value['descricao'].'</span>';
+                    echo '</div>';
+                echo '</div>';
             echo '</div>';
           }
         endif;

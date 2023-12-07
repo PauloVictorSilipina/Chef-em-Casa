@@ -28,9 +28,7 @@ session_start();
 
 
             <div class="menu collapse navbar-collapse col-lg-2 offset-lg-1" id="navbarSupportedContent">
-                <a href="#"><i class="fa-solid fa-heart fa-xl col-2"></i></a>
                 <a href="cadreceita.php"><i class="fa-solid fa-plus fa-xl col-2"></i></a>
-                <a href="#"><i class="fa-regular fa-bell fa-xl col-2"></i></a>
                 <div class="dropdown">
 
                 <?php
