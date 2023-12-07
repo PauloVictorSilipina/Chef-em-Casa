@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include_once 'imports.html'?>
     <script src="script/cadrec.js" defer></script>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/css_base.css">
     <link rel="stylesheet" href="css/css_cadreceita.css">
     
@@ -62,7 +62,7 @@
             <div class="col-lg-4">
                 <span class="sub-titulos">Número de pessoas ou porções</span><br>
                 <div class="row no-gutters">
-                    <input class="col-lg-2 col-2 offset-1" id="qtd"></input>
+                    <input class="col-lg-2 col-2 offset-1" id="porc"></input>
                     <select class="col-lg-3 col-4" name="medida" id="dif">
                         <option value="porcao">Porções</option>
                         <option value="pedaco">Pedaços</option>
@@ -97,7 +97,7 @@
                 <div class="col-lg-6">
                     <span class="sub-titulos">Preparo</span>
                     <div class="modopreparo col-lg-6">
-                        <textarea class="col-lg-12" placeholder="Digite um passo por linha"></textarea>
+                        <textarea class="col-lg-12" id="prep" placeholder="Digite um passo por linha"></textarea>
                     </div>
                 </div>
             </div>
