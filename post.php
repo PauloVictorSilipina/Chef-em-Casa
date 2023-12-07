@@ -178,6 +178,41 @@ class POST{
 	}
 
 	public function cadastroReceita($dados) {
+
+		if ($dados["imagem"]["size"] > 0){
+			$client_id = "450e282f79474c3";
+			$filename = $_FILES['foto']['tmp_name'];
+			
+			$image_data = file_get_contents($filename);
+			$image_data_base64 = base64_encode($image_data);
+			
+			$api_url = 'https://api.imgur.com/3/image.json';
+			
+			$headers = [
+				'Authorization: Client-ID ' . $client_id,
+				'Content-Type: application/x-www-form-urlencoded'
+			];
+			
+			$postData = http_build_query(['image' => $image_data_base64]);
+			
+			$options = [
+				'http' => [
+					'header' => implode("\r\n", $headers),
+					'method' => 'POST',
+					'content' => $postData
+				]
+			];
+			
+			$context = stream_context_create($options);
+			$result = file_get_contents($api_url, false, $context);
+			
+			if ($result === FALSE) {
+				echo "Erro ao enviar arquivo para o Imgur";
+			} else {
+				$response = json_decode($result, true);
+				$foto = $response['data']['link'];
+			}
+
 		$query = "
 		insert into RECEITA (nome, temp_preparo, porcao, descricao, FK_USUARIO_cod_perfil, FK_DIFICULDADE_cod_dificuldade) value 
 		("+$dados['titulo']+","+$dados['tempopreparo']+","+$dados['quantidade']+","+$dados['descrição']+","+$dados['user']+","+$dados['dificuldade']+")";
@@ -186,6 +221,7 @@ class POST{
 		$stmt->execute();
 		return true;
 	}
+
 	/*
 	//Construtor - cria uma instância PDO que representa a conexão com o banco de dados
 	public function __construct($db){

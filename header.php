@@ -13,22 +13,17 @@ session_start();
 
             <div class="div-logo col-lg-2 col-6">
                 <a href="index.php"><span class="offset-lg-2">Chef em Casa</span></a>
-            </div>
-
-            <button class="navbar-toggler col-3" type="button" data-bs-toggle="" data-bs-target="#">
-                <i class="fa-solid fa-tags fa-xl"></i>
-            </button>
-            
+            </div> 
             <div class="div-pesquisa col-12 col-lg-6 offset-lg-1 row no-gutters"  id="div-pesquisa">
                 <form class="col-lg-12 row no-gutters" action="pesquisa.php" method="post">
-                    <input name="input-pesquisa" type="text" placeholder="Digite uma receita, ingrediente ou categoria" id="input-pesquisa" class="input-pesquisa col-7 offset-1 col-lg-10 offset-lg-0">
+                    <input name="input-pesquisa" type="text" placeholder="Digite uma receita" id="input-pesquisa" class="input-pesquisa col-7 offset-1 col-lg-10 offset-lg-0">
                     <button name="btn-pesquisa" type="submit" id="btn-pesquisa" class="btn-pesquisa col-4 col-lg-2"><i class="fa-solid fa-magnifying-glass fa-xl"></i></button>
                 </form>
             </div>
 
 
             <div class="menu collapse navbar-collapse col-lg-2 offset-lg-1" id="navbarSupportedContent">
-                <a href="cadreceita.php"><i class="fa-solid fa-plus fa-xl col-2"></i></a>
+                <a href="cadreceita.php"><i class="fa-solid fa-plus fa-xl"></i></a>
                 <div class="dropdown">
 
                 <?php
