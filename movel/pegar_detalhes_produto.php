@@ -68,9 +68,9 @@ if(autenticar($db_con)) {
 				
 				$consulta->execute();
 				$linha = $consulta->fetch(PDO::FETCH_ASSOC);
-				list = [];
-				for(i = 0;i<sizeof($linha);i++){
-					$string = $linha[i]["qtd"] + " " + $linha[i]["medida"] + " de " + $linha[i]["ingrediente"];
+				$list = [];
+				for($i = 0;$i<sizeof($linha);$i++){
+					$string = $linha[$i]["qtd"] + " " + $linha[$i]["medida"] + " de " + $linha[$i]["ingrediente"];
 					array_push($list,$string);
 				}
 				$resposta["ingredientes"] = $list;
