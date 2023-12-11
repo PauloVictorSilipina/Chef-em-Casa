@@ -62,19 +62,18 @@ if(autenticar($db_con)) {
 				}
 				$resposta["preparo"] = $list;
 				
-				$consultaIngrediente = $db_con->prepare("
+				$consulta = $db_con->prepare("
 				SELECT ri.qtd, ri.medida, ri.ingrediente FROM RECEITA_INGREDIENTE ri
 				WHERE ri.fk_RECEITA_cod_rec = " . $id);
 				
 				$consulta->execute();
 				$linha = $consulta->fetch(PDO::FETCH_ASSOC);
-				//$list = [];
-				//for($i = 0;$i<sizeof($linha);$i++){
-					//$string = $linha[$i]["qtd"] + " " + $linha[$i]["medida"] + " de " + $linha[$i]["ingrediente"];
-					//array_push($list,$string);
-				//}
-				//$resposta["ingredientes"] = $list;
-				$resposta["ingredientes"] = $linha;
+				$list = [];
+				for($i = 0;$i<sizeof($linha);$i++){
+					$string = $linha[$i]["qtd"] + " " + $linha[$i]["medida"] + " de " + $linha[$i]["ingrediente"];
+					array_push($list,$string);
+				}
+				$resposta["ingredientes"] = $list;
 				// Caso o produto exista no BD, o cliente 
 				// recebe a chave "sucesso" com valor 1.
 				$resposta["sucesso"] = 1;
