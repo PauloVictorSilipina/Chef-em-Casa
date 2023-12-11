@@ -68,12 +68,13 @@ if(autenticar($db_con)) {
 				
 				$consulta->execute();
 				$linha = $consulta->fetch(PDO::FETCH_ASSOC);
-				$list = [];
-				for($i = 0;$i<sizeof($linha);$i++){
-					$string = $linha[$i]["qtd"] + " " + $linha[$i]["medida"] + " de " + $linha[$i]["ingrediente"];
-					array_push($list,$string);
-				}
-				$resposta["ingredientes"] = $list;
+				//$list = [];
+				//for($i = 0;$i<sizeof($linha);$i++){
+					//$string = $linha[$i]["qtd"] + " " + $linha[$i]["medida"] + " de " + $linha[$i]["ingrediente"];
+					//array_push($list,$string);
+				//}
+				//$resposta["ingredientes"] = $list;
+				$resposta["ingredientes"] = $linha;
 				// Caso o produto exista no BD, o cliente 
 				// recebe a chave "sucesso" com valor 1.
 				$resposta["sucesso"] = 1;
