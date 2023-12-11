@@ -17,15 +17,14 @@ async function cadastro() {
   let medidaIng = $("select[id='medida']").map(function(){return $(this).val();}).get();
   
   let dados = {"dificuldade":dif,"titulo":titulo,"descrição":desc,"tempopreparo":tempPrep,"quantidade":quant,"imagem":image,"modopreparo":prep,"nomeIng":nomeIng,"quantidadeIng":quantIng,"medidaIng":medidaIng};
-  console.log(dados);
   let json = JSON.stringify(dados);
-  let resposta = await fetch('http://localhost/php/search.php', {
+  let resposta = await fetch('http://localhost:4443/php/search.php', {
   method: 'POST',
   body: json,
   headers: { 'Content-Type': 'application/json'}
   });
-  console.log("denis");
-  let sendJson = await resposta.json();
+  let sendJson = await resposta;
+  console.log(sendJson);
 }
 
 

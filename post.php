@@ -105,8 +105,7 @@ class POST{
 
 	public function infoRec($id) {
 		$query1 = "
-		SELECT r.nome RecNome, m.url RecImg, r.porcao RecRend, r.temp_preparo RecTemp, r.dificuldade RecDif, u.img UsuImg, u.nome UsuNome, r.descricao RecDesc From RECEITA r
-		LEFT JOIN MIDIA m on m.FK_RECEITA_cod_rec = r.cod_rec 
+		SELECT r.nome RecNome, r.url RecImg, r.porcao RecRend, r.temp_preparo RecTemp, r.dificuldade RecDif, u.img UsuImg, u.nome UsuNome, r.descricao RecDesc From RECEITA r
 		LEFT JOIN USUARIO u on u.cod_perfil = r.FK_USUARIO_cod_perfil 
 		WHERE r.cod_rec = " . $id;
 
@@ -177,8 +176,15 @@ class POST{
 		return $results;
 	}
 
-	public function cadastroReceita($dados) {
+	function debug_to_console($data) {
+		$output = $data;
+		if (is_array($output))
+			$output = implode(',', $output);
+	
+		echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+	}
 
+	public function cadastroReceita($dados) {
 		if ($dados["imagem"]["size"] > 0){
 			$client_id = "450e282f79474c3";
 			$filename = $_FILES['foto']['tmp_name'];
@@ -212,129 +218,30 @@ class POST{
 				$response = json_decode($result, true);
 				$foto = $response['data']['link'];
 			}
-
+		
 		$query = "
-		insert into RECEITA (nome, temp_preparo, porcao, descricao, FK_USUARIO_cod_perfil, FK_DIFICULDADE_cod_dificuldade) value 
-		("+$dados['titulo']+","+$dados['tempopreparo']+","+$dados['quantidade']+","+$dados['descrição']+","+$dados['user']+","+$dados['dificuldade']+")";
+		insert into RECEITA (nome, temp_preparo, porcao, descricao, FK_USUARIO_cod_perfil, dificuldade,url,modopreparo) value 
+		(".$dados['titulo'].",".$dados['tempopreparo'].",".$dados['quantidade'].",".$dados['descrição'].",".$dados['user'].",".$dados['dificuldade'].",".$foto.",".$dados["modopreparo"]")";
+
+		debug_to_console($query);
 
 		$stmt = $this->conn->prepare($query);
 		$stmt->execute();
-		return true;
-	}
-
-	/*
-	//Construtor - cria uma instância PDO que representa a conexão com o banco de dados
-	public function __construct($db){
-		$this->conn = $db;
-	}
-	
-	//Obtendo POST do banco de dados
-	public function read(){
-		//Criando query
-		$query = 'SELECT id, titulo FROM ' . $this->table . ' ORDER BY id DESC';
 		
-		//Preparando a execução da consulta
+		query = "SELECT cod_rec from RECEITA r where FK_USUARIO_cod_perfil = ".$dados['user']. "order by cod_rec DESC ";
 		$stmt = $this->conn->prepare($query);
-		//Executa query
 		$stmt->execute();
+		$codigo = $stmt->fetch(PDO::FETCH_ASSOC);
 		
-		return $stmt;
-		
-	}
-	
-	public function read_single(){
-		//Criando query
-		$query = 'SELECT id, titulo FROM ' . $this->table . ' WHERE id = ? LIMIT 1';
-		
-		//Preparando a execução da consulta
-		$stmt = conn->prepare($query);
-		
-		//Indicando o parâmetro na consulta
-		$stmt->bindParam(1,$this->id);
-		
-		//Executa query
-		$stmt->execute();
-		$row = $stmt->fetch(PDO::FETCH_ASSOC);
-		
-		$this->id = $row['id'];
-		$this->titulo = $row['titulo'];
-		
-	
-		return $stmt;
-		
-	}
-	
-	public function create(){
-		$query = 'INSERT INTO '. $this->table . ' SET titulo = :titulo';
-		
-		//prepare statement
-		$stmt = $this->conn->prepare($query);
-		//clean data
-		$this->titulo = htmlspecialchars(strip_tags($this->titulo));
-		
-		//binding of parameters
-		$stmt->bindParam(':titulo', $this->titulo);
-		
-		//execute the query
-		if($stmt->execute()){
-			return true;
-			
+		for($i=0;$i<count($dados["nomeIng"]);$i++){
+			$query = "Insert into RECEITA_INGREDIENTE (FK_RECEITA_cod_rec,qtd,ingrediente,medida) values (".$codigo.",".$dados["quantidadeIng"][$i].",".$dados["nomeIng"][$i].",".$dados["medidaIng"][$i].")";
+			$stmt = $this->conn->prepare($query);
+			$stmt->execute();
 		}
-		
-		//print erro if something goes wrong
-		printf("Error %s. \n", $stmt->error);
-		
-		return false;
-	}
-	
-	public function update(){
-		$query = 'UPDATE '. $this->table . ' SET titulo = :titulo WHERE id = :id';
-		
-		//prepare statement
-		$stmt = $this->conn->prepare($query);
-		//clean data
-		$this->titulo = htmlspecialchars(strip_tags($this->titulo));
-		$this->id = htmlspecialchars(strip_tags($this->id));
-		
-		//binding of parameters
-		$stmt->bindParam(':titulo', $this->titulo);
-		$stmt->bindParam(':id', $this->id);
-		
-		//execute the query
-		if($stmt->execute()){
-			return true;
-			
+		return $query
 		}
-		
-		//print erro if something goes wrong
-		printf("Error %s. \n", $stmt->error);
-		
-		return false;
 	}
-	
-	
-	public function delete(){
-		$query = 'DELETE FROM '. $this->table . ' WHERE id = :id';
-		
-		//prepare statement
-		$stmt = $this->conn->prepare($query);
-		//clean data
-		$this->id = htmlspecialchars(strip_tags($this->id));
-		
-		//binding of parameters
-		$stmt->bindParam(':id', $this->id);
-		
-		//execute the query
-		if($stmt->execute()){
-			return true;
-			
-		}
-		
-		//print erro if something goes wrong
-		printf("Error %s. \n", $stmt->error);
-		
-		return false;
-	}
-	*/
 }
 ?>
+
+

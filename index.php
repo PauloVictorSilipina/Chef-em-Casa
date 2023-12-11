@@ -31,7 +31,7 @@
     <div class='container div-receitas'>
 
         <div class='col-lg-3 titulo-receita'>
-            <h3 class='offset-lg-2'>Receitas do Chef</h3>
+            <h3 class='offset-lg-2'>Receitas</h3>
         </div>
         <div class='col-lg-10 offset-lg-1'>
             <div class='imagens row'>

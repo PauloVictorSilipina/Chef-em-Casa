@@ -29,7 +29,7 @@
 }
 
 .div-imagem a:hover {
-    color: aqua;
+    color: var(--primary-color);
 }
 
 .imagem img{
@@ -41,6 +41,6 @@
 }
 
 .img-receitas:hover{
-    border: 1px solid aqua;
+    border: 1px solid var(--primary-color);
     cursor: pointer;
 }

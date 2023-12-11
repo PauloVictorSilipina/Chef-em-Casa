@@ -27,7 +27,6 @@ importação de fonte e adicionando ela em todos itens, utilizado também o bord
 :root {
     --login-container-color: #fff;
     --login-container-border-color: rgb(238, 238, 238);
-    --login-background-color: rgb(0, 0, 0);
 }
 
 html {

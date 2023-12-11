@@ -62,15 +62,15 @@ if(autenticar($db_con)) {
 				}
 				$resposta["preparo"] = $list;
 				
-				$consulta = $db_con->prepare("
+				$consultaIngrediente = $db_con->prepare("
 				SELECT ri.qtd, ri.medida, ri.ingrediente FROM RECEITA_INGREDIENTE ri
 				WHERE ri.fk_RECEITA_cod_rec = " . $id);
 				
 				$consulta->execute();
-				$linha = $consulta->fetchAll(PDO::FETCH_ASSOC);
+				$linha = $consulta->fetch(PDO::FETCH_ASSOC);
 				$list = [];
 				for($i = 0;$i<sizeof($linha);$i++){
-					$string = $linha[$i]["qtd"]. " " .$linha[$i]["medida"]. " de " .$linha[$i]["ingrediente"];
+					$string = $linha[$i]["qtd"] + " " + $linha[$i]["medida"] + " de " + $linha[$i]["ingrediente"];
 					array_push($list,$string);
 				}
 				$resposta["ingredientes"] = $list;
