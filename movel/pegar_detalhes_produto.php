@@ -67,7 +67,7 @@ if(autenticar($db_con)) {
 				WHERE ri.fk_RECEITA_cod_rec = " . $id);
 				
 				$consulta->execute();
-				$linha = $consulta->fetch(PDO::FETCH_ASSOC);
+				$linha = $consulta->fetchAll(PDO::FETCH_ASSOC);
 				//$list = [];
 				//for($i = 0;$i<sizeof($linha);$i++){
 					//$string = $linha[$i]["qtd"] + " " + $linha[$i]["medida"] + " de " + $linha[$i]["ingrediente"];
