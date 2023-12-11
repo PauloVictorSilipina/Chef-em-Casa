@@ -221,14 +221,14 @@ class POST{
 		
 		$query = "
 		insert into RECEITA (nome, temp_preparo, porcao, descricao, FK_USUARIO_cod_perfil, dificuldade,url,modopreparo) value 
-		(".$dados['titulo'].",".$dados['tempopreparo'].",".$dados['quantidade'].",".$dados['descrição'].",".$dados['user'].",".$dados['dificuldade'].",".$foto.",".$dados["modopreparo"]")";
+		(".$dados['titulo'].",".$dados['tempopreparo'].",".$dados['quantidade'].",".$dados['descrição'].",".$dados['user'].",".$dados['dificuldade'].",".$foto.",".$dados["modopreparo"].")";
 
 		debug_to_console($query);
 
 		$stmt = $this->conn->prepare($query);
 		$stmt->execute();
 		
-		query = "SELECT cod_rec from RECEITA r where FK_USUARIO_cod_perfil = ".$dados['user']. "order by cod_rec DESC ";
+		$query = "SELECT cod_rec from RECEITA r where FK_USUARIO_cod_perfil = ".$dados['user']. "order by cod_rec DESC ";
 		$stmt = $this->conn->prepare($query);
 		$stmt->execute();
 		$codigo = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -238,7 +238,7 @@ class POST{
 			$stmt = $this->conn->prepare($query);
 			$stmt->execute();
 		}
-		return $query
+		return $query;
 		}
 	}
 }
