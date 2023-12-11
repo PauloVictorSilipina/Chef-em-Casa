@@ -57,8 +57,8 @@ if(autenticar($db_con)) {
 				$resposta["tempo"] = $linha["RecTemp"];
 				$list = [];
 				$prepList = explode(";",$linha["modo_preparo"]);
-				for(i = 0;i<sizeof(prepList);i++){
-					array_push($list,$prepList[i]);
+				for($i = 0;$i<sizeof($prepList);$i++){
+					array_push($list,$prepList[$i]);
 				}
 				$resposta["preparo"] = $list;
 				
