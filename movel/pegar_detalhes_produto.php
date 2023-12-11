@@ -26,7 +26,7 @@ if(autenticar($db_con)) {
 	 
 		// Obtem do BD os detalhes do produto com id especificado na requisicao GET
 
-		$consultaInfoReceita = $db_con->prepare("
+		$consulta = $db_con->prepare("
 		SELECT r.nome RecNome, m.url RecImg, r.porcao RecRend, r.temp_preparo RecTemp, r.dificuldade RecDif, u.img UsuImg, u.nome UsuNome, r.descricao RecDesc, mp.modo_preparo From RECEITA r
 		LEFT JOIN MIDIA m on m.FK_RECEITA_cod_rec = r.cod_rec 
 		LEFT JOIN USUARIO u on u.cod_perfil = r.FK_USUARIO_cod_perfil 
